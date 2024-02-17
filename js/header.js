@@ -9,12 +9,11 @@ function includeHeader(filePath) {
 }
 
 function main() {
-    const pagesDir = path.join(__dirname, '..', '*.html');
-    const files = fs.readdirSync(path.join(__dirname, '..'));
-
-    files.forEach(filename => {
+    const pagesDir = path.join(__dirname, '..', 'pages');
+    fs.readdirSync(pagesDir).forEach(filename => {
+        const filePath = path.join(pagesDir, filename);
         if (filename.endsWith('.html')) {
-            includeHeader(filename);
+            includeHeader(filePath);
             console.log(`Header included in ${filename}`);
         }
     });
