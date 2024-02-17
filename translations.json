@@ -1,5 +1,10 @@
 {
   "en": {
-    "index-title": "Rolling And Falling"
+    "index-title": "Rolling And Falling",
+    "header-home": "Home",
+    "header-events": "Events",
+    "header-items": "Items",
+    "header-places": "Places",
+    "header-npcs": "NPCs"
   }
 }
