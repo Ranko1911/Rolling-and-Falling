@@ -22,6 +22,7 @@
 </head>
 
 <body>
+
   <nav class="navbar navbar-expand-lg bg-black" data-bs-theme="dark">
     <div class="container-fluid p-0">
       <a class="navbar-brand ps-4" href="./index.html"
@@ -57,6 +58,23 @@
               aria-expanded="false"
             >
             </a>
+            <ul class="dropdown-menu" aria-labelledby="languageDropdown">
+              <li>
+                <a class="dropdown-item" href="#" onclick="loadTranslations('en')"
+                  ><img src="./images/icons/flags/en.svg" width="24" height="18" alt="en flag" /> EN</a
+                >
+              </li>
+              <li>
+                <a class="dropdown-item" href="#" onclick="loadTranslations('es')"
+                  ><img src="./images/icons/flags/es.svg" width="24" height="18" alt="es flag" /> ES</a
+                >
+              </li>
+              <li>
+                <a class="dropdown-item" href="#" onclick="loadTranslations('fr')"
+                  ><img src="./images/icons/flags/fr.svg" width="24" height="18" alt="fr flag" /> FR</a
+                >
+              </li>
+            </ul>
           </div>
         </div>
       </div>
