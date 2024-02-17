@@ -1,37 +1,40 @@
 <nav class="navbar navbar-expand-lg bg-black" data-bs-theme="dark">
   <div class="container-fluid p-0">
     <a class="navbar-brand ps-4" href="./index.html"
-      ><img src="./images/icons/dado blanco fondo negro.webp" width="100" height="100" alt="Rolling And Falling Logo"
+      ><img src="./images/mischief/logo.webp" width="260" height="100" alt="Mischief Logo"
     /></a>
+    <button
+      class="navbar-toggler me-4"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#headerNavBar"
+      aria-controls="headerNavBar"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
     <div class="collapse navbar-collapse" id="headerNavBar">
       <div class="navbar-nav">
         <a id="header-home" class="nav-link" href="./index.html"></a>
-        <a id="header-events" class="nav-link" href="./events.html"></a>
-        <a id="header-items" class="nav-link" href="./items.html"></a>
-        <a id="header-places" class="nav-link" href="./places.html"></a>
-        <a id="header-npcs" class="nav-link" href="./npcs.html"></a>
+        <a id="header-analysis" class="nav-link" href="./analysis.html"></a>
+        <a id="header-news" class="nav-link" href="./news.html"></a>
+        <a id="header-guides" class="nav-link" href="./guides.html"></a>
+        <a id="header-our-team-2" class="nav-link" href="./our-team.html"></a>
       </div>
       <div class="navbar-nav ms-auto">
+        <div class="nav-item dropdown me-5">
+          <a
+            class="nav-link dropdown-toggle"
+            href="#"
+            id="languageDropdown"
+            role="button"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+          >
+          </a>
+        </div>
       </div>
     </div>
   </div>
 </nav>
-<!-- <script>
-  var storedLanguage = localStorage.getItem("selectedLanguage");
-  if (storedLanguage) {
-    loadTranslations(storedLanguage);
-  }
-
-  var currentPage = location.pathname.substring(
-    location.pathname.lastIndexOf("/") + 1
-  );
-  var navLinks = document.querySelectorAll(".navbar-nav .nav-link");
-  for (var i = 0; i < navLinks.length; i++) {
-    var link = navLinks[i];
-
-    var linkHref = link.getAttribute("href");
-    var linkPage = linkHref.substring(linkHref.lastIndexOf("/") + 1);
-
-    if (linkPage === currentPage) link.setAttribute("aria-current", "page");
-  }
-</script> -->

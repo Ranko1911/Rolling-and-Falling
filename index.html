@@ -22,25 +22,45 @@
 </head>
 
 <body>
-  <nav class="navbar bg-dark border-bottom border-body bg-dark">
+  <nav class="navbar navbar-expand-lg bg-black" data-bs-theme="dark">
     <div class="container-fluid p-0">
-      <ul class="navbar-brand ps-4" href="./index.html"><img src="./css/images/icons/dado blanco fondo negro.webp"
-          width="100" height="100" alt="Rolling And Falling Logo" />
-        <li class="nav-item">
-          <a class="nav-link" href="items.html">Items</a>
-        </li>
-        <li>
-          <a class="nav-link" href="places.html">Places</a>
-        </li>
-        <li>
-          <a class="nav-link" href="npcs.html">NPCs</a>
-        </li>
-        <li>
-          <a class="nav-link" href="events.html">Events</a>
-        </li>
-      </ul>
+      <a class="navbar-brand ps-4" href="./index.html"
+        ><img src="./images/mischief/logo.webp" width="260" height="100" alt="Mischief Logo"
+      /></a>
+      <button
+        class="navbar-toggler me-4"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#headerNavBar"
+        aria-controls="headerNavBar"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="headerNavBar">
+        <div class="navbar-nav">
+          <a id="header-home" class="nav-link" href="./index.html"></a>
+          <a id="header-analysis" class="nav-link" href="./analysis.html"></a>
+          <a id="header-news" class="nav-link" href="./news.html"></a>
+          <a id="header-guides" class="nav-link" href="./guides.html"></a>
+          <a id="header-our-team-2" class="nav-link" href="./our-team.html"></a>
+        </div>
+        <div class="navbar-nav ms-auto">
+          <div class="nav-item dropdown me-5">
+            <a
+              class="nav-link dropdown-toggle"
+              href="#"
+              id="languageDropdown"
+              role="button"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            >
+            </a>
+          </div>
+        </div>
+      </div>
     </div>
-
   </nav>
 
   <div class="container-fluid p-5 bg-black text-white text-center">
