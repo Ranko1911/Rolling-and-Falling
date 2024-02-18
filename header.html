@@ -1,12 +1,8 @@
 <nav class="navbar navbar-expand-lg bg-black" data-bs-theme="dark">
   <div class="container-fluid p-0">
     <a class="navbar-brand ps-4" href="./index.html"
-      ><img src="./images/icons/dado blanco fondo negro.webp" width="100" height="100" alt="Rolling and Falling Logo"
+      ><img src="./images/icons/dado blanco fondo negro.webp" width="100" height="100" alt="Mischief Logo"
     /></a>
-    <div class="container-fluid p-5 bg-black text-white text-center">
-      <h1>Rolling And Falling</h1>
-      <p>Welcome to my own personal Wiki!</p>
-    </div>
     <button
       class="navbar-toggler me-4"
       type="button"
@@ -20,13 +16,62 @@
     </button>
     <div class="collapse navbar-collapse" id="headerNavBar">
       <div class="navbar-nav">
-        <a id="header-home" class="nav-link" href="./index.html">Home</a>
-        <a id="header-items" class="nav-link" href="./pages/items.html">Items</a>
-        <a id="header-places" class="nav-link" href="./pages/places.html">Places</a>
-        <a id="header-npcs" class="nav-link" href="./pages/npcs.html">NPCs</a>
-        <a id="header-events" class="nav-link" href="./pages/events.html">Events</a>
+        <a id="header-home" class="nav-link" href="./index.html"></a>
+        <a id="header-analysis" class="nav-link" href="./pages/items.html"></a>
+        <a id="header-news" class="nav-link" href="./pages/places.html"></a>
+        <a id="header-guides" class="nav-link" href="./pages/npcs.html"></a>
+        <a id="header-our-team-2" class="nav-link" href="./pages/events.html"></a>
       </div>
+      <div class="navbar-nav ms-auto">
+        <div class="nav-item dropdown me-5">
+          <a
+            class="nav-link dropdown-toggle"
+            href="#"
+            id="languageDropdown"
+            role="button"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+          >
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="languageDropdown">
+            <li>
+              <a class="dropdown-item" href="#" onclick="loadTranslations('en')"
+                ><img src="./images/icons/flags/en.svg" width="24" height="18" alt="en flag" /> EN</a
+              >
+            </li>
+            <li>
+              <a class="dropdown-item" href="#" onclick="loadTranslations('es')"
+                ><img src="./images/icons/flags/es.svg" width="24" height="18" alt="es flag" /> ES</a
+              >
+            </li>
+            <li>
+              <a class="dropdown-item" href="#" onclick="loadTranslations('fr')"
+                ><img src="./images/icons/flags/fr.svg" width="24" height="18" alt="fr flag" /> FR</a
+              >
+            </li>
+          </ul>
+        </div>
       </div>
     </div>
   </div>
 </nav>
+
+<script>
+  var storedLanguage = localStorage.getItem("selectedLanguage");
+  if (storedLanguage) {
+    loadTranslations(storedLanguage);
+  }
+
+  var currentPage = location.pathname.substring(
+    location.pathname.lastIndexOf("/") + 1
+  );
+  var navLinks = document.querySelectorAll(".navbar-nav .nav-link");
+  for (var i = 0; i < navLinks.length; i++) {
+    var link = navLinks[i];
+
+    var linkHref = link.getAttribute("href");
+    var linkPage = linkHref.substring(linkHref.lastIndexOf("/") + 1);
+
+    if (linkPage === currentPage) link.setAttribute("aria-current", "page");
+  }
+</script>
