@@ -1,44 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <title>Events</title>
-    <meta charset="utf-8">
-    <meta name="author" content="Ranko" />
-    <meta name="desciption" content="Lore, Homebrew and Original campain." />
-    <meta name="keywords" content="Lore, Homebrew and Original campain." />
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-  
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
-      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-  
-    <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
-      crossorigin="anonymous">
-      </script>
-  
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
-      crossorigin="anonymous"></script>
-  
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
-      integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
-      crossorigin="anonymous"></script>
-  
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
-      integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
-      crossorigin="anonymous"></script>
-  
-    <script> 
-      $(function(){
-        $("#header").load("../header.html"); 
-        $("#footer").load("../footer.html"); 
-      });
-      </script> 
-  
-    <link href="./images/icons/dado blanco fondo negro.webp" rel="icon" type="image/x-icon" />
-    <link href="./css/common.css" rel="stylesheet" />
-    <link href="./css/index.css" rel="stylesheet" />
-  </head>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fictional Character Wiki</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f3f3f3;
+        }
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            display: flex; /* Utilizamos flexbox para ajustar la disposición */
+        }
+        .content {
+            flex: 1; /* El contenido ocupa todo el espacio disponible */
+        }
+        h1, h2, h3 {
+            color: #333;
+        }
+        p {
+            color: #666;
+        }
+        .image-container {
+            text-align: center;
+            margin-left: 20px; /* Margen izquierdo para separar la imagen del contenido */
+        }
+        .character-image {
+            max-width: 100%;
+            height: auto;
+        }
+    </style>
+</head>
 <body>
-  <h1>Events</h1>
+    <div class="container">
+        <div class="content">
+            <h1>Fictional Historical Event Name</h1>
+            <p><strong>Description:</strong> Brief description of the historical event.</p>
+            <h2>Background</h2>
+            <p>Details about the context, causes, and significance of the event.</p>
+            <h2>Key Figures</h2>
+            <p>Notable individuals involved in the event and their roles.</p>
+            <h2>Timeline</h2>
+            <p>Chronological sequence of major events leading up to and following the event.</p>
+            <h2>Consequences</h2>
+            <p>The impact and aftermath of the event on society, culture, and the world.</p>
+            <h2>Legacy</h2>
+            <p>Long-term effects and historical significance of the event.</p>
+            <h2>References</h2>
+            <p>Citations or references to official sources, historical documents, or scholarly works.</p>
+        </div>
+        <div class="image-container">
+            <img src="event_image.jpg" alt="Historical Event Image" class="event-image">
+        </div>
+    </div>
 </body>
 </html>
