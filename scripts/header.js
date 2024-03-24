@@ -15,7 +15,7 @@ class SpecialHeader extends HTMLElement {
           <a id="header-home" class="nav-link" href="/index.html">Home</a>
           <a id="header-items" class="nav-link" href="/pages/items/test_display_item.html">Items</a>
           <a id="header-places" class="nav-link" href="/pages/places/test_place.html">Places</a>
-          <a id="header-npcs" class="nav-link" href="/pages/NPCS/test_char.html">NPCs</a>
+          <a id="header-charac" class="nav-link" href="/pages/charac/test_char.html">charac</a>
           <a id="header-events" class="nav-link" href="/pages/events/test_display_events.html">Events</a>
         </div>
       </div>
