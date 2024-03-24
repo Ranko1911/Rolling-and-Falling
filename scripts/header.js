@@ -3,7 +3,7 @@ class SpecialHeader extends HTMLElement {
     this.innerHTML = `
     <nav class="navbar navbar-expand-lg bg-black" data-bs-theme="dark">
     <div class="container-fluid p-0">
-      <a class="navbar-brand ps-4" href="./index.html">
+      <a class="navbar-brand ps-4" href="/index.html">
         <img src="/images/icons/dado_blanco_fondo_negro.webp" width="100" height="100"
           alt="Rolling and Falling Logo" /></a>
       <button class="navbar-toggler me-4" type="button" data-bs-toggle="collapse" data-bs-target="#headerNavBar"
