@@ -13,20 +13,45 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
   <link href="https://getbootstrap.com/docs/5.3/assets/css/docs.css" rel="stylesheet">
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+  <script>
+      $(function(){$('#header1').load('../../header.html')})
+  </script>
 </head>
 
 <body>
 
-  <!-- Common Header-->
-  <!-- <special-header></special-header> -->
-  <a href="pages/test/test_header.html">sep</a>
+  <!-- <nav class="navbar navbar-expand-lg bg-black" data-bs-theme="dark">
+    <div class="container-fluid p-0">
+      <a class="navbar-brand ps-4" href="./index.html">
+        <img src="./images/icons/dado_blanco_fondo_negro.webp" width="100" height="100"
+          alt="Rolling and Falling Logo" /></a>
+      <button class="navbar-toggler me-4" type="button" data-bs-toggle="collapse" data-bs-target="#headerNavBar"
+        aria-controls="headerNavBar" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="headerNavBar">
+        <div class="navbar-nav">
+          <a id="header-home" class="nav-link" href="./index.html">Home</a>
+          <a id="header-items" class="nav-link" href="./pages/items/test_display_item.html">Items</a>
+          <a id="header-places" class="nav-link" href="./pages/places/test_place.html">Places</a>
+          <a id="header-npcs" class="nav-link" href="./pages/NPCS/test_char.html">NPCs</a>
+          <a id="header-events" class="nav-link" href="./pages/events/test_events.html">Events</a>
+        </div>
+      </div>
+    </div>
+  </nav> -->
+  <div id="header1"></div>
+
 
   <!-- Bienvenida a los usuarios -->
   <div class="container-fluid p-5 bg-black text-white text-center">
     <h1>Rolling And Falling</h1>
     <p>Welcome to my own personal Wiki!</p>
   </div>
+
+
+
 
   <!-- Carrusel Inicial -->
   <div class="p-3 m-0 border-0 bd-example m-0 border-0">
@@ -81,52 +106,50 @@
     </div>
   </div>
 
-    <!-- bloque con texto de introduccion -->
-    <div class="container mt-5">
-      <div class="row">
-        <div class="col-sm-6">
-          <h2>What is Rolling and Falling?</h2>
-          <p>Rolling and Falling is a personal project that I have been working on for a while now. It is a
-            collection of lore, homebrew and original content for a campaign that I am currently running. I have
-            decided to share it with the world in the hopes that it may inspire others to create their own
-            campaigns or to use some of the content that I have created in their own games.</p>
-        </div>
-        <div class="col-sm-6">
-          <h2>What can you find here?</h2>
-          <p>Here you will find information on items, places, NPCs and events that are part of the campaign that I
-            am running. You will also find some homebrew content that I have created for the campaign. I hope that
-            you find the content here interesting and that it inspires you to create your own campaigns.</p>
-        </div>
-      </div>
-
-  <!-- las columnas de cada categoría -->
+  <!-- bloque con texto de introduccion -->
   <div class="container mt-5">
     <div class="row">
-      <div class="col-sm-3">
-        <h3>Items</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
-        <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
+      <div class="col-sm-6">
+        <h2>What is Rolling and Falling?</h2>
+        <p>Rolling and Falling is a personal project that I have been working on for a while now. It is a
+          collection of lore, homebrew and original content for a campaign that I am currently running. I have
+          decided to share it with the world in the hopes that it may inspire others to create their own
+          campaigns or to use some of the content that I have created in their own games.</p>
       </div>
-      <div class="col-sm-3">
-        <h3>Places</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
-        <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
-      </div>
-      <div class="col-sm-3">
-        <h3>Character</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
-        <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
-      </div>
-      <div class="col-sm-3">
-        <h3>Events</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
-        <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
+      <div class="col-sm-6">
+        <h2>What can you find here?</h2>
+        <p>Here you will find information on items, places, NPCs and events that are part of the campaign that I
+          am running. You will also find some homebrew content that I have created for the campaign. I hope that
+          you find the content here interesting and that it inspires you to create your own campaigns.</p>
       </div>
     </div>
-  </div>
 
+    <!-- las columnas de cada categoría -->
+    <div class="container mt-5">
+      <div class="row">
+        <div class="col-sm-3">
+          <h3>Items</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
+          <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
+        </div>
+        <div class="col-sm-3">
+          <h3>Places</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
+          <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
+        </div>
+        <div class="col-sm-3">
+          <h3>NPCs</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
+          <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
+        </div>
+        <div class="col-sm-3">
+          <h3>Events</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
+          <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
+        </div>
+      </div>
+    </div>
 
-  <script type="module" src="./scripts/header.js" ></script>
 </body>
 
 </html>
