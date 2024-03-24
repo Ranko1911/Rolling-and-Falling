@@ -1,8 +1,0 @@
-{
-  "dependencies": {
-    "bootstrap": "^5.3.2"
-  },
-  "scripts": {
-    "include-header": "node js/header.js"
-  }
-}
