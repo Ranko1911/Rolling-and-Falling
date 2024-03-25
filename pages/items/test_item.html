@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,38 +10,61 @@
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #222; /* Cambiar al color de fondo oscuro */
-            color: #eee; /* Cambiar el color de texto a claro */
+            background-color: #222;
+            /* Cambiar al color de fondo oscuro */
+            color: #eee;
+            /* Cambiar el color de texto a claro */
         }
+
         .container {
             max-width: 800px;
             margin: 20px auto;
             padding: 20px;
-            background-color: #333; /* Cambiar el color de fondo del contenedor */
+            background-color: #333;
+            /* Cambiar el color de fondo del contenedor */
             border-radius: 5px;
-            box-shadow: 0 0 10px rgba(255,255,255,0.1); /* Cambiar el color de la sombra */
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+            /* Cambiar el color de la sombra */
             display: flex;
         }
+
         .content {
-            flex: 1; /* El contenido ocupa todo el espacio disponible */
+            flex: 1;
+            /* El contenido ocupa todo el espacio disponible */
         }
-        h1, h2, h3 {
-            color: #fff; /* Cambiar el color de los títulos */
+
+        h1,
+        h2,
+        h3 {
+            color: #ffffff;
+            /* Cambiar el color de los títulos */
         }
+
         p {
-            color: #ccc; /* Cambiar el color del texto normal */
+            color: #ccc;
+            /* Cambiar el color del texto normal */
         }
+
         .image-container {
             text-align: center;
             margin-left: 20px;
         }
+
         .item-image {
             max-width: 100%;
             height: auto;
         }
     </style>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script>
+        $(function () { $('#header1').load('../../header.html') })
+    </script>
 </head>
+
 <body>
+    <div id="header1"></div>
     <div class="container">
         <div class="content">
             <h1>Fictional Item Name</h1>
@@ -59,8 +83,9 @@
             <p>Citations or references to official sources or creators.</p>
         </div>
         <div class="image-container">
-            <img src="item_image.jpg" alt="Item Image" class="item-image">        
+            <img src="item_image.jpg" alt="Item Image" class="item-image">
         </div>
     </div>
 </body>
+
 </html>
