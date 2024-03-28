@@ -12,3 +12,9 @@
 - Lugares
 - Eventos
 - Objetos
+
+## Main page
+
+- Horarios de partidas
+- Mensaje de bienvenida
+- ...
