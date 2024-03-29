@@ -17,4 +17,5 @@
 
 - Horarios de partidas
 - Mensaje de bienvenida
-- ...
+- nav bar homemade para no eepender de Bootstrap 
+- imagen de fondo
