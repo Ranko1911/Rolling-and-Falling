@@ -1,3 +1,3 @@
 git add .
-git commit -m "AUTO-UPDATE"
+git commit -m "UPDATE - cambio de enlaces en el header"
 git push
