@@ -1,3 +1,3 @@
 git add .
-git commit -m "UPDATE - places"
+git commit -m "UPDATE - templates"
 git push
