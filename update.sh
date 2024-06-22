@@ -1,3 +1,3 @@
 git add .
-git commit -m "UPDATE - templates"
+git commit -m "UPDATE - Header and Footer"
 git push
