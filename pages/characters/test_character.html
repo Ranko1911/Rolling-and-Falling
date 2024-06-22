@@ -16,9 +16,19 @@
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"
         integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
 
-    <script>
-        $(function () { $('#header1').load('https://ranko1911.github.io/Rolling-and-Falling/header.html') })
-    </script>
+        <script>
+            fetch('header.html')
+              .then(response => response.text())
+              .then(data => {
+                document.getElementById('header1').innerHTML = data;
+              });
+        
+            fetch('footer.html')
+              .then(response => response.text())
+              .then(data => {
+                document.getElementById('footer1').innerHTML = data;
+              });
+          </script>
 
     <link rel="stylesheet" href="../../css/object.css">
 </head>
@@ -49,6 +59,8 @@
             <img src="../../images/icons/dado_blanco_fondo_negro.webp" alt="Character Image" class="character-image">
         </div>
     </div>
+
+    <div id="footer1"></div>
 </body>
 
 </html>

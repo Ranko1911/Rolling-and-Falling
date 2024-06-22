@@ -4,35 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fictional Animal Companion Wiki</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f3f3f3;
-        }
-        .container {
-            max-width: 800px;
-            margin: 20px auto;
-            padding: 20px;
-            background-color: #fff;
-            border-radius: 5px;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
-            display: flex;
-        }
-        .content {
-            flex: 1;
-            padding-right: 20px;
-        }
-        .image-container {
-            text-align: center;
-            margin-left: 20px;
-        }
-        .companion-image {
-            max-width: 100%;
-            height: auto;
-        }
-    </style>
+    <link rel="stylesheet" href="../../css/object.css">
+    <script>
+        fetch('header.html')
+          .then(response => response.text())
+          .then(data => {
+            document.getElementById('header1').innerHTML = data;
+          });
+    
+        fetch('footer.html')
+          .then(response => response.text())
+          .then(data => {
+            document.getElementById('footer1').innerHTML = data;
+          });
+      </script>
 </head>
 <body>
     <div class="container">
@@ -60,5 +45,7 @@
             <img src="companion_image.jpg" alt="Animal Companion Image" class="companion-image">
         </div>
     </div>
+
+    <div id="footer1"></div>
 </body>
 </html>
