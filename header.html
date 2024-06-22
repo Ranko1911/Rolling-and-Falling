@@ -1,101 +1,54 @@
 <!doctype html>
 <html lang="en" translate="no" data-bs-theme="dark">
-  <head>
-    <title>Rolling And Falling</title>
-    <meta name="author" content="Ranko" />
-    <meta
-      name="description"
-      content="A DnD 5e Homebrew and Original campaign."
-    />
-    <meta name="keywords" content="DnD5e, Homebrew, Original campaign." />
-    <link
-      href="./images/icons/dado_blanco_fondo_negro.webp"
-      rel="icon"
-      type="image/x-icon"
-    />
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-    />
-    <link
-      href="https://getbootstrap.com/docs/5.3/assets/css/docs.css"
-      rel="stylesheet"
-    />
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-    <link rel="stylesheet" href="css/header.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
-    />
-  </head>
 
-  <body>
-    <nav class="navbar navbar-expand-lg bg-black" data-bs-theme="dark">
-      <div class="container-fluid p-0">
-        <a
-          class="navbar-brand ps-4"
-          href="https://ranko1911.github.io/Rolling-and-Falling/"
-        >
-          <img
-            src="https://ranko1911.github.io/Rolling-and-Falling/images/icons/dado_blanco_fondo_negro.webp"
-            width="100"
-            height="100"
-            alt="Rolling and Falling Logo HTML"
-          />
-        </a>
-        <button
-          class="navbar-toggler me-4"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#headerNavBar"
-          aria-controls="headerNavBar"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="headerNavBar">
-          <div class="navbar-nav">
-            <button
-              id="header-home"
-              class="btn btn-outline-light me-2"
-              onclick="window.location.href='https://ranko1911.github.io/Rolling-and-Falling/'"
-            >
-              Home
-            </button>
-            <button
-              id="header-items"
-              class="btn btn-outline-light me-2"
-              onclick="window.location.href='https://ranko1911.github.io/Rolling-and-Falling//pages/items/test_display_item.html'"
-            >
-              Items
-            </button>
-            <button
-              id="header-places"
-              class="btn btn-outline-light me-2"
-              onclick="window.location.href='https://ranko1911.github.io/Rolling-and-Falling//pages/places/test_display_places.html'"
-            >
-              Places
-            </button>
-            <button
-              id="header-npcs"
-              class="btn btn-outline-light me-2"
-              onclick="window.location.href='https://ranko1911.github.io/Rolling-and-Falling/pages/characters/display_groups.html'"
-            >
-              Characters Groups
-            </button>
-            <button
-              id="header-events"
-              class="btn btn-outline-light"
-              onclick="window.location.href='https://ranko1911.github.io/Rolling-and-Falling//pages/events/test_display_events.html'"
-            >
-              Events
-            </button>
-          </div>
+<head>
+  <title>Rolling And Falling</title>
+  <meta name="author" content="Ranko" />
+  <meta name="description" content="A DnD 5e Homebrew and Original campaign." />
+  <meta name="keywords" content="DnD5e, Homebrew, Original campaign." />
+  <link href="./images/icons/dado_blanco_fondo_negro.webp" rel="icon" type="image/x-icon" />
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://getbootstrap.com/docs/5.3/assets/css/docs.css" rel="stylesheet" />
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <link rel="stylesheet" href="css/header.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg bg-black" data-bs-theme="dark">
+    <div class="container-fluid p-0">
+      <a class="navbar-brand ps-4" href="https://ranko1911.github.io/Rolling-and-Falling/">
+        <img src="https://ranko1911.github.io/Rolling-and-Falling/images/icons/dado_blanco_fondo_negro.webp" width="100"
+          height="100" alt="Rolling and Falling Logo HTML" />
+      </a>
+      <button class="navbar-toggler me-4" type="button" data-bs-toggle="collapse" data-bs-target="#headerNavBar"
+        aria-controls="headerNavBar" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="headerNavBar">
+        <div class="navbar-nav">
+          <button id="header-home" class="btn btn-outline-light me-2"
+            onclick="window.location.href='https://ranko1911.github.io/Rolling-and-Falling/'">
+            Home
+          </button>
+          <button id="header-places" class="btn btn-outline-light me-2"
+            onclick="window.location.href='https://ranko1911.github.io/Rolling-and-Falling//pages/places/test_display_places.html'">
+            Places
+          </button>
+          <button id="header-npcs" class="btn btn-outline-light me-2"
+            onclick="window.location.href='https://ranko1911.github.io/Rolling-and-Falling/pages/characters/display_groups.html'">
+            Characters Groups
+          </button>
+          <button id="header-events" class="btn btn-outline-light"
+            onclick="window.location.href='https://ranko1911.github.io/Rolling-and-Falling//pages/lore/display_lore.html'">
+            Lore
+          </button>
         </div>
       </div>
-    </nav>
-  </body>
+    </div>
+  </nav>
+</body>
+
 </html>
