@@ -5,7 +5,7 @@ body {
   background-color: #222; /* Cambiar al color de fondo oscuro */
   color: #eee; /* Cambiar el color de texto a claro */
 }
-.container-object {
+.container {
   max-width: 800px;
   margin: 20px auto;
   padding: 20px;
