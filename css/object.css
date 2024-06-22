@@ -11,13 +11,15 @@ body {
   padding: 20px;
   background-color: #333; /* Cambiar el color de fondo del contenedor */
   border-radius: 5px;
-  box-shadow: 0 0 10px rgba(255,255,255,0.1); /* Cambiar el color de la sombra */
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.1); /* Cambiar el color de la sombra */
   display: flex;
 }
 .content {
   flex: 1; /* El contenido ocupa todo el espacio disponible */
 }
-h1, h2, h3 {
+h1,
+h2,
+h3 {
   color: #fff; /* Cambiar el color de los títulos */
 }
 p {

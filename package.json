@@ -1,0 +1,24 @@
+{
+  "name": "Rolling-and-Falling",
+  "version": "1.0.0",
+  "scripts": {
+    "format": "prettier --write \"**/*.{js,jsx,ts,tsx,css,scss,html,json,md}\"",
+    "precommit": "lint-staged"
+  },
+  "devDependencies": {
+    "husky": "^7.0.2",
+    "lint-staged": "^12.2.1",
+    "prettier": "^2.5.0"
+  },
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx,css,scss,html,json,md}": [
+      "prettier --write",
+      "git add"
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run precommit"
+    }
+  }
+}
