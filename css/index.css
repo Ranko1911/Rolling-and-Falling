@@ -1,0 +1,9 @@
+
+.btn-custom {
+  background-color: #ffd700; /* Color dorado */
+  border-color: #ffd700; /* Color de borde */
+}
+.btn-custom:hover {
+  background-color: #ffcc00; /* Color dorado claro al pasar el ratón */
+  border-color: #ffcc00; /* Color de borde al pasar el ratón */
+}
