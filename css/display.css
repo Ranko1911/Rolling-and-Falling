@@ -6,6 +6,9 @@ body {
   /* Dark background color */
   color: #eee;
   /* Light text color */
+  display: flex;
+  flex-direction: column;
+  height: 100%;
 }
 
 .object {
@@ -42,4 +45,20 @@ a {
 
 a:hover {
   text-decoration: underline;
+}
+
+footer {
+  margin-top: auto; /* Empuja el footer hacia abajo */
+  background-color: #000;
+  color: #fff;
+  padding: 20px 0;
+  text-align: center;
+}
+
+main {
+  flex: 1; /* Este div se expandirá para llenar el espacio entre header y footer */
+}
+
+html {
+  height: 100%;
 }
