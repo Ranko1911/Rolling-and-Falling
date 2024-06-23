@@ -8,6 +8,11 @@
 [Devdocs](https://devdocs.io/) -
 [Markdown](https://guides.github.com/features/mastering-markdown/)
 
+## Cosas a arreglar
+
+- [ ] Crear un archivo `README.md` con la información del proyecto.
+- [ ] Arreglar test_article.html y aplicarlo a todos los articulos.
+
 ## Elementos a incluir
 
 - [ ] Grupos de aventureros - Jugadores
