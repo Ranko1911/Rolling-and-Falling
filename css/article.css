@@ -20,6 +20,7 @@ body {
   padding: 20px;
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  margin-bottom: 30px; /* Añadido para separación inferior del contenido */
 }
 .content h1 {
   color: #ffcc00;
@@ -35,4 +36,23 @@ body {
   max-width: 100%;
   border: 2px solid #ffcc00;
   border-radius: 10px;
+}
+/* Estilos adicionales para los bloques de enlaces */
+.link-block {
+  padding: 20px;
+  background-color: #292929;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  margin-bottom: 30px;
+}
+.link-block a {
+  color: #ffffff; /* Color de texto para los enlaces */
+  display: block;
+  text-align: center;
+  padding: 10px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+.link-block a:hover {
+  background-color: #3d3d3d; /* Color de fondo al pasar el mouse */
 }
