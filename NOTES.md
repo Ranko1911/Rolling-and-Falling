@@ -12,6 +12,7 @@
 
 - [ ] Crear un archivo `README.md` con la información del proyecto.
 - [ ] Arreglar test_article.html y aplicarlo a todos los articulos.
+- [ ] Error 404 personalizado.
 
 ## Elementos a incluir
 
