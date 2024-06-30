@@ -34,9 +34,12 @@ body {
   display: block;
   margin: 20px auto;
   max-width: 100%;
+  width: 50%; /* Ajusta el tamaño según tus necesidades */
+  height: auto;
   border: 2px solid #ffcc00;
   border-radius: 10px;
 }
+
 /* Estilos adicionales para los bloques de enlaces */
 .link-block {
   padding: 20px;
