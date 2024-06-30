@@ -56,15 +56,7 @@ body {
 .link-block a:hover {
   background-color: #3d3d3d; /* Color de fondo al pasar el mouse */
 }
-footer {
-  background-color: #333333;
-  color: #ffffff;
-  text-align: center;
-  padding: 10px;
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-}
+
 main.container {
   padding-top: 20px;
   padding-bottom: 60px; /* Para asegurar que el pie de página no se superponga */
