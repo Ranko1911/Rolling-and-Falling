@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Error 404 - Página no encontrada</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f0f0f0;
+        text-align: center;
+        padding: 50px;
+      }
+      .container {
+        max-width: 600px;
+        margin: 0 auto;
+        background-color: #fff;
+        padding: 30px;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
+      h1 {
+        font-size: 2.5rem;
+        color: #ff6347; /* Color rojo */
+        margin-bottom: 20px;
+      }
+      p {
+        font-size: 1.2rem;
+        color: #333;
+        margin-bottom: 20px;
+      }
+      a {
+        text-decoration: none;
+        background-color: #007bff; /* Color azul */
+        color: #fff;
+        padding: 10px 20px;
+        border-radius: 5px;
+        transition: background-color 0.3s;
+      }
+      a:hover {
+        background-color: #0056b3; /* Color azul más oscuro al hacer hover */
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Error 404 - Página no encontrada</h1>
+      <p>Lo sentimos, la página que estás buscando no ha sido encontrada.</p>
+      <p>Mensaje aleatorio: <span id="randomMessage"></span></p>
+      <p><a href="/">Volver a la página de inicio</a></p>
+    </div>
+
+    <script>
+      // Array de mensajes aleatorios
+      var messages = [
+        'Oops, algo salió mal.',
+        'Parece que te perdiste.',
+        'La página que buscas no está aquí.',
+        '¡Vaya! No encontramos lo que buscas.',
+        'Error 404: Página no encontrada.',
+        '¿Te has perdido? Vuelve a casa.',
+        'Nada por aquí, ¿por qué no intentas ir a la página de inicio?',
+      ];
+
+      // Función para mostrar un mensaje aleatorio
+      function showRandomMessage() {
+        var randomIndex = Math.floor(Math.random() * messages.length);
+        var message = messages[randomIndex];
+        document.getElementById('randomMessage').textContent = message;
+      }
+
+      // Mostrar un mensaje aleatorio al cargar la página
+      showRandomMessage();
+    </script>
+  </body>
+</html>
