@@ -29,7 +29,7 @@ p {
   text-align: center;
   margin-left: 20px;
 }
-.object-image {
-  max-width: 100%;
+.item-image {
+  width: 150px; /* Ajustar el tamaño de la imagen */
   height: auto;
 }
