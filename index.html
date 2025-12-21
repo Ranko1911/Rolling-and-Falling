@@ -40,30 +40,35 @@
       <!-- Main Content Column (9 cols) -->
       <div class="col-md-9">
         <!-- Bienvenida a los usuarios -->
-        <div class="p-5 bg-black text-white text-center rounded mb-4">
-          <h1>Rolling And Falling</h1>
-          <p>Welcome to my own personal Wiki! BETA</p>
+        <div class="p-5 bg-black text-white text-center rounded mb-5 shadow-lg position-relative overflow-hidden">
+          <div class="position-relative z-1">
+            <h1 class="display-4 fw-bold text-warning">Rolling And Falling</h1>
+            <p class="lead mb-4">Welcome to my personal RPG Wiki</p>
+            <a href="countdown.html" class="btn btn-warning btn-lg px-5 py-3 fw-bold shadow">
+              <span class="me-2">⏱️</span> Next Session Countdown
+            </a>
+          </div>
         </div>
 
         <!-- Carrusel Inicial -->
-        <div class="p-3 m-0 border-0 bd-example m-0 border-0 mb-5">
-          <div id="carouselExampleIndicators" class="carousel slide">
+        <div class="card mb-5 border-0 shadow-sm overflow-hidden">
+          <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
             <div class="carousel-indicators">
               <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0"
-                aria-label="Slide 1" class=""></button>
+                aria-label="Slide 1" class="active" aria-current="true"></button>
               <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
-                aria-label="Slide 2" class=""></button>
+                aria-label="Slide 2"></button>
               <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
-                aria-label="Slide 3" class="active" aria-current="true"></button>
+                aria-label="Slide 3"></button>
             </div>
             <div class="carousel-inner">
-              <div class="carousel-item">
+              <div class="carousel-item active">
                 <svg class="bd-placeholder-img bd-placeholder-img-lg d-block w-100" width="800" height="400"
                   xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: First slide"
                   preserveAspectRatio="xMidYMid slice" focusable="false">
                   <title>Terranova</title>
-                  <rect width="100%" height="100%" fill="#777"></rect>
-                  <text x="50%" y="50%" fill="#555" dy=".3em">Terranova</text>
+                  <rect width="100%" height="100%" fill="#333"></rect>
+                  <text x="50%" y="50%" fill="#555" dy=".3em" font-size="2em">Terranova Landscapes</text>
                 </svg>
               </div>
               <div class="carousel-item">
@@ -71,17 +76,17 @@
                   xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Second slide"
                   preserveAspectRatio="xMidYMid slice" focusable="false">
                   <title>Odin's Hand</title>
-                  <rect width="100%" height="100%" fill="#666"></rect>
-                  <text x="50%" y="50%" fill="#444" dy=".3em">Odin's Hand</text>
+                  <rect width="100%" height="100%" fill="#222"></rect>
+                  <text x="50%" y="50%" fill="#444" dy=".3em" font-size="2em">Odin's Hand Faction</text>
                 </svg>
               </div>
-              <div class="carousel-item active">
+              <div class="carousel-item">
                 <svg class="bd-placeholder-img bd-placeholder-img-lg d-block w-100" width="800" height="400"
                   xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Third slide"
                   preserveAspectRatio="xMidYMid slice" focusable="false">
-                  <title>A little helper</title>
-                  <rect width="100%" height="100%" fill="#555"></rect>
-                  <text x="50%" y="50%" fill="#333" dy=".3em">A little helper</text>
+                  <title>Adventure Awaits</title>
+                  <rect width="100%" height="100%" fill="#111"></rect>
+                  <text x="50%" y="50%" fill="#333" dy=".3em" font-size="2em">Adventure Awaits</text>
                 </svg>
               </div>
             </div>
@@ -98,79 +103,121 @@
           </div>
         </div>
 
-        <!-- Texto de Introduccion -->
-        <div class="wiki-content mb-4">
-          <div class="row">
-            <div class="col-sm-6">
-              <h2>What is Rolling and Falling?</h2>
-              <p>
-                Rolling and Falling is a personal project that I have been working
-                on for a while now. It is a collection of lore, homebrew and
-                original content for a campaign that I am currently running. I have
-                decided to share it with the world in the hopes that it may inspire
-                others to create their own campaigns or to use some of the content
-                that I have created in their own games.
+        <!-- Introduction Section -->
+        <div class="wiki-content mb-5">
+          <div class="row align-items-center">
+            <div class="col-lg-6 mb-4 mb-lg-0">
+              <h2 class="text-warning mb-3">What is 'Rolling and Falling'?</h2>
+              <p class="lead text-light">
+                A personal collection of lore, homebrew, and original content for the
+                campaign currently in progress.
+              </p>
+              <p class="text-secondary">
+                This project serves as a living document of our adventures, chronicling the heroes,
+                villains, and the ever-changing world of Terranova.
               </p>
             </div>
-            <div class="col-sm-6">
-              <h2>What can you find here?</h2>
-              <p>
-                Here you will find information on items, places, NPCs and events
-                that are part of the campaign that I am running. You will also find
-                some homebrew content that I have created for the campaign. I hope
-                that you find the content here interesting and that it inspires you
-                to create your own campaigns.
-              </p>
+            <div class="col-lg-6">
+              <div class="p-4 bg-dark rounded border border-secondary text-center">
+                <p class="mb-0 text-muted fst-italic">
+                  "In the heart of chaos, we find our story."
+                </p>
+              </div>
             </div>
           </div>
         </div>
 
-        <!-- Shortcuts Cards -->
-        <div class="row">
-          <!-- Columna de Horarios de Partidas -->
-          <div class="col-md-4 mb-4">
+        <h3 class="border-bottom border-secondary pb-2 mb-4 text-white">Campaign Resources</h3>
+
+        <!-- Navigation Grid -->
+        <div class="row g-4 mb-5">
+
+          <!-- Lore Column (Replaces General Info) -->
+          <div class="col-md-4">
             <div class="card h-100">
               <div class="card-body">
-                <h5 class="card-title">Game schedules</h5>
+                <h5 class="card-title">📜 Lore</h5>
                 <p class="card-text">
-                  Here you can find the schedules for the different games that are
-                  being run in Terranova.
+                  Deep dive into the history, myths, and legends of Terranova.
                 </p>
               </div>
-              <div class="card-footer">
-                <a href="pages/schedules.html" class="btn btn-custom">See schedules</a>
+              <div class="card-footer bg-transparent border-top-0">
+                <a href="pages/lore/display_lore.html" class="btn btn-custom w-100">Read Lore</a>
               </div>
             </div>
           </div>
 
-          <!-- Columna de Grupos de Aventureros -->
-          <div class="col-md-4 mb-4">
+          <!-- Events Column -->
+          <div class="col-md-4">
             <div class="card h-100">
               <div class="card-body">
-                <h5 class="card-title">Groups of Adventures</h5>
+                <h5 class="card-title">📅 Events</h5>
                 <p class="card-text">
-                  Get to know the different groups of adventurers that are
-                  currently active in Terranova.
+                  A timeline of significant events and world-shaping moments.
                 </p>
               </div>
-              <div class="card-footer">
-                <a href="pages/characters/display_groups.html" class="btn btn-custom">See Groups</a>
+              <div class="card-footer bg-transparent border-top-0">
+                <a href="pages/lore/events/test_display_events.html" class="btn btn-custom w-100">Timeline</a>
               </div>
             </div>
           </div>
 
-          <!-- Columna de Información sobre Terranova -->
-          <div class="col-md-4 mb-4">
+          <!-- Items Column -->
+          <div class="col-md-4">
             <div class="card h-100">
               <div class="card-body">
-                <h5 class="card-title">General Information about Terranova</h5>
+                <h5 class="card-title">💎 Items of Interest</h5>
                 <p class="card-text">
-                  Discover the world of Terranova and learn about its history,
-                  geography and inhabitants.
+                  Discover powerful artifacts, magical objects, and unique gear.
                 </p>
               </div>
-              <div class="card-footer">
-                <a href="pages/lore/display_lore.html" class="btn btn-custom">More Info</a>
+              <div class="card-footer bg-transparent border-top-0">
+                <a href="pages/lore/items/test_display_item.html" class="btn btn-custom w-100">View Items</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Schedules -->
+          <div class="col-md-4">
+            <div class="card h-100">
+              <div class="card-body">
+                <h5 class="card-title">🗓️ Schedules</h5>
+                <p class="card-text">
+                  Track upcoming sessions and game times.
+                </p>
+              </div>
+              <div class="card-footer bg-transparent border-top-0">
+                <a href="pages/schedules.html" class="btn btn-outline-light w-100">Check Times</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Groups -->
+          <div class="col-md-4">
+            <div class="card h-100">
+              <div class="card-body">
+                <h5 class="card-title">🛡️ Adventurers</h5>
+                <p class="card-text">
+                  Meet the diverse groups of heroes exploring the world.
+                </p>
+              </div>
+              <div class="card-footer bg-transparent border-top-0">
+                <a href="pages/characters/display_groups.html" class="btn btn-outline-light w-100">Meet Groups</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Places -->
+          <div class="col-md-4">
+            <div class="card h-100">
+              <div class="card-body">
+                <h5 class="card-title">🗺️ Places</h5>
+                <p class="card-text">
+                  Navigate the regions, cities, and dungeons of the realm.
+                </p>
+              </div>
+              <div class="card-footer bg-transparent border-top-0">
+                <a href="pages/places/display_places.html" class="btn btn-outline-light w-100">Explore Map</a>
               </div>
             </div>
           </div>

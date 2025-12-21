@@ -1,10 +1,37 @@
 .btn-custom {
-  background-color: #ffd700; /* Color dorado */
-  border-color: #ffd700; /* Color del borde */
-  color: #ffffff; /* Texto en color blanco */
+  background-color: #ffd700;
+  border-color: #ffd700;
+  color: #000;
+  font-weight: bold;
+  transition: all 0.3s ease;
 }
 
 .btn-custom:hover {
-  background-color: #ffcc00; /* Color dorado claro al pasar el ratón */
-  border-color: #ffcc00; /* Color de borde al pasar el ratón */
+  background-color: #ffcc00;
+  border-color: #ffcc00;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 6px rgba(255, 215, 0, 0.3);
+}
+
+.card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 1px solid #444;
+  background-color: #212529 !important;
+  /* Ensure dark background */
+  color: #fff;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+  border-color: #ffd700;
+}
+
+.card-title {
+  color: #ffd700;
+  font-weight: bold;
+}
+
+.card-text {
+  color: #ced4da;
 }

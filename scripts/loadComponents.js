@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
         fetch(rootPath + file)
             .then((response) => {
-                if (!response.ok) throw new Error(`Failed to load ${file}`);
+                if (!response.ok) throw new Error(`Failed to load ${file}: ${response.statusText}`);
                 return response.text();
             })
             .then((data) => {
@@ -45,11 +45,18 @@ document.addEventListener("DOMContentLoaded", function () {
 
                 // Let's replace href="/" with href="{rootPath}" and href="/pages" with href="{rootPath}pages"
                 // to make it adaptable.
+                // Fix relative paths for links starting with /
                 processedData = processedData.replace(/href="\//g, `href="${rootPath}`);
 
                 element.innerHTML = processedData;
             })
-            .catch((error) => console.error(error));
+            .catch((error) => {
+                console.error(error);
+                element.innerHTML = `<div class="alert alert-danger">
+                    <small>Error loading ${file}.<br>
+                    If viewing locally, use a local server (e.g. VS Code Live Server) or check console.</small>
+                </div>`;
+            });
     }
 
     loadComponent("header1", "header.html");
