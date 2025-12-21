@@ -15,120 +15,137 @@
   <link href="https://getbootstrap.com/docs/5.3/assets/css/docs.css" rel="stylesheet" />
   <script src="https://code.jquery.com/jquery-3.7.1.min.js"
     integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
-  <script src="https://ranko1911.github.io/Rolling-and-Falling//scripts/loadHeaderFooter.js"></script>
+  <script src="../../scripts/loadComponents.js"></script>
 
-  <link rel="stylesheet" href="https://ranko1911.github.io/Rolling-and-Falling//css/display.css" />
+  <link rel="stylesheet" href="../../css/index.css" />
+  <link rel="stylesheet" href="../../css/wiki.css" />
+  <link rel="stylesheet" href="../../css/display.css" />
 </head>
 
-<body>
+<body data-root="../../">
   <div id="header1"></div>
-  <main class="container mt-5">
-    <div class="container">
-      <div class="object">
-        <div class="object-description">
-          <h2 class="object-name">
-            <a href="https://ranko1911.github.io/Rolling-and-Falling//pages/characters/groups/AnchietaHouse.html">Anchieta's
-              House - Members.</a>
-          </h2>
-          <p>
-            <a>These mfs are the origin of my perpetual PAIN, but I still love
-              them ( YES, I'm stupid)</a>
-          </p>
-        </div>
-        <a href="https://ranko1911.github.io/Rolling-and-Falling//pages/characters/groups/AnchietaHouse.html"><img
-            src="https://ranko1911.github.io/Rolling-and-Falling/images/icons/dado_blanco_fondo_negro.webp"
-            alt="object A Image" class="object-img" /></a>
-      </div>
-      <div class="object">
-        <div class="object-description">
-          <h2 class="object-name">
-            <a href="https://ranko1911.github.io/Rolling-and-Falling//pages/characters/groups/Staff.html">Anchieta's
-              House Staff</a>
-          </h2>
-          <p>
-            <a>The Memorable Staff of the Anchieta's House.</a>
-          </p>
-        </div>
-        <a href="https://ranko1911.github.io/Rolling-and-Falling//pages/characters/groups/Staff.html"><img
-            src="https://ranko1911.github.io/Rolling-and-Falling/images/icons/dado_blanco_fondo_negro.webp"
-            alt="object A Image" class="object-img" /></a>
-      </div>
-      <div class="object">
-        <div class="object-description">
-          <h2 class="object-name">
-            <a href="https://ranko1911.github.io/Rolling-and-Falling//pages/characters/groups/ArcaneAcademy.html">Everantha
-              - Arcane Academy</a>
-          </h2>
-          <p>
-            <a>Main members of the Arcane Academy.</a>
-          </p>
-        </div>
-        <a href="https://ranko1911.github.io/Rolling-and-Falling//pages/characters/groups/ArcaneAcademy.html"><img
-            src="https://ranko1911.github.io/Rolling-and-Falling/images/icons/dado_blanco_fondo_negro.webp"
-            alt="object A Image" class="object-img" /></a>
-      </div>
-      <div class="object">
-        <div class="object-description">
-          <h2 class="object-name">
-            <a href="https://ranko1911.github.io/Rolling-and-Falling//pages/characters/groups/Guard.html">Everantha
-              - Guard</a>
-          </h2>
-          <p>
-            <a>The Top of the Guard in Everantha.</a>
-          </p>
-        </div>
-        <a href="https://ranko1911.github.io/Rolling-and-Falling//pages/characters/groups/Guard.html"><img
-            src="https://ranko1911.github.io/Rolling-and-Falling/images/icons/dado_blanco_fondo_negro.webp"
-            alt="object A Image" class="object-img" /></a>
-      </div>
-      <div class="object">
-        <div class="object-description">
-          <h2 class="object-name">
-            <a href="https://ranko1911.github.io/Rolling-and-Falling//pages/characters/groups/Reinhart.html">Everantha
-              - Reinhart House</a>
-          </h2>
-          <p>
-            <a>The Reinhart House also can display his members.</a>
-          </p>
-        </div>
-        <a href="https://ranko1911.github.io/Rolling-and-Falling//pages/characters/groups/Reinhart.html"><img
-            src="https://ranko1911.github.io/Rolling-and-Falling/images/icons/dado_blanco_fondo_negro.webp"
-            alt="object A Image" class="object-img" /></a>
+
+  <div class="container-fluid mt-4">
+    <div class="row">
+      <!-- Sidebar Column -->
+      <div class="col-md-3 mb-4">
+        <div id="sidebar-container"></div>
       </div>
 
-      <div class="object">
-        <div class="object-description">
-          <h2 class="object-name">
-            <a href="https://ranko1911.github.io/Rolling-and-Falling//pages/characters/groups/OdinHand.html">
-              Mano de Odín</a>
-          </h2>
-          <p>
-            <a>The BBEGs of the Campain, this includes the Storm Guard.</a>
-          </p>
+      <!-- Main Content Column -->
+      <div class="col-md-9">
+
+        <!-- Breadcrumbs -->
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="../../index.html">Home</a></li>
+            <li class="breadcrumb-item active">Characters</li>
+            <li class="breadcrumb-item active" aria-current="page">Groups</li>
+          </ol>
+        </nav>
+
+        <!-- Content -->
+        <div class="wiki-content">
+          <div class="p-3 bg-black text-white text-center rounded mb-4">
+            <h1>Groups of Adventures</h1>
+            <p>Groups currently active in Terranova</p>
+          </div>
+
+          <div class="container">
+            <div class="object">
+              <div class="object-description">
+                <h2 class="object-name">
+                  <a href="../../pages/characters/groups/AnchietaHouse.html">Anchieta's House - Members.</a>
+                </h2>
+                <p>
+                  <a>These mfs are the origin of my perpetual PAIN, but I still love them ( YES, I'm stupid)</a>
+                </p>
+              </div>
+              <a href="../../pages/characters/groups/AnchietaHouse.html"><img
+                  src="../../images/icons/dado_blanco_fondo_negro.webp" alt="object A Image" class="object-img" /></a>
+            </div>
+            <div class="object">
+              <div class="object-description">
+                <h2 class="object-name">
+                  <a href="../../pages/characters/groups/Staff.html">Anchieta's House Staff</a>
+                </h2>
+                <p>
+                  <a>The Memorable Staff of the Anchieta's House.</a>
+                </p>
+              </div>
+              <a href="../../pages/characters/groups/Staff.html"><img
+                  src="../../images/icons/dado_blanco_fondo_negro.webp" alt="object A Image" class="object-img" /></a>
+            </div>
+            <div class="object">
+              <div class="object-description">
+                <h2 class="object-name">
+                  <a href="../../pages/characters/groups/ArcaneAcademy.html">Everantha - Arcane Academy</a>
+                </h2>
+                <p>
+                  <a>Main members of the Arcane Academy.</a>
+                </p>
+              </div>
+              <a href="../../pages/characters/groups/ArcaneAcademy.html"><img
+                  src="../../images/icons/dado_blanco_fondo_negro.webp" alt="object A Image" class="object-img" /></a>
+            </div>
+            <div class="object">
+              <div class="object-description">
+                <h2 class="object-name">
+                  <a href="../../pages/characters/groups/Guard.html">Everantha - Guard</a>
+                </h2>
+                <p>
+                  <a>The Top of the Guard in Everantha.</a>
+                </p>
+              </div>
+              <a href="../../pages/characters/groups/Guard.html"><img
+                  src="../../images/icons/dado_blanco_fondo_negro.webp" alt="object A Image" class="object-img" /></a>
+            </div>
+            <div class="object">
+              <div class="object-description">
+                <h2 class="object-name">
+                  <a href="../../pages/characters/groups/Reinhart.html">Everantha - Reinhart House</a>
+                </h2>
+                <p>
+                  <a>The Reinhart House also can display his members.</a>
+                </p>
+              </div>
+              <a href="../../pages/characters/groups/Reinhart.html"><img
+                  src="../../images/icons/dado_blanco_fondo_negro.webp" alt="object A Image" class="object-img" /></a>
+            </div>
+
+            <div class="object">
+              <div class="object-description">
+                <h2 class="object-name">
+                  <a href="../../pages/characters/groups/OdinHand.html">Mano de Odín</a>
+                </h2>
+                <p>
+                  <a>The BBEGs of the Campain, this includes the Storm Guard.</a>
+                </p>
+              </div>
+              <a href="../../pages/characters/groups/OdinHand.html"><img
+                  src="../../images/icons/dado_blanco_fondo_negro.webp" alt="object A Image" class="object-img" /></a>
+            </div>
+            <div class="object">
+              <div class="object-description">
+                <h2 class="object-name">
+                  <a href="../../pages/characters/groups/OdinHand.html">Sun Seed</a>
+                </h2>
+                <p>
+                  <a>The home of the base for the revelion, aka Katie and Ranko place to live.</a>
+                </p>
+              </div>
+              <a href="../../pages/characters/groups/OdinHand.html"><img
+                  src="../../images/icons/dado_blanco_fondo_negro.webp" alt="object A Image" class="object-img" /></a>
+            </div>
+          </div>
         </div>
-        <a href="https://ranko1911.github.io/Rolling-and-Falling//pages/characters/groups/OdinHand.html"><img
-            src="https://ranko1911.github.io/Rolling-and-Falling/images/icons/dado_blanco_fondo_negro.webp"
-            alt="object A Image" class="object-img" /></a>
-      </div>
-      <div class="object">
-        <div class="object-description">
-          <h2 class="object-name">
-            <a href="https://ranko1911.github.io/Rolling-and-Falling//pages/characters/groups/OdinHand.html">
-              Sun Seed</a>
-          </h2>
-          <p>
-            <a>The home of the base for the revelion, aka Katie and Ranko place to live.</a>
-          </p>
-        </div>
-        <a href="https://ranko1911.github.io/Rolling-and-Falling//pages/characters/groups/OdinHand.html"><img
-            src="https://ranko1911.github.io/Rolling-and-Falling/images/icons/dado_blanco_fondo_negro.webp"
-            alt="object A Image" class="object-img" /></a>
       </div>
     </div>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
-  </main>
+  </div>
+
   <div id="footer1"></div>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
 </body>
 
 </html>

@@ -1,0 +1,50 @@
+/* Wiki Styles */
+
+/* Sidebar */
+.wiki-sidebar {
+    position: sticky;
+    top: 20px;
+}
+
+.wiki-sidebar .list-group-item {
+    border-color: #444;
+}
+
+.wiki-sidebar a:hover {
+    color: #ffd700 !important;
+    /* Gold hover */
+}
+
+/* Content Area */
+.wiki-content {
+    background-color: #212529;
+    /* Dark bg matching bootstrap table-dark approx */
+    padding: 20px;
+    border-radius: 5px;
+    border: 1px solid #444;
+}
+
+/* Breadcrumbs */
+.breadcrumb-item a {
+    color: #ffd700;
+    text-decoration: none;
+}
+
+.breadcrumb-item.active {
+    color: #adb5bd;
+}
+
+/* Typography tweaks */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: #f8f9fa;
+}
+
+p,
+li {
+    color: #e9ecef;
+}
