@@ -14,6 +14,8 @@ document.addEventListener("DOMContentLoaded", function () {
         <button class="navbar-toggler me-4" type="button" data-bs-toggle="collapse" data-bs-target="#headerNavBar" aria-controls="headerNavBar" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
+        <p class="text-white" style="font-size: 24px;" align="center">Everything is a placeholder at the moment
+        </p>
       </div>
     </nav>`;
 

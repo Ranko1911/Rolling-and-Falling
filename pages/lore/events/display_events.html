@@ -18,6 +18,7 @@
     <link rel="stylesheet" href="../../../css/display.css" />
     <link rel="stylesheet" href="../../../css/index.css" />
     <link rel="stylesheet" href="../../../css/wiki.css" />
+    <link rel="stylesheet" href="../../../css/timeline.css" />
 </head>
 
 <body data-root="../../../">
@@ -49,46 +50,71 @@
                         <p>History and major occurrences</p>
                     </div>
 
-                    <div class="container">
+                    <!-- Timeline Structure -->
+                    <div class="timeline">
 
-                        <!-- Event Card 1 -->
-                        <div class="object">
-                            <div class="object-description">
-                                <h2 class="object-name">
-                                    <a href="#">The Great Cataclysm</a>
-                                </h2>
+                        <!-- Event 1 (Left) -->
+                        <div class="timeline-container left">
+                            <div class="timeline-content">
+                                <span class="timeline-date">Ancient Era</span>
+                                <h2 class="timeline-title">The Great Cataclysm</h2>
                                 <div class="mb-2">
-                                    <span class="badge bg-secondary">Ancient Era</span>
                                     <span class="badge bg-danger">Disaster</span>
                                 </div>
-                                <p>
-                                    <a href="#">The event that reshaped the world and separated the planes.</a>
+                                <p class="timeline-body">
+                                    The event that reshaped the world and separated the planes. Civilizations fell, and
+                                    magic was wild for a century.
                                 </p>
+                                <a href="#" class="btn btn-sm btn-outline-warning">Read More</a>
                             </div>
-                            <a href="#">
-                                <img src="../../../images/icons/dado_blanco_fondo_negro.webp" alt="Event Image"
-                                    class="object-img" />
-                            </a>
                         </div>
 
-                        <!-- Event Card 2 -->
-                        <div class="object">
-                            <div class="object-description">
-                                <h2 class="object-name">
-                                    <a href="#">Founding of Everantha</a>
-                                </h2>
+                        <!-- Event 2 (Right) -->
+                        <div class="timeline-container right">
+                            <div class="timeline-content">
+                                <span class="timeline-date">Golden Age (Year 0)</span>
+                                <h2 class="timeline-title">Founding of Everantha</h2>
                                 <div class="mb-2">
-                                    <span class="badge bg-secondary">Golden Age</span>
                                     <span class="badge bg-primary">Political</span>
                                 </div>
-                                <p>
-                                    <a href="#">The establishment of the first great human kingdom.</a>
+                                <p class="timeline-body">
+                                    The establishment of the first great human kingdom under King Alaric I. Example of
+                                    peace and prosperity.
                                 </p>
+                                <a href="#" class="btn btn-sm btn-outline-warning">Read More</a>
                             </div>
-                            <a href="#">
-                                <img src="../../../images/icons/dado_blanco_fondo_negro.webp" alt="Event Image"
-                                    class="object-img" />
-                            </a>
+                        </div>
+
+                        <!-- Event 3 (Left) -->
+                        <div class="timeline-container left">
+                            <div class="timeline-content">
+                                <span class="timeline-date">Year 350</span>
+                                <h2 class="timeline-title">The War of Ash</h2>
+                                <div class="mb-2">
+                                    <span class="badge bg-danger">War</span>
+                                    <span class="badge bg-dark border border-secondary">Necromancy</span>
+                                </div>
+                                <p class="timeline-body">
+                                    A great conflict against the risen dead. The Order of the Sun was founded during
+                                    this time.
+                                </p>
+                                <a href="#" class="btn btn-sm btn-outline-warning">Read More</a>
+                            </div>
+                        </div>
+
+                        <!-- Event 4 (Right) -->
+                        <div class="timeline-container right">
+                            <div class="timeline-content">
+                                <span class="timeline-date">Current Era (Year 892)</span>
+                                <h2 class="timeline-title">The Awakening</h2>
+                                <div class="mb-2">
+                                    <span class="badge bg-info text-dark">Mystery</span>
+                                </div>
+                                <p class="timeline-body">
+                                    Strange magical anomalies have been reported across the realm. The campaign begins.
+                                </p>
+                                <a href="#" class="btn btn-sm btn-outline-warning">Read More</a>
+                            </div>
                         </div>
 
                     </div>
