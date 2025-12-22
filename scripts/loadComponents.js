@@ -48,7 +48,7 @@ document.addEventListener("DOMContentLoaded", function () {
         </li>
         <li class="list-group-item bg-black">
             <ul class="list-unstyled ps-3 mb-0">
-                <li><a href="${rootPath}pages/lore/items/test_display_item.html" class="text-light text-decoration-none small">All Objects</a></li>
+                <li><a href="${rootPath}pages/lore/items/display_items.html" class="text-light text-decoration-none small">All Objects</a></li>
             </ul>
         </li>
 
@@ -68,9 +68,9 @@ document.addEventListener("DOMContentLoaded", function () {
         </li>
         <li class="list-group-item bg-black">
             <ul class="list-unstyled ps-3 mb-0">
-                <li><a href="${rootPath}pages/lore/display_lore.html" class="text-light text-decoration-none small">General Info</a></li>
-                <li><a href="#" class="text-secondary text-decoration-none small">History & Chronology (WIP)</a></li>
-                <li><a href="${rootPath}pages/lore/events/test_display_events.html" class="text-light text-decoration-none small">Events</a></li>
+                <li><a href="${rootPath}pages/lore/display_lore.html" class="text-light text-decoration-none small">Lore Hub</a></li>
+                <li><a href="${rootPath}pages/lore/terranova.html" class="text-secondary text-decoration-none small">Terranova</a></li>
+                <li><a href="${rootPath}pages/lore/events/display_events.html" class="text-light text-decoration-none small">Events</a></li>
             </ul>
         </li>
 
