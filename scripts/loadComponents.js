@@ -7,14 +7,14 @@ document.addEventListener("DOMContentLoaded", function () {
 
   const HEADER_HTML = `
     <nav class="navbar navbar-expand-lg bg-black" data-bs-theme="dark">
-      <div class="container-fluid p-0">
+      <div class="container-fluid p-0 position-relative">
         <a class="navbar-brand ps-4" href="https://ranko1911.github.io/Rolling-and-Falling/">
           <img src="https://ranko1911.github.io/Rolling-and-Falling/images/icons/dado_blanco_fondo_negro.webp" width="100" height="100" alt="Rolling and Falling Logo HTML" />
         </a>
         <button class="navbar-toggler me-4" type="button" data-bs-toggle="collapse" data-bs-target="#headerNavBar" aria-controls="headerNavBar" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
-        <p class="text-white" style="font-size: 24px;" align="center">Everything is a placeholder at the moment
+        <p class="text-white position-absolute start-50 translate-middle-x m-0" style="font-size: 24px;">Everything is a placeholder at the moment
         </p>
       </div>
     </nav>`;
