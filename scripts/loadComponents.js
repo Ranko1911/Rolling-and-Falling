@@ -1,65 +1,118 @@
 document.addEventListener("DOMContentLoaded", function () {
-    // Determine root path from body attribute or default to relative root
-    const body = document.body;
-    const rootPath = body.getAttribute("data-root") || "./";
+  // Determine root path from body attribute or default to relative root
+  const body = document.body;
+  const rootPath = body.getAttribute("data-root") || "./";
 
-    function loadComponent(id, file) {
-        const element = document.getElementById(id);
-        if (!element) return; // Skip if element doesn't exist on this page
+  // HARDCODED COMPONENTS FOR OFFLINE COMPATIBILITY (Avoids CORS on file://)
 
-        fetch(rootPath + file)
-            .then((response) => {
-                if (!response.ok) throw new Error(`Failed to load ${file}: ${response.statusText}`);
-                return response.text();
-            })
-            .then((data) => {
-                // Replace absolute paths in the loaded HTML to match the current depth
-                // This is a simple fix for standard links starting with / or ./
-                // For a more robust solution, we'd parse HTML, but simple string replace helps for now
-                // specifically for common links like index.html or images
+  const HEADER_HTML = `
+    <nav class="navbar navbar-expand-lg bg-black" data-bs-theme="dark">
+      <div class="container-fluid p-0">
+        <a class="navbar-brand ps-4" href="https://ranko1911.github.io/Rolling-and-Falling/">
+          <img src="https://ranko1911.github.io/Rolling-and-Falling/images/icons/dado_blanco_fondo_negro.webp" width="100" height="100" alt="Rolling and Falling Logo HTML" />
+        </a>
+        <button class="navbar-toggler me-4" type="button" data-bs-toggle="collapse" data-bs-target="#headerNavBar" aria-controls="headerNavBar" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      </div>
+    </nav>`;
 
-                let processedData = data;
+  const SIDEBAR_HTML = `
+<div class="card wiki-sidebar">
+    <div class="card-header bg-warning text-black">
+        <strong>Navigation</strong>
+    </div>
+    <ul class="list-group list-group-flush">
+        <li class="list-group-item bg-dark text-white">
+            <a href="${rootPath}index.html" class="text-white text-decoration-none">Home</a>
+        </li>
+        <!-- Next Session -->
+        <li class="list-group-item bg-black">
+            <a href="${rootPath}countdown.html" class="text-warning text-decoration-none small"><strong>Next Session (Timer)</strong></a>
+        </li>
 
-                // Adjust links in the sidebar/header if they are meant to be relative to root
-                // NOTE: This is tricky with simple string replace. 
-                // Better strategy: Write sidebar.html with root-relative paths e.g. "pages/..." 
-                // and prepend rootPath here? 
-                // OR: Just rely on sidebar.html having links like "/pages/..." and assuming site root.
-                // BUT: User wants local file support. 
+        <!-- Personajes -->
+        <li class="list-group-item bg-dark text-white">
+            <strong>Characters</strong>
+        </li>
+        <li class="list-group-item bg-black">
+            <ul class="list-unstyled ps-3 mb-0">
+                <li><a href="${rootPath}pages/characters/display_groups.html" class="text-light text-decoration-none small">Groups</a></li>
+                <li><a href="#" class="text-secondary text-decoration-none small">NPCs (WIP)</a></li>
+            </ul>
+        </li>
 
-                // Strategy: We will expect sidebar.html to have links like "pages/..." (no leading /)
-                // AND we will prepend rootPath to key hrefs if needed, or rely on base tag?
-                // Base tag is dangerous for dynamic content.
+        <!-- Objetos -->
+        <li class="list-group-item bg-dark text-white">
+            <strong>Objects</strong>
+        </li>
+        <li class="list-group-item bg-black">
+            <ul class="list-unstyled ps-3 mb-0">
+                <li><a href="${rootPath}pages/lore/items/test_display_item.html" class="text-light text-decoration-none small">All Objects</a></li>
+            </ul>
+        </li>
 
-                // SIMPLIFIED APPROACH:
-                // Assume sidebar.html has links strictly relative to the Repo Root.
-                // We will perform a replacement on specific known paths if necessary, 
-                // OR simply trust the browser resolution if we use correct relative paths in sidebar.
+        <!-- Lugares -->
+        <li class="list-group-item bg-dark text-white">
+            <strong>Places</strong>
+        </li>
+        <li class="list-group-item bg-black">
+            <ul class="list-unstyled ps-3 mb-0">
+                <li><a href="${rootPath}pages/places/display_places.html" class="text-light text-decoration-none small">All Places</a></li>
+            </ul>
+        </li>
 
-                // For now, just inject the content. 
-                // As per plan, we will try to make sidebar.html have logic or just use rootPath prefixing 
-                // by simple replacement of `href="/` to `href="${rootPath}` if we used absolute paths.
-                // But sidebar.html I wrote has `href="/..."`. 
-                // I should probably update sidebar.html to NOT use leading slash for local compat 
-                // if I want it to work with `rootPath`.
+        <!-- Lore -->
+        <li class="list-group-item bg-dark text-white">
+            <strong>Lore</strong>
+        </li>
+        <li class="list-group-item bg-black">
+            <ul class="list-unstyled ps-3 mb-0">
+                <li><a href="${rootPath}pages/lore/display_lore.html" class="text-light text-decoration-none small">General Info</a></li>
+                <li><a href="#" class="text-secondary text-decoration-none small">History & Chronology (WIP)</a></li>
+                <li><a href="${rootPath}pages/lore/events/test_display_events.html" class="text-light text-decoration-none small">Events</a></li>
+            </ul>
+        </li>
 
-                // Let's replace href="/" with href="{rootPath}" and href="/pages" with href="{rootPath}pages"
-                // to make it adaptable.
-                // Fix relative paths for links starting with /
-                processedData = processedData.replace(/href="\//g, `href="${rootPath}`);
+        <!-- Horarios -->
+        <li class="list-group-item bg-dark text-white">
+            <strong>Game</strong>
+        </li>
+        <li class="list-group-item bg-black">
+            <ul class="list-unstyled ps-3 mb-0">
+                <li><a href="${rootPath}pages/schedules.html" class="text-light text-decoration-none small">Schedules</a></li>
+            </ul>
+        </li>
+    </ul>
+</div>`;
 
-                element.innerHTML = processedData;
-            })
-            .catch((error) => {
-                console.error(error);
-                element.innerHTML = `<div class="alert alert-danger">
-                    <small>Error loading ${file}.<br>
-                    If viewing locally, use a local server (e.g. VS Code Live Server) or check console.</small>
-                </div>`;
-            });
-    }
+  const FOOTER_HTML = `
+    <footer class="bg-black text-white text-center py-4">
+      <div class="foot-container">
+        <div class="row">
+          <div class="col-md-6 mb-3 mb-md-0">
+            <p class="mb-0">
+              &copy; 2024 Rolling And Falling. All Rights Reserved.
+            </p>
+          </div>
+          <div class="col-md-6">
+            <a href="https://www.facebook.com" class="text-white me-3"><i class="fab fa-facebook fa-2x"></i></a>
+            <a href="https://www.twitter.com" class="text-white me-3"><i class="fab fa-twitter fa-2x"></i></a>
+            <a href="https://www.instagram.com" class="text-white me-3"><i class="fab fa-instagram fa-2x"></i></a>
+            <a href="https://www.linkedin.com/in/ancor-gonz%C3%A1lez-carballo-01665927a/" class="text-white"><i class="fab fa-linkedin fa-2x"></i></a>
+          </div>
+        </div>
+      </div>
+    </footer>`;
 
-    loadComponent("header1", "header.html");
-    loadComponent("footer1", "footer.html");
-    loadComponent("sidebar-container", "sidebar.html");
+  function injectComponent(id, htmlContent) {
+    const element = document.getElementById(id);
+    if (!element) return;
+    element.innerHTML = htmlContent;
+  }
+
+  // Inject Components
+  injectComponent("header1", HEADER_HTML);
+  injectComponent("footer1", FOOTER_HTML);
+  injectComponent("sidebar-container", SIDEBAR_HTML);
 });

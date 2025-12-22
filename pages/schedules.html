@@ -46,53 +46,101 @@
 
         <!-- Content -->
         <div class="wiki-content">
-          <div class="p-3 bg-black text-white text-center rounded mb-4">
-            <h1>Rolling And Falling</h1>
-            <p>Game Schedules</p>
+          <div class="row mb-4">
+            <div class="col-12 text-center">
+              <h1 class="display-4 text-warning fw-bold">Game Schedules</h1>
+              <p class="lead text-secondary">Current active campaigns and session times</p>
+              <hr class="border-secondary">
+            </div>
           </div>
 
-          <div class="container">
-            <!-- utilizar una tabla para mostrar los horarios disponibles en la semana -->
-            <table class="table table-dark table-striped">
-              <thead>
-                <tr>
-                  <th scope="col">Día</th>
-                  <th scope="col">Horario</th>
-                  <th scope="col">Juego</th>
-                  <th scope="col">Campaña</th>
-                  <th scope="col">DM</th>
-                  <th scope="col">Jugadores</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <th scope="row">Lunes - Viernes</th>
-                  <td>No disponible</td>
-                  <td>-</td>
-                  <td>-</td>
-                  <td>-</td>
-                  <td>-</td>
-                </tr>
-                <tr>
-                  <th scope="row">Sábado</th>
-                  <td>16:00 - 19:00</td>
-                  <td>D&D 5e</td>
-                  <td>A New Awakening</td>
-                  <td>Ranko</td>
-                  <td>6</td>
-                </tr>
-                <tr>
-                  <th scope="row">?</th>
-                  <td>-</td>
-                  <td>D&D 5e</td>
-                  <td>Deus Vult</td>
-                  <td>Ranko</td>
-                  <td>4 - 5</td>
-                </tr>
+          <div class="container px-0">
+            <div class="row g-4">
 
-                <!-- Add comentario " Falta por decidir el horario de la partida "Deus Vult -->
-              </tbody>
-            </table>
+              <!-- Campaign Card: A New Awakening -->
+              <div class="col-md-6">
+                <div class="card bg-dark border-secondary h-100 shadow-sm schedule-card">
+                  <div
+                    class="card-header bg-black text-warning d-flex justify-content-between align-items-center border-secondary">
+                    <h4 class="m-0"><i class="fas fa-dragon me-2"></i>A New Awakening</h4>
+                    <span class="badge bg-success text-white">Active</span>
+                  </div>
+                  <div class="card-body">
+                    <div class="mb-3">
+                      <h5 class="text-white mb-1"><i class="fas fa-calendar-day text-secondary me-2"></i>Saturday</h5>
+                      <span class="text-info fs-5">16:00 - 19:00</span>
+                    </div>
+
+                    <ul class="list-group list-group-flush rounded mb-3">
+                      <li class="list-group-item bg-black text-light border-secondary d-flex justify-content-between">
+                        <span><i class="fas fa-book me-2"></i>System</span>
+                        <span>D&D 5e</span>
+                      </li>
+                      <li class="list-group-item bg-black text-light border-secondary d-flex justify-content-between">
+                        <span><i class="fas fa-crown me-2"></i>Dungeon Master</span>
+                        <span>Ranko</span>
+                      </li>
+                      <li class="list-group-item bg-black text-light border-secondary d-flex justify-content-between">
+                        <span><i class="fas fa-users me-2"></i>Players</span>
+                        <span>6</span>
+                      </li>
+                    </ul>
+
+                  </div>
+                </div>
+              </div>
+
+              <!-- Campaign Card: Deus Vult -->
+              <div class="col-md-6">
+                <div class="card bg-dark border-secondary h-100 shadow-sm schedule-card">
+                  <div
+                    class="card-header bg-black text-light d-flex justify-content-between align-items-center border-secondary">
+                    <h4 class="m-0"><i class="fas fa-shield-alt me-2"></i>Deus Vult</h4>
+                    <span class="badge bg-warning text-dark">Scheduling</span>
+                  </div>
+                  <div class="card-body">
+                    <div class="mb-3">
+                      <h5 class="text-white mb-1"><i class="fas fa-question-circle text-secondary me-2"></i>To Be
+                        Decided</h5>
+                      <span class="text-secondary fs-5">Time Pending</span>
+                    </div>
+
+                    <ul class="list-group list-group-flush rounded mb-3">
+                      <li class="list-group-item bg-black text-light border-secondary d-flex justify-content-between">
+                        <span><i class="fas fa-book me-2"></i>System</span>
+                        <span>D&D 5e</span>
+                      </li>
+                      <li class="list-group-item bg-black text-light border-secondary d-flex justify-content-between">
+                        <span><i class="fas fa-crown me-2"></i>Dungeon Master</span>
+                        <span>Ranko</span>
+                      </li>
+                      <li class="list-group-item bg-black text-light border-secondary d-flex justify-content-between">
+                        <span><i class="fas fa-users me-2"></i>Players</span>
+                        <span>4 - 5</span>
+                      </li>
+                    </ul>
+
+                    <div class="alert alert-dark border-secondary text-secondary small mb-0">
+                      <i class="fas fa-info-circle me-1"></i> Exact schedule is currently being coordinated with the
+                      party.
+                    </div>
+
+                  </div>
+                </div>
+              </div>
+
+              <!-- General Availability -->
+              <div class="col-12">
+                <div class="card bg-black border-secondary mt-2">
+                  <div class="card-body d-flex justify-content-between align-items-center flex-wrap">
+                    <span class="text-white mb-2 mb-md-0"><i class="fas fa-clock me-2 text-muted"></i><strong>Weekdays
+                        (Mon-Fri)</strong></span>
+                    <span class="text-danger">Generally Unavailable / Prep Time</span>
+                  </div>
+                </div>
+              </div>
+
+            </div>
           </div>
         </div>
       </div>
