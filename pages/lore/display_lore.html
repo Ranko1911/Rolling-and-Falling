@@ -1,96 +1,133 @@
 <!doctype html>
-<html lang="en" translate="no" data-bs-theme="dark">
+<html lang="es" data-bs-theme="dark">
 
 <head>
-    <title>Lore - Wiki</title>
-    <meta name="author" content="Ranko" />
-    <meta name="description" content="Lore of Terranova" />
-    <meta name="keywords" content="DnD, Lore, Compendium, History" />
-    <link href="../../images/icons/dado_blanco_fondo_negro.webp" rel="icon" type="image/x-icon" />
+  <title>Lore Hub — Rolling and Falling</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="author" content="Ranko" />
+  <meta name="description" content="Lore hub and world knowledge of Terranova." />
+  <link rel="icon" href="../../images/icons/dado_blanco_fondo_negro.webp" type="image/x-icon" />
 
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
-    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
-        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
-    <script src="../../scripts/loadComponents.js"></script>
+  <!-- Bootstrap & FontAwesome -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
 
-    <link rel="stylesheet" href="../../css/display.css" />
-    <link rel="stylesheet" href="../../css/index.css" />
-    <link rel="stylesheet" href="../../css/wiki.css" />
+  <!-- Styles -->
+  <link rel="stylesheet" href="../../css/wiki.css" />
+  <link rel="stylesheet" href="../../css/display.css" />
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="../../scripts/loadComponents.js"></script>
 </head>
 
 <body data-root="../../">
-    <div id="header1"></div>
+  <div id="header1"></div>
 
-    <div class="container-fluid mt-4">
-        <div class="row">
-            <!-- Sidebar Column -->
-            <div class="col-md-3 mb-4">
-                <div id="sidebar-container"></div>
+  <main class="container-fluid mt-4">
+    <div class="row g-4">
+      <aside class="col-lg-3 col-md-4">
+        <div id="sidebar-container"></div>
+      </aside>
+
+      <section class="col-lg-9 col-md-8">
+        <nav aria-label="breadcrumb" class="mb-3">
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="../../index.html">Inicio</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Lore Hub</li>
+          </ol>
+        </nav>
+
+        <div class="wiki-content p-4 p-lg-5">
+          <div class="d-flex align-items-center justify-content-between border-bottom border-secondary pb-3 mb-4">
+            <div>
+              <h1 class="display-5 text-warning fw-bold mb-1">📜 Hub de Lore & Conocimiento</h1>
+              <p class="text-secondary mb-0">Historia, leyendas y acontecimientos que dan forma a Terranova.</p>
             </div>
+            <span class="rpg-badge rpg-badge-gold">COMPENDIO COMPLETO</span>
+          </div>
 
-            <!-- Main Content Column -->
-            <div class="col-md-9">
-
-                <!-- Breadcrumbs -->
-                <nav aria-label="breadcrumb">
-                    <ol class="breadcrumb">
-                        <li class="breadcrumb-item"><a href="../../index.html">Home</a></li>
-                        <li class="breadcrumb-item active" aria-current="page">Lore</li>
-                    </ol>
-                </nav>
-
-                <!-- Content -->
-                <div class="wiki-content">
-                    <div class="p-3 bg-black text-white text-center rounded mb-4">
-                        <h1>Lore of Terranova</h1>
-                        <p>Knowledge of the world</p>
-                    </div>
-
-                    <div class="row g-4">
-
-                        <!-- Terranova Card -->
-                        <div class="col-md-6">
-                            <div class="card bg-dark border-secondary h-100 shadow-sm">
-                                <div class="card-header bg-primary text-white text-center">
-                                    <h4><i class="fas fa-globe me-2"></i>Terranova</h4>
-                                </div>
-                                <div class="card-body text-center">
-                                    <p class="card-text text-light">
-                                        General information about the world, its geography, politics, and rules.
-                                    </p>
-                                    <a href="terranova.html" class="btn btn-outline-light mt-2">Explore the World</a>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Events Card -->
-                        <div class="col-md-6">
-                            <div class="card bg-dark border-secondary h-100 shadow-sm">
-                                <div class="card-header bg-danger text-white text-center">
-                                    <h4><i class="fas fa-clock me-2"></i>History & Events</h4>
-                                </div>
-                                <div class="card-body text-center">
-                                    <p class="card-text text-light">
-                                        The timeline of major events that have shaped history.
-                                    </p>
-                                    <a href="events/display_events.html" class="btn btn-outline-light mt-2">View
-                                        Timeline</a>
-                                </div>
-                            </div>
-                        </div>
-
-                    </div>
+          <div class="row g-4">
+            <!-- Terranova Main Lore -->
+            <div class="col-md-6">
+              <div class="card display-card h-100">
+                <div class="card-body">
+                  <div class="category-icon text-warning mb-2"><i class="fas fa-globe fa-2x"></i></div>
+                  <h4 class="card-title text-warning mb-2">
+                    <a href="terranova.html">El Mundo de Terranova</a>
+                  </h4>
+                  <p class="card-text text-secondary">
+                    Geografía, reinos, costumbres, panteón y reglas del escenario de campaña original.
+                  </p>
                 </div>
+                <div class="card-footer bg-transparent border-top-0 pt-0">
+                  <a href="terranova.html" class="btn btn-outline-gold w-100">Explorar Terranova</a>
+                </div>
+              </div>
             </div>
-        </div>
-    </div>
 
-    <div id="footer1"></div>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-    <!-- FontAwesome for icons in cards -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
+            <!-- Timeline & Events -->
+            <div class="col-md-6">
+              <div class="card display-card h-100">
+                <div class="card-body">
+                  <div class="category-icon text-warning mb-2"><i class="fas fa-history fa-2x"></i></div>
+                  <h4 class="card-title text-warning mb-2">
+                    <a href="events/display_events.html">Línea del Tiempo & Eventos</a>
+                  </h4>
+                  <p class="card-text text-secondary">
+                    Acontecimientos decisivos, batallas históricas y las grandes eras del mundo.
+                  </p>
+                </div>
+                <div class="card-footer bg-transparent border-top-0 pt-0">
+                  <a href="events/display_events.html" class="btn btn-outline-gold w-100">Ver Cronología</a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Magical Items -->
+            <div class="col-md-6">
+              <div class="card display-card h-100">
+                <div class="card-body">
+                  <div class="category-icon text-warning mb-2"><i class="fas fa-gem fa-2x"></i></div>
+                  <h4 class="card-title text-warning mb-2">
+                    <a href="items/display_items.html">Reliquias & Objetos Mágicos</a>
+                  </h4>
+                  <p class="card-text text-secondary">
+                    Inventario de objetos mágicos, artefactos sagrados y tesoros legendarios.
+                  </p>
+                </div>
+                <div class="card-footer bg-transparent border-top-0 pt-0">
+                  <a href="items/display_items.html" class="btn btn-outline-gold w-100">Ver Artefactos</a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Factions Overview -->
+            <div class="col-md-6">
+              <div class="card display-card h-100">
+                <div class="card-body">
+                  <div class="category-icon text-warning mb-2"><i class="fas fa-users-cog fa-2x"></i></div>
+                  <h4 class="card-title text-warning mb-2">
+                    <a href="../characters/display_groups.html">Facciones & Organizaciones</a>
+                  </h4>
+                  <p class="card-text text-secondary">
+                    Resumen geopolítico de las fuerzas que compiten por el control de Terranova.
+                  </p>
+                </div>
+                <div class="card-footer bg-transparent border-top-0 pt-0">
+                  <a href="../characters/display_groups.html" class="btn btn-outline-gold w-100">Ver Facciones</a>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <div id="footer1"></div>
 </body>
 
 </html>

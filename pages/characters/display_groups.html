@@ -1,204 +1,214 @@
 <!doctype html>
-<html lang="en" translate="no" data-bs-theme="dark">
+<html lang="es" data-bs-theme="dark">
 
 <head>
-  <title>Groups - Wiki</title>
-  <meta name="author" content="Ranko" />
-  <meta name="description" content="Groups active in Terranova" />
-  <meta name="keywords" content="DnD, Groups, Factions, Index" />
-  <link href="../../images/icons/dado_blanco_fondo_negro.webp" rel="icon" type="image/x-icon" />
-
+  <title>Grupos & Facciones — Rolling and Falling</title>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
-  <script src="https://code.jquery.com/jquery-3.7.1.min.js"
-    integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
-  <script src="../../scripts/loadComponents.js"></script>
+  <meta name="author" content="Ranko" />
+  <meta name="description" content="Groups, adventuring parties, and factions active in Terranova." />
+  <link rel="icon" href="../../images/icons/dado_blanco_fondo_negro.webp" type="image/x-icon" />
 
-  <link rel="stylesheet" href="../../css/display.css" />
-  <link rel="stylesheet" href="../../css/index.css" />
+  <!-- Bootstrap & FontAwesome -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+
+  <!-- Styles -->
   <link rel="stylesheet" href="../../css/wiki.css" />
+  <link rel="stylesheet" href="../../css/display.css" />
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="../../scripts/loadComponents.js"></script>
 </head>
 
 <body data-root="../../">
   <div id="header1"></div>
 
-  <div class="container-fluid mt-4">
-    <div class="row">
-      <!-- Sidebar Column -->
-      <div class="col-md-3 mb-4">
+  <main class="container-fluid mt-4">
+    <div class="row g-4">
+      <!-- Sidebar -->
+      <aside class="col-lg-3 col-md-4">
         <div id="sidebar-container"></div>
-      </div>
+      </aside>
 
-      <!-- Main Content Column -->
-      <div class="col-md-9">
-
+      <!-- Main Content -->
+      <section class="col-lg-9 col-md-8">
         <!-- Breadcrumbs -->
-        <nav aria-label="breadcrumb">
+        <nav aria-label="breadcrumb" class="mb-3">
           <ol class="breadcrumb">
-            <li class="breadcrumb-item"><a href="../../index.html">Home</a></li>
-            <li class="breadcrumb-item active">Characters</li>
-            <li class="breadcrumb-item active" aria-current="page">Groups</li>
+            <li class="breadcrumb-item"><a href="../../index.html">Inicio</a></li>
+            <li class="breadcrumb-item">Personajes</li>
+            <li class="breadcrumb-item active" aria-current="page">Grupos & Facciones</li>
           </ol>
         </nav>
 
-        <!-- Content -->
-        <div class="wiki-content">
-          <div class="p-3 bg-black text-white text-center rounded mb-4">
-            <h1>Groups of Adventures</h1>
-            <p>Groups currently active in Terranova</p>
+        <div class="wiki-content p-4 p-lg-5">
+          <div class="d-flex align-items-center justify-content-between border-bottom border-secondary pb-3 mb-4">
+            <div>
+              <h1 class="display-5 text-warning fw-bold mb-1">🛡️ Grupos & Facciones</h1>
+              <p class="text-secondary mb-0">Organizaciones, compañías de aventureros y casas nobles de Terranova.</p>
+            </div>
+            <span class="rpg-badge rpg-badge-gold">7 FACCIONES REGISTRADAS</span>
           </div>
 
-          <div class="container">
+          <!-- Groups Grid -->
+          <div class="row g-4">
 
             <!-- Anchieta's House -->
-            <div class="object">
-              <div class="object-description">
-                <h2 class="object-name">
-                  <a href="../../pages/characters/groups/AnchietaHouse.html">Anchieta's House - Members</a>
-                </h2>
-                <div class="mb-2">
-                  <span class="badge bg-warning text-dark">Chaotic Good</span>
-                  <span class="badge bg-primary">Adventuring Party</span>
+            <div class="col-md-6 col-xl-4">
+              <div class="card display-card h-100">
+                <div class="card-body">
+                  <div class="d-flex justify-content-between align-items-center mb-2">
+                    <span class="rpg-badge rpg-badge-gold">Grupo Principal</span>
+                    <span class="badge bg-success">Caótico Bueno</span>
+                  </div>
+                  <h4 class="card-title text-warning mb-2">
+                    <a href="../../pages/characters/groups/AnchietaHouse.html">Anchieta's House</a>
+                  </h4>
+                  <p class="card-text text-secondary small">
+                    El grupo de aventureros formado por los protagonistas de la campaña. Conocidos por su tenacidad y caos creativo.
+                  </p>
                 </div>
-                <p>
-                  <a href="../../pages/characters/groups/AnchietaHouse.html">These mfs are the origin of my perpetual
-                    PAIN, but I still love them (YES, I'm stupid)</a>
-                </p>
+                <div class="card-footer bg-transparent border-top-0 pt-0">
+                  <a href="../../pages/characters/groups/AnchietaHouse.html" class="btn btn-outline-gold btn-sm w-100">Ver Ficha de Grupo</a>
+                </div>
               </div>
-              <a href="../../pages/characters/groups/AnchietaHouse.html">
-                <img src="../../images/icons/dado_blanco_fondo_negro.webp" alt="Anchieta House Image"
-                  class="object-img" />
-              </a>
             </div>
 
             <!-- Staff -->
-            <div class="object">
-              <div class="object-description">
-                <h2 class="object-name">
-                  <a href="../../pages/characters/groups/Staff.html">Anchieta's House Staff</a>
-                </h2>
-                <div class="mb-2">
-                  <span class="badge bg-secondary">Neutral</span>
-                  <span class="badge bg-info text-dark">Staff/Support</span>
+            <div class="col-md-6 col-xl-4">
+              <div class="card display-card h-100">
+                <div class="card-body">
+                  <div class="d-flex justify-content-between align-items-center mb-2">
+                    <span class="rpg-badge rpg-badge-cyan">Soporte</span>
+                    <span class="badge bg-secondary">Neutral</span>
+                  </div>
+                  <h4 class="card-title text-warning mb-2">
+                    <a href="../../pages/characters/groups/Staff.html">Anchieta's Staff</a>
+                  </h4>
+                  <p class="card-text text-secondary small">
+                    Personal de apoyo, sirvientes y aliados leales que mantienen en pie la base de operaciones de Anchieta's House.
+                  </p>
                 </div>
-                <p>
-                  <a href="../../pages/characters/groups/Staff.html">The Memorable Staff of the Anchieta's House.</a>
-                </p>
+                <div class="card-footer bg-transparent border-top-0 pt-0">
+                  <a href="../../pages/characters/groups/Staff.html" class="btn btn-outline-gold btn-sm w-100">Ver Integrantes</a>
+                </div>
               </div>
-              <a href="../../pages/characters/groups/Staff.html">
-                <img src="../../images/icons/dado_blanco_fondo_negro.webp" alt="Staff Image" class="object-img" />
-              </a>
             </div>
 
-            <!-- Evearantha - Arcane Academy -->
-            <div class="object">
-              <div class="object-description">
-                <h2 class="object-name">
-                  <a href="../../pages/characters/groups/ArcaneAcademy.html">Everantha - Arcane Academy</a>
-                </h2>
-                <div class="mb-2">
-                  <span class="badge bg-primary">Academic</span>
-                  <span class="badge bg-info text-dark">Mages</span>
+            <!-- Arcane Academy -->
+            <div class="col-md-6 col-xl-4">
+              <div class="card display-card h-100">
+                <div class="card-body">
+                  <div class="d-flex justify-content-between align-items-center mb-2">
+                    <span class="rpg-badge rpg-badge-cyan">Academia</span>
+                    <span class="badge bg-info text-dark">Gremio Mágico</span>
+                  </div>
+                  <h4 class="card-title text-warning mb-2">
+                    <a href="../../pages/characters/groups/ArcaneAcademy.html">Arcane Academy</a>
+                  </h4>
+                  <p class="card-text text-secondary small">
+                    Institución de estudio arcano en Everantha donde eruditos y magos investigan los secretos del cosmos.
+                  </p>
                 </div>
-                <p>
-                  <a href="../../pages/characters/groups/ArcaneAcademy.html">Main members of the Arcane Academy.</a>
-                </p>
+                <div class="card-footer bg-transparent border-top-0 pt-0">
+                  <a href="../../pages/characters/groups/ArcaneAcademy.html" class="btn btn-outline-gold btn-sm w-100">Ver Miembros Arcanos</a>
+                </div>
               </div>
-              <a href="../../pages/characters/groups/ArcaneAcademy.html">
-                <img src="../../images/icons/dado_blanco_fondo_negro.webp" alt="Arcane Academy Image"
-                  class="object-img" />
-              </a>
             </div>
 
-            <!-- Everantha - Guard -->
-            <div class="object">
-              <div class="object-description">
-                <h2 class="object-name">
-                  <a href="../../pages/characters/groups/Guard.html">Everantha - Guard</a>
-                </h2>
-                <div class="mb-2">
-                  <span class="badge bg-warning text-dark">Lawful</span>
-                  <span class="badge bg-danger">Military</span>
+            <!-- Guard -->
+            <div class="col-md-6 col-xl-4">
+              <div class="card display-card h-100">
+                <div class="card-body">
+                  <div class="d-flex justify-content-between align-items-center mb-2">
+                    <span class="rpg-badge rpg-badge-gold">Militar</span>
+                    <span class="badge bg-warning text-dark">Legal Neutral</span>
+                  </div>
+                  <h4 class="card-title text-warning mb-2">
+                    <a href="../../pages/characters/groups/Guard.html">Everantha Guard</a>
+                  </h4>
+                  <p class="card-text text-secondary small">
+                    Fuerza de seguridad militar encargada de la defensa de Everantha, patrullaje de fronteras y ley del reino.
+                  </p>
                 </div>
-                <p>
-                  <a href="../../pages/characters/groups/Guard.html">The Top of the Guard in Everantha.</a>
-                </p>
+                <div class="card-footer bg-transparent border-top-0 pt-0">
+                  <a href="../../pages/characters/groups/Guard.html" class="btn btn-outline-gold btn-sm w-100">Ver Oficiales de la Guardia</a>
+                </div>
               </div>
-              <a href="../../pages/characters/groups/Guard.html">
-                <img src="../../images/icons/dado_blanco_fondo_negro.webp" alt="Guard Image" class="object-img" />
-              </a>
             </div>
 
-            <!-- Everantha - Reinhart House -->
-            <div class="object">
-              <div class="object-description">
-                <h2 class="object-name">
-                  <a href="../../pages/characters/groups/Reinhart.html">Everantha - Reinhart House</a>
-                </h2>
-                <div class="mb-2">
-                  <span class="badge bg-secondary">Noble House</span>
-                  <span class="badge bg-warning text-dark">Political</span>
+            <!-- Reinhart House -->
+            <div class="col-md-6 col-xl-4">
+              <div class="card display-card h-100">
+                <div class="card-body">
+                  <div class="d-flex justify-content-between align-items-center mb-2">
+                    <span class="rpg-badge rpg-badge-gold">Casa Noble</span>
+                    <span class="badge bg-secondary">Política</span>
+                  </div>
+                  <h4 class="card-title text-warning mb-2">
+                    <a href="../../pages/characters/groups/Reinhart.html">Reinhart House</a>
+                  </h4>
+                  <p class="card-text text-secondary small">
+                    Dinastía noble con fuerte influencia económica y cortesana en la capital de Everantha.
+                  </p>
                 </div>
-                <p>
-                  <a href="../../pages/characters/groups/Reinhart.html">The Reinhart House also can display his
-                    members.</a>
-                </p>
+                <div class="card-footer bg-transparent border-top-0 pt-0">
+                  <a href="../../pages/characters/groups/Reinhart.html" class="btn btn-outline-gold btn-sm w-100">Ver Dinastía Reinhart</a>
+                </div>
               </div>
-              <a href="../../pages/characters/groups/Reinhart.html">
-                <img src="../../images/icons/dado_blanco_fondo_negro.webp" alt="Reinhart House Image"
-                  class="object-img" />
-              </a>
             </div>
 
-            <!-- Mano de Odin -->
-            <div class="object">
-              <div class="object-description">
-                <h2 class="object-name">
-                  <a href="../../pages/characters/groups/OdinHand.html">Mano de Odín</a>
-                </h2>
-                <div class="mb-2">
-                  <span class="badge bg-dark border border-secondary">Evil</span>
-                  <span class="badge bg-danger">Antagonists</span>
+            <!-- Odin's Hand -->
+            <div class="col-md-6 col-xl-4">
+              <div class="card display-card h-100 border-danger">
+                <div class="card-body">
+                  <div class="d-flex justify-content-between align-items-center mb-2">
+                    <span class="rpg-badge rpg-badge-crimson">Antagonistas</span>
+                    <span class="badge bg-danger">Malvado</span>
+                  </div>
+                  <h4 class="card-title text-danger mb-2">
+                    <a href="../../pages/characters/groups/OdinHand.html" class="text-danger">Mano de Odín</a>
+                  </h4>
+                  <p class="card-text text-secondary small">
+                    La facción antagonista principal de la campaña. Incluye a los capitanes de la Guardia de la Tormenta.
+                  </p>
                 </div>
-                <p>
-                  <a href="../../pages/characters/groups/OdinHand.html">The BBEGs of the Campain, this includes the
-                    Storm Guard.</a>
-                </p>
+                <div class="card-footer bg-transparent border-top-0 pt-0">
+                  <a href="../../pages/characters/groups/OdinHand.html" class="btn btn-outline-danger btn-sm w-100">Ver Ficha Enemiga</a>
+                </div>
               </div>
-              <a href="../../pages/characters/groups/OdinHand.html">
-                <img src="../../images/icons/dado_blanco_fondo_negro.webp" alt="Odin Hand Image" class="object-img" />
-              </a>
             </div>
 
             <!-- Sun Seed -->
-            <div class="object">
-              <div class="object-description">
-                <h2 class="object-name">
-                  <a href="../../pages/characters/groups/SunSeed.html">Sun Seed</a>
-                </h2>
-                <div class="mb-2">
-                  <span class="badge bg-success">Rebellion</span>
-                  <span class="badge bg-primary">Safe Haven</span>
+            <div class="col-md-6 col-xl-4">
+              <div class="card display-card h-100">
+                <div class="card-body">
+                  <div class="d-flex justify-content-between align-items-center mb-2">
+                    <span class="rpg-badge rpg-badge-gold">Resistencia</span>
+                    <span class="badge bg-success">Refugio Seguro</span>
+                  </div>
+                  <h4 class="card-title text-warning mb-2">
+                    <a href="../../pages/characters/groups/SunSeed.html">Sun Seed</a>
+                  </h4>
+                  <p class="card-text text-secondary small">
+                    Base de operaciones y santuario sagrado para los miembros de la resistencia y aliados del sol.
+                  </p>
                 </div>
-                <p>
-                  <a href="../../pages/characters/groups/SunSeed.html">The home of the base for the revelion, aka Katie
-                    and Ranko place to live.</a>
-                </p>
+                <div class="card-footer bg-transparent border-top-0 pt-0">
+                  <a href="../../pages/characters/groups/SunSeed.html" class="btn btn-outline-gold btn-sm w-100">Ver Santuario Sun Seed</a>
+                </div>
               </div>
-              <a href="../../pages/characters/groups/SunSeed.html">
-                <img src="../../images/icons/dado_blanco_fondo_negro.webp" alt="Sun Seed Image" class="object-img" />
-              </a>
             </div>
 
           </div>
         </div>
-      </div>
+      </section>
     </div>
-  </div>
+  </main>
 
   <div id="footer1"></div>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 
 </html>

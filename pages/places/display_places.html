@@ -1,224 +1,197 @@
 <!doctype html>
-<html lang="en" translate="no" data-bs-theme="dark">
+<html lang="es" data-bs-theme="dark">
 
 <head>
-    <title>Places - Wiki</title>
-    <meta name="author" content="Ranko" />
-    <meta name="description" content="Index of Places in Terranova" />
-    <meta name="keywords" content="DnD, Places, Locations, Index, Terranova" />
-    <link href="../../images/icons/dado_blanco_fondo_negro.webp" rel="icon" type="image/x-icon" />
+  <title>Lugares de Terranova — Rolling and Falling</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="author" content="Ranko" />
+  <meta name="description" content="Catalog of places, regions, cities, and wilderness in Terranova." />
+  <link rel="icon" href="../../images/icons/dado_blanco_fondo_negro.webp" type="image/x-icon" />
 
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
-    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
-        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
-    <script src="../../scripts/loadComponents.js"></script>
+  <!-- Bootstrap & FontAwesome -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
 
-    <link rel="stylesheet" href="../../css/display.css" />
-    <link rel="stylesheet" href="../../css/index.css" />
-    <link rel="stylesheet" href="../../css/wiki.css" />
+  <!-- Styles -->
+  <link rel="stylesheet" href="../../css/wiki.css" />
+  <link rel="stylesheet" href="../../css/display.css" />
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="../../scripts/loadComponents.js"></script>
 </head>
 
 <body data-root="../../">
-    <div id="header1"></div>
+  <div id="header1"></div>
 
-    <div class="container-fluid mt-4">
-        <div class="row">
-            <!-- Sidebar Column -->
-            <div class="col-md-3 mb-4">
-                <div id="sidebar-container"></div>
+  <main class="container-fluid mt-4">
+    <div class="row g-4">
+      <!-- Sidebar -->
+      <aside class="col-lg-3 col-md-4">
+        <div id="sidebar-container"></div>
+      </aside>
+
+      <!-- Main Content -->
+      <section class="col-lg-9 col-md-8">
+        <!-- Breadcrumbs -->
+        <nav aria-label="breadcrumb" class="mb-3">
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="../../index.html">Inicio</a></li>
+            <li class="breadcrumb-item">Lugares</li>
+            <li class="breadcrumb-item active" aria-current="page">Catálogo de Regiones</li>
+          </ol>
+        </nav>
+
+        <div class="wiki-content p-4 p-lg-5">
+          <div class="d-flex align-items-center justify-content-between border-bottom border-secondary pb-3 mb-4">
+            <div>
+              <h1 class="display-5 text-warning fw-bold mb-1">🗺️ Lugares & Regiones</h1>
+              <p class="text-secondary mb-0">Ciudades, fortalezas, abismos y zonas salvajes en Terranova.</p>
             </div>
+            <a href="../lore/terranova.html" class="btn btn-outline-gold btn-sm">
+              🌍 Ver Lore de Terranova
+            </a>
+          </div>
 
-            <!-- Main Content Column -->
-            <div class="col-md-9">
+          <!-- Places Grid -->
+          <div class="row g-4">
 
-                <!-- Breadcrumbs -->
-                <nav aria-label="breadcrumb">
-                    <ol class="breadcrumb">
-                        <li class="breadcrumb-item"><a href="../../index.html">Home</a></li>
-                        <li class="breadcrumb-item active">Places</li>
-                        <li class="breadcrumb-item active" aria-current="page">Display Places</li>
-                    </ol>
-                </nav>
-
-                <!-- Content -->
-                <div class="wiki-content">
-                    <div class="p-3 bg-black text-white text-center rounded mb-4">
-                        <h1>Places</h1>
-                        <p>Known places in Terranova</p>
-                    </div>
-
-                    <div class="container">
-
-                        <!-- Zemyras -->
-                        <div class="object">
-                            <div class="object-description">
-                                <h2 class="object-name">
-                                    <a href="#">Zemyras</a>
-                                </h2>
-                                <div class="mb-2">
-                                    <span class="badge bg-secondary">Unknown Region</span>
-                                    <span class="badge bg-primary">Location</span>
-                                </div>
-                                <p>
-                                    <a href="#">Brief description of place A.</a>
-                                </p>
-                            </div>
-                            <a href="#">
-                                <img src="../../images/icons/dado_blanco_fondo_negro.webp" alt="Zemyras Image"
-                                    class="object-img" />
-                            </a>
-                        </div>
-
-                        <!-- Abismos de la luna Plateada -->
-                        <div class="object">
-                            <div class="object-description">
-                                <h2 class="object-name">
-                                    <a href="#">Abismos de la luna Plateada</a>
-                                </h2>
-                                <div class="mb-2">
-                                    <span class="badge bg-secondary">Unknown Region</span>
-                                    <span class="badge bg-primary">Location</span>
-                                </div>
-                                <p>
-                                    <a href="#">Brief description of place A.</a>
-                                </p>
-                            </div>
-                            <a href="#">
-                                <img src="../../images/icons/dado_blanco_fondo_negro.webp" alt="Abismos Image"
-                                    class="object-img" />
-                            </a>
-                        </div>
-
-                        <!-- Asarha -->
-                        <div class="object">
-                            <div class="object-description">
-                                <h2 class="object-name">
-                                    <a href="#">Asarha</a>
-                                </h2>
-                                <div class="mb-2">
-                                    <span class="badge bg-secondary">Unknown Region</span>
-                                    <span class="badge bg-primary">Location</span>
-                                </div>
-                                <p>
-                                    <a href="#">Brief description of place A.</a>
-                                </p>
-                            </div>
-                            <a href="#">
-                                <img src="../../images/icons/dado_blanco_fondo_negro.webp" alt="Asarha Image"
-                                    class="object-img" />
-                            </a>
-                        </div>
-
-                        <!-- Brisa verde -->
-                        <div class="object">
-                            <div class="object-description">
-                                <h2 class="object-name">
-                                    <a href="#">Brisa verde</a>
-                                </h2>
-                                <div class="mb-2">
-                                    <span class="badge bg-success">Wilderness</span>
-                                    <span class="badge bg-primary">Location</span>
-                                </div>
-                                <p>
-                                    <a href="#">Brief description of place A.</a>
-                                </p>
-                            </div>
-                            <a href="#">
-                                <img src="../../images/icons/dado_blanco_fondo_negro.webp" alt="Brisa verde Image"
-                                    class="object-img" />
-                            </a>
-                        </div>
-
-                        <!-- Eternal Jungle -->
-                        <div class="object">
-                            <div class="object-description">
-                                <h2 class="object-name">
-                                    <a href="#">Eternal Jungle</a>
-                                </h2>
-                                <div class="mb-2">
-                                    <span class="badge bg-success">Jungle</span>
-                                    <span class="badge bg-danger">Danger: High</span>
-                                </div>
-                                <p>
-                                    <a href="#">Brief description of place A.</a>
-                                </p>
-                            </div>
-                            <a href="#">
-                                <img src="../../images/icons/dado_blanco_fondo_negro.webp" alt="Eternal Jungle Image"
-                                    class="object-img" />
-                            </a>
-                        </div>
-
-                        <!-- Nahiyar -->
-                        <div class="object">
-                            <div class="object-description">
-                                <h2 class="object-name">
-                                    <a href="#">Nahiyar</a>
-                                </h2>
-                                <div class="mb-2">
-                                    <span class="badge bg-secondary">Unknown Region</span>
-                                    <span class="badge bg-primary">Location</span>
-                                </div>
-                                <p>
-                                    <a href="#">Brief description of place A.</a>
-                                </p>
-                            </div>
-                            <a href="#">
-                                <img src="../../images/icons/dado_blanco_fondo_negro.webp" alt="Nahiyar Image"
-                                    class="object-img" />
-                            </a>
-                        </div>
-
-                        <!-- Dominio de la Custodia -->
-                        <div class="object">
-                            <div class="object-description">
-                                <h2 class="object-name">
-                                    <a href="#">Dominio de la Custodia</a>
-                                </h2>
-                                <div class="mb-2">
-                                    <span class="badge bg-secondary">Unknown Region</span>
-                                    <span class="badge bg-primary">Location</span>
-                                </div>
-                                <p>
-                                    <a href="#">Brief description of place A.</a>
-                                </p>
-                            </div>
-                            <a href="#">
-                                <img src="../../images/icons/dado_blanco_fondo_negro.webp"
-                                    alt="Dominio de la Custodia Image" class="object-img" />
-                            </a>
-                        </div>
-
-                        <!-- Farol Blanco -->
-                        <div class="object">
-                            <div class="object-description">
-                                <h2 class="object-name">
-                                    <a href="#">Farol Blanco</a>
-                                </h2>
-                                <div class="mb-2">
-                                    <span class="badge bg-secondary">Unknown Region</span>
-                                    <span class="badge bg-primary">Location</span>
-                                </div>
-                                <p>
-                                    <a href="#">Brief description of place A.</a>
-                                </p>
-                            </div>
-                            <a href="#">
-                                <img src="../../images/icons/dado_blanco_fondo_negro.webp" alt="Farol Blanco Image"
-                                    class="object-img" />
-                            </a>
-                        </div>
-
-                    </div>
+            <!-- Zemyras -->
+            <div class="col-md-6 col-xl-4">
+              <div class="card display-card h-100">
+                <div class="card-body">
+                  <div class="d-flex justify-content-between align-items-center mb-2">
+                    <span class="rpg-badge rpg-badge-gold">Ciudad Ancestral</span>
+                    <span class="badge bg-secondary">Región Desconocida</span>
+                  </div>
+                  <h4 class="card-title text-warning mb-2">Zemyras</h4>
+                  <p class="card-text text-secondary small">
+                    Antigua urbe rodeada de murallas de piedra rúnica e intrigas políticas.
+                  </p>
                 </div>
+              </div>
             </div>
-        </div>
-    </div>
 
-    <div id="footer1"></div>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+            <!-- Abismos de la luna Plateada -->
+            <div class="col-md-6 col-xl-4">
+              <div class="card display-card h-100">
+                <div class="card-body">
+                  <div class="d-flex justify-content-between align-items-center mb-2">
+                    <span class="rpg-badge rpg-badge-cyan">Mazmorra / Foso</span>
+                    <span class="badge bg-danger">Peligro Elevado</span>
+                  </div>
+                  <h4 class="card-title text-warning mb-2">Abismos de la Luna Plateada</h4>
+                  <p class="card-text text-secondary small">
+                    Una falla subterránea iluminada por cristales lunares donde residen criaturas abisales.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Asarha -->
+            <div class="col-md-6 col-xl-4">
+              <div class="card display-card h-100">
+                <div class="card-body">
+                  <div class="d-flex justify-content-between align-items-center mb-2">
+                    <span class="rpg-badge rpg-badge-gold">Asentamiento</span>
+                    <span class="badge bg-primary">Comercial</span>
+                  </div>
+                  <h4 class="card-title text-warning mb-2">Asarha</h4>
+                  <p class="card-text text-secondary small">
+                    Pueblo de frontera famoso por sus mercados de especias y refugio de caravanas.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Brisa Verde -->
+            <div class="col-md-6 col-xl-4">
+              <div class="card display-card h-100">
+                <div class="card-body">
+                  <div class="d-flex justify-content-between align-items-center mb-2">
+                    <span class="rpg-badge rpg-badge-gold">Bosque Sagrado</span>
+                    <span class="badge bg-success">Naturaleza</span>
+                  </div>
+                  <h4 class="card-title text-warning mb-2">Brisa Verde</h4>
+                  <p class="card-text text-secondary small">
+                    Valle arbolado protegido por espíritus de la naturaleza y druidas del círculo solar.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Eternal Jungle -->
+            <div class="col-md-6 col-xl-4">
+              <div class="card display-card h-100">
+                <div class="card-body">
+                  <div class="d-flex justify-content-between align-items-center mb-2">
+                    <span class="rpg-badge rpg-badge-crimson">Zona Salvaje</span>
+                    <span class="badge bg-danger">Extremo</span>
+                  </div>
+                  <h4 class="card-title text-warning mb-2">Eternal Jungle</h4>
+                  <p class="card-text text-secondary small">
+                    Densa selva imperecedera envuelta en brumas de veneno y ruinas de una civilización perdida.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Nahiyar -->
+            <div class="col-md-6 col-xl-4">
+              <div class="card display-card h-100">
+                <div class="card-body">
+                  <div class="d-flex justify-content-between align-items-center mb-2">
+                    <span class="rpg-badge rpg-badge-gold">Fortaleza</span>
+                    <span class="badge bg-warning text-dark">Defensiva</span>
+                  </div>
+                  <h4 class="card-title text-warning mb-2">Nahiyar</h4>
+                  <p class="card-text text-secondary small">
+                    Fortín militar erigido sobre los desfiladeros de las montañas del norte.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Dominio de la Custodia -->
+            <div class="col-md-6 col-xl-4">
+              <div class="card display-card h-100">
+                <div class="card-body">
+                  <div class="d-flex justify-content-between align-items-center mb-2">
+                    <span class="rpg-badge rpg-badge-cyan">Santuario</span>
+                    <span class="badge bg-info text-dark">Sagrado</span>
+                  </div>
+                  <h4 class="card-title text-warning mb-2">Dominio de la Custodia</h4>
+                  <p class="card-text text-secondary small">
+                    Tierras consagradas protegidas por paladines encargados de velar por reliquias primigenias.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Farol Blanco -->
+            <div class="col-md-6 col-xl-4">
+              <div class="card display-card h-100">
+                <div class="card-body">
+                  <div class="d-flex justify-content-between align-items-center mb-2">
+                    <span class="rpg-badge rpg-badge-gold">Puerto / Faro</span>
+                    <span class="badge bg-primary">Navegación</span>
+                  </div>
+                  <h4 class="card-title text-warning mb-2">Farol Blanco</h4>
+                  <p class="card-text text-secondary small">
+                    Faro colosal de luz arcana que guía a los navíos a través de las nieblas de la costa de Terranova.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <div id="footer1"></div>
 </body>
 
 </html>

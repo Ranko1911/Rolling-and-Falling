@@ -1,106 +1,105 @@
 <!doctype html>
-<html lang="en" translate="no" data-bs-theme="dark">
+<html lang="es" data-bs-theme="dark">
 
 <head>
-    <title>Objects - Wiki</title>
-    <meta name="author" content="Ranko" />
-    <meta name="description" content="Index of Objects in Terranova" />
-    <meta name="keywords" content="DnD, Items, Artifacts, Index, Terranova" />
-    <link href="../../../images/icons/dado_blanco_fondo_negro.webp" rel="icon" type="image/x-icon" />
+  <title>Reliquias & Objetos — Rolling and Falling</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="author" content="Ranko" />
+  <meta name="description" content="Artifacts, magical gear, and relics of Terranova." />
+  <link rel="icon" href="../../../images/icons/dado_blanco_fondo_negro.webp" type="image/x-icon" />
 
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
-    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
-        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
-    <script src="../../../scripts/loadComponents.js"></script>
+  <!-- Bootstrap & FontAwesome -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
 
-    <link rel="stylesheet" href="../../../css/display.css" />
-    <link rel="stylesheet" href="../../../css/index.css" />
-    <link rel="stylesheet" href="../../../css/wiki.css" />
+  <!-- Styles -->
+  <link rel="stylesheet" href="../../../css/wiki.css" />
+  <link rel="stylesheet" href="../../../css/display.css" />
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="../../../scripts/loadComponents.js"></script>
 </head>
 
 <body data-root="../../../">
-    <div id="header1"></div>
+  <div id="header1"></div>
 
-    <div class="container-fluid mt-4">
-        <div class="row">
-            <!-- Sidebar Column -->
-            <div class="col-md-3 mb-4">
-                <div id="sidebar-container"></div>
+  <main class="container-fluid mt-4">
+    <div class="row g-4">
+      <aside class="col-lg-3 col-md-4">
+        <div id="sidebar-container"></div>
+      </aside>
+
+      <section class="col-lg-9 col-md-8">
+        <nav aria-label="breadcrumb" class="mb-3">
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="../../../index.html">Inicio</a></li>
+            <li class="breadcrumb-item"><a href="../display_lore.html">Lore</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Objetos Mágicos</li>
+          </ol>
+        </nav>
+
+        <div class="wiki-content p-4 p-lg-5">
+          <div class="d-flex align-items-center justify-content-between border-bottom border-secondary pb-3 mb-4">
+            <div>
+              <h1 class="display-5 text-warning fw-bold mb-1">💎 Reliquias & Objetos Mágicos</h1>
+              <p class="text-secondary mb-0">Catálogo de artefactos, armas mágicas y curiosidades descubiertas.</p>
             </div>
+            <span class="rpg-badge rpg-badge-gold">TESORO Y EQUIPAMIENTO</span>
+          </div>
 
-            <!-- Main Content Column -->
-            <div class="col-md-9">
+          <div class="row g-4">
 
-                <!-- Breadcrumbs -->
-                <nav aria-label="breadcrumb">
-                    <ol class="breadcrumb">
-                        <li class="breadcrumb-item"><a href="../../../index.html">Home</a></li>
-                        <li class="breadcrumb-item active">Objects</li>
-                        <li class="breadcrumb-item active" aria-current="page">All Objects</li>
-                    </ol>
-                </nav>
-
-                <!-- Content -->
-                <div class="wiki-content">
-                    <div class="p-3 bg-black text-white text-center rounded mb-4">
-                        <h1>Treasury & Items</h1>
-                        <p>Artifacts, magic items, and curiosities found in Terranova</p>
-                    </div>
-
-                    <div class="container">
-
-                        <!-- Guantelete Plateado -->
-                        <div class="object">
-                            <div class="object-description">
-                                <h2 class="object-name">
-                                    <a href="GuanteletePlateado.html">Guantelete Plateado</a>
-                                </h2>
-                                <div class="mb-2">
-                                    <span class="badge bg-warning text-dark">Raro (Posiblemente)</span>
-                                    <span class="badge bg-info text-dark">Armor/Wondrous Item</span>
-                                </div>
-                                <p>
-                                    <a href="GuanteletePlateado.html">Un guantelete de diseño intrincado y origen
-                                        misterioso.</a>
-                                </p>
-                            </div>
-                            <a href="GuanteletePlateado.html">
-                                <img src="../../../images/icons/dado_blanco_fondo_negro.webp"
-                                    alt="Guantelete Plateado Image" class="object-img" />
-                            </a>
-                        </div>
-
-                        <!-- Fragmento de Sangre -->
-                        <div class="object">
-                            <div class="object-description">
-                                <h2 class="object-name">
-                                    <a href="FragmentoDeSangre.html">Fragmento de Sangre</a>
-                                </h2>
-                                <div class="mb-2">
-                                    <span class="badge bg-danger">Peligroso</span>
-                                    <span class="badge bg-info text-dark">Material/Artifact</span>
-                                </div>
-                                <p>
-                                    <a href="FragmentoDeSangre.html">Un fragmento cristalizado de color carmesí profundo
-                                        que emana una energía inquietante.</a>
-                                </p>
-                            </div>
-                            <a href="FragmentoDeSangre.html">
-                                <img src="../../../images/icons/dado_blanco_fondo_negro.webp"
-                                    alt="Fragmento de Sangre Image" class="object-img" />
-                            </a>
-                        </div>
-
-                    </div>
+            <!-- Guantelete Plateado -->
+            <div class="col-md-6">
+              <div class="card display-card h-100">
+                <div class="card-body">
+                  <div class="d-flex justify-content-between align-items-center mb-2">
+                    <span class="rpg-badge rpg-badge-gold">Rareza: Muy Raro</span>
+                    <span class="badge bg-info text-dark">Armadura / Objeto Maravilloso</span>
+                  </div>
+                  <h4 class="card-title text-warning mb-2">
+                    <a href="GuanteletePlateado.html">Guantelete Plateado</a>
+                  </h4>
+                  <p class="card-text text-secondary small">
+                    Un guantelete de diseño plateado intrincado y origen misterioso capaz de canalizar barreras arcanas.
+                  </p>
                 </div>
+                <div class="card-footer bg-transparent border-top-0 pt-0">
+                  <a href="GuanteletePlateado.html" class="btn btn-outline-gold w-100">Ver Propiedades</a>
+                </div>
+              </div>
             </div>
-        </div>
-    </div>
 
-    <div id="footer1"></div>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+            <!-- Fragmento de Sangre -->
+            <div class="col-md-6">
+              <div class="card display-card h-100 border-danger">
+                <div class="card-body">
+                  <div class="d-flex justify-content-between align-items-center mb-2">
+                    <span class="rpg-badge rpg-badge-crimson">Artefacto Carmesí</span>
+                    <span class="badge bg-danger">Peligroso</span>
+                  </div>
+                  <h4 class="card-title text-danger mb-2">
+                    <a href="FragmentoDeSangre.html" class="text-danger">Fragmento de Sangre</a>
+                  </h4>
+                  <p class="card-text text-secondary small">
+                    Un fragmento cristalizado de color carmesí profundo que emana una pulsación mágica inquietante.
+                  </p>
+                </div>
+                <div class="card-footer bg-transparent border-top-0 pt-0">
+                  <a href="FragmentoDeSangre.html" class="btn btn-outline-danger w-100">Ver Ficha del Artefacto</a>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <div id="footer1"></div>
 </body>
 
 </html>

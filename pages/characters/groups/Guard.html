@@ -1,140 +1,95 @@
 <!doctype html>
-<html lang="en" translate="no" data-bs-theme="dark">
+<html lang="es" data-bs-theme="dark">
 
 <head>
-  <title>Guard</title>
-  <meta name="author" content="Ranko" />
-  <meta name="description" content="Lore, Homebrew and Original campaign." />
-  <meta name="keywords" content="Lore, Homebrew and Original campaign." />
-  <link href="../../../images/icons/dado_blanco_fondo_negro.webp" rel="icon" type="image/x-icon" />
-
+  <title>Guardia de Everantha — Rolling and Falling</title>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
-  <link href="https://getbootstrap.com/docs/5.3/assets/css/docs.css" rel="stylesheet" />
-  <script src="https://code.jquery.com/jquery-3.7.1.min.js"
-    integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
-  <script src="../../../scripts/loadComponents.js"></script>
+  <meta name="author" content="Ranko" />
+  <meta name="description" content="City Guard and military leaders of Everantha." />
+  <link rel="icon" href="../../../images/icons/dado_blanco_fondo_negro.webp" type="image/x-icon" />
 
-  <link rel="stylesheet" href="../../../css/index.css" />
+  <!-- Bootstrap & FontAwesome -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+
+  <!-- Styles -->
   <link rel="stylesheet" href="../../../css/wiki.css" />
-  <link rel="stylesheet" href="../../../css/display.css" />
+  <link rel="stylesheet" href="../../../css/article.css" />
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="../../../scripts/loadComponents.js"></script>
 </head>
 
 <body data-root="../../../">
   <div id="header1"></div>
 
-  <div class="container-fluid mt-4">
-    <div class="row">
-      <!-- Sidebar Column -->
-      <div class="col-md-3 mb-4">
+  <main class="container-fluid mt-4">
+    <div class="row g-4">
+      <aside class="col-lg-3 col-md-4">
         <div id="sidebar-container"></div>
-      </div>
+      </aside>
 
-      <!-- Main Content Column -->
-      <div class="col-md-9">
-
-        <!-- Breadcrumbs -->
-        <nav aria-label="breadcrumb">
+      <section class="col-lg-9 col-md-8">
+        <nav aria-label="breadcrumb" class="mb-3">
           <ol class="breadcrumb">
-            <li class="breadcrumb-item"><a href="../../../index.html">Home</a></li>
-            <li class="breadcrumb-item active">Characters</li>
-            <li class="breadcrumb-item"><a href="../display_groups.html">Groups</a></li>
-            <li class="breadcrumb-item active" aria-current="page">Guard</li>
+            <li class="breadcrumb-item"><a href="../../../index.html">Inicio</a></li>
+            <li class="breadcrumb-item">Personajes</li>
+            <li class="breadcrumb-item"><a href="../display_groups.html">Grupos</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Everantha Guard</li>
           </ol>
         </nav>
 
-        <!-- Content -->
-        <div class="wiki-content">
-          <div class="p-3 bg-black text-white text-center rounded mb-4">
-            <h1>Guard</h1>
-            <p>Members of the Guard</p>
+        <div class="wiki-content p-4 p-lg-5">
+          <!-- RPG Infobox -->
+          <div class="rpg-infobox float-end-md">
+            <div class="rpg-infobox-header">Everantha Guard</div>
+            <div class="rpg-infobox-image">
+              <img src="../../../images/icons/dado_blanco_fondo_negro.webp" alt="Everantha Guard Emblem">
+            </div>
+            <table class="rpg-infobox-table">
+              <tr>
+                <th>Tipo</th>
+                <td>Fuerza Militar / Guardia de la Ciudad</td>
+              </tr>
+              <tr>
+                <th>Alineamiento</th>
+                <td>Legal Neutral</td>
+              </tr>
+              <tr>
+                <th>Estado</th>
+                <td>Activo</td>
+              </tr>
+              <tr>
+                <th>Líder</th>
+                <td>Capitán Haldery</td>
+              </tr>
+            </table>
           </div>
 
-          <div class="container">
-            <div class="object">
-              <div class="object-description">
-                <h2 class="object-name">
-                  <a href="#">First Commander</a>
-                </h2>
-                <p>
-                  <a>PlaceHolder</a>
-                </p>
-              </div>
-              <a href="#"><img src="../../../images/icons/dado_blanco_fondo_negro.webp" alt="object A Image"
-                  class="object-img" /></a>
-            </div>
+          <div class="article-header">
+            <h1 class="display-5 text-warning fw-bold">Everantha - Guardia de la Ciudad</h1>
+            <p class="article-subtitle">Protectores de la ley, murallas y ciudadanos de Everantha</p>
+          </div>
 
-            <div class="object">
-              <div class="object-description">
-                <h2 class="object-name">
-                  <a href="#">James Garner</a>
-                </h2>
-                <p>
-                  <a>PlaceHolder.</a>
-                </p>
-              </div>
-              <a href="#"><img src="../../../images/icons/dado_blanco_fondo_negro.webp" alt="object A Image"
-                  class="object-img" /></a>
-            </div>
-            <div class="object">
-              <div class="object-description">
-                <h2 class="object-name">
-                  <a href="#">Slayer</a>
-                </h2>
-                <p>
-                  <a>PlaceHolder.</a>
-                </p>
-              </div>
-              <a href="#"><img src="../../../images/icons/dado_blanco_fondo_negro.webp" alt="object A Image"
-                  class="object-img" /></a>
-            </div>
-            <div class="object">
-              <div class="object-description">
-                <h2 class="object-name">
-                  <a href="#">Nauk.</a>
-                </h2>
-                <p>
-                  <a>PlaceHolder.</a>
-                </p>
-              </div>
-              <a href="#"><img src="../../../images/icons/dado_blanco_fondo_negro.webp" alt="object A Image"
-                  class="object-img" /></a>
-            </div>
-            <div class="object">
-              <div class="object-description">
-                <h2 class="object-name">
-                  <a href="#">Ruler-Warrior</a>
-                </h2>
-                <p>
-                  <a>PlaceHolder.</a>
-                </p>
-              </div>
-              <a href="#"><img src="../../../images/icons/dado_blanco_fondo_negro.webp" alt="object A Image"
-                  class="object-img" /></a>
-            </div>
-            <div class="object">
-              <div class="object-description">
-                <h2 class="object-name">
-                  <a href="#">
-                    Victoria DeVir</a>
-                </h2>
-                <p>
-                  <a>PlaceHolder.</a>
-                </p>
-              </div>
-              <a href="#"><img src="../../../images/icons/dado_blanco_fondo_negro.webp" alt="object A Image"
-                  class="object-img" /></a>
-            </div>
+          <div class="article-body">
+            <h2>Descripción</h2>
+            <p>
+              La Guardia de Everantha es el cuerpo militar encargado de la seguridad interior, patrullaje de calles y defensa de murallas ante amenazas exteriores.
+            </p>
+
+            <h2>Oficiales Principales</h2>
+            <p class="text-secondary">
+              Liderados por el Capitán Haldery, los comandantes de sector supervisan el orden táctico de la ciudad.
+            </p>
           </div>
         </div>
-      </div>
+      </section>
     </div>
-  </div>
+  </main>
 
   <div id="footer1"></div>
-  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
 </body>
 
 </html>

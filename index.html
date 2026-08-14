@@ -1,235 +1,231 @@
 <!doctype html>
-<html lang="EN" translate="no" data-bs-theme="dark">
+<html lang="es" data-bs-theme="dark">
 
 <head>
-  <title>Rolling And Falling</title>
-  <meta name="author" content="Ranko" />
-  <meta name="desciption" content="Lore, Homebrew and Original campain." />
-  <meta name="keywords" content="DnD5e, Homebrew, Original campaign." />
-  <link href="./images/icons/dado_blanco_fondo_negro.webp" rel="icon" type="image/x-icon" />
-
+  <title>Rolling and Falling — RPG Campaign Wiki</title>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="author" content="Ranko" />
+  <meta name="description" content="Official Wiki and Campaign Hub for Rolling and Falling - D&D 5e Homebrew World of Terranova." />
+  <meta name="keywords" content="DnD5e, Homebrew, RPG Wiki, Terranova, Campaign" />
+  <link rel="icon" href="./images/icons/dado_blanco_fondo_negro.webp" type="image/x-icon" />
+
+  <!-- Bootstrap 5 CSS & FontAwesome -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
-  <link href="https://getbootstrap.com/docs/5.3/assets/css/docs.css" rel="stylesheet" />
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="https://code.jquery.com/jquery-3.7.1.min.js"
-    integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
-  <script src="./scripts/loadComponents.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
 
-  <link rel="stylesheet" href="./css/index.css" />
+  <!-- Custom Styles -->
   <link rel="stylesheet" href="./css/wiki.css" />
-</head>
-<!-- https://ranko1911.github.io/Rolling-and-Falling/ -->
+  <link rel="stylesheet" href="./css/index.css" />
 
-<!-- Introducir un link a 404 -->
-<!-- <a href="https://ranko1911.github.io/Rolling-and-Falling/url_incorrecta"
-    >EJEMPLO me levanto de la siesta y hago commit</a
-  > -->
+  <!-- Bootstrap JS Bundle & Components Script -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="./scripts/loadComponents.js"></script>
+</head>
 
 <body data-root="./">
   <div id="header1"></div>
 
-  <div class="container-fluid mt-4">
-    <div class="row">
-      <!-- Sidebar Column (3 cols on medium+, full width on small) -->
-      <div class="col-md-3 mb-4">
+  <main class="container-fluid mt-4">
+    <div class="row g-4">
+      <!-- Sidebar Column -->
+      <aside class="col-lg-3 col-md-4">
         <div id="sidebar-container"></div>
-      </div>
+      </aside>
 
-      <!-- Main Content Column (9 cols) -->
-      <div class="col-md-9">
-        <!-- Bienvenida a los usuarios -->
-        <div class="p-5 bg-black text-white text-center rounded mb-5 shadow-lg position-relative overflow-hidden">
-          <div class="position-relative z-1">
-            <h1 class="display-4 fw-bold text-warning">Rolling And Falling</h1>
-            <p class="lead mb-4">Welcome to my personal RPG Wiki</p>
-            <a href="countdown.html" class="btn btn-warning btn-lg px-5 py-3 fw-bold shadow">
-              <span class="me-2">⏱️</span> Next Session Countdown
-            </a>
+      <!-- Main Content Column -->
+      <section class="col-lg-9 col-md-8">
+        <!-- Hero Banner -->
+        <div class="hero-banner p-4 p-lg-5 text-white mb-4 shadow-lg position-relative">
+          <div class="position-relative z-1 max-w-75">
+            <span class="rpg-badge rpg-badge-gold mb-2">D&D 5E HOMEBREW CAMPAIGN</span>
+            <h1 class="display-4 fw-bold text-warning mb-2">Rolling and Falling</h1>
+            <p class="lead mb-4 text-light">
+              Bienvenido al compendio oficial de la campaña. Explora la historia de <strong>Terranova</strong>, sus facciones, lugares legendarios y el destino de sus aventureros.
+            </p>
+            <div class="d-flex flex-wrap gap-3">
+              <a href="countdown.html" class="btn btn-custom btn-lg px-4 py-2 d-inline-flex align-items-center gap-2">
+                <span>⏱️</span> Próxima Sesión
+              </a>
+              <a href="pages/lore/terranova.html" class="btn btn-outline-gold btn-lg px-4 py-2 d-inline-flex align-items-center gap-2">
+                <span>🌍</span> Explorar Terranova
+              </a>
+            </div>
           </div>
         </div>
 
-        <!-- Carrusel Inicial -->
-        <div class="card mb-5 border-0 shadow-sm overflow-hidden">
-          <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+        <!-- Featured Carousel -->
+        <div class="card mb-4 border-0 shadow-sm overflow-hidden">
+          <div id="indexCarousel" class="carousel slide" data-bs-ride="carousel">
             <div class="carousel-indicators">
-              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0"
-                aria-label="Slide 1" class="active" aria-current="true"></button>
-              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
-                aria-label="Slide 2"></button>
-              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
-                aria-label="Slide 3"></button>
+              <button type="button" data-bs-target="#indexCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Terranova"></button>
+              <button type="button" data-bs-target="#indexCarousel" data-bs-slide-to="1" aria-label="Facciones"></button>
+              <button type="button" data-bs-target="#indexCarousel" data-bs-slide-to="2" aria-label="Objetos Mágicos"></button>
             </div>
             <div class="carousel-inner">
+              <!-- Slide 1 -->
               <div class="carousel-item active">
-                <svg class="bd-placeholder-img bd-placeholder-img-lg d-block w-100" width="800" height="400"
-                  xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: First slide"
-                  preserveAspectRatio="xMidYMid slice" focusable="false">
-                  <title>Terranova</title>
-                  <rect width="100%" height="100%" fill="#333"></rect>
-                  <text x="50%" y="50%" fill="#555" dy=".3em" font-size="2em">Terranova Landscapes</text>
-                </svg>
+                <div class="carousel-item-content">
+                  <div class="carousel-graphic">
+                    <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="#d4af37" stroke-width="1.5">
+                      <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
+                      <polyline points="2 17 12 22 22 17"></polyline>
+                      <polyline points="2 12 12 17 22 12"></polyline>
+                    </svg>
+                  </div>
+                  <h3>El Mundo de Terranova</h3>
+                  <p>Descubre los reinos, la historia antigua y los misterios que envuelven el continente de Terranova.</p>
+                  <a href="pages/lore/terranova.html" class="btn btn-outline-gold btn-sm mt-2">Leer Lore</a>
+                </div>
               </div>
+              <!-- Slide 2 -->
               <div class="carousel-item">
-                <svg class="bd-placeholder-img bd-placeholder-img-lg d-block w-100" width="800" height="400"
-                  xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Second slide"
-                  preserveAspectRatio="xMidYMid slice" focusable="false">
-                  <title>Odin's Hand</title>
-                  <rect width="100%" height="100%" fill="#222"></rect>
-                  <text x="50%" y="50%" fill="#444" dy=".3em" font-size="2em">Odin's Hand Faction</text>
-                </svg>
+                <div class="carousel-item-content">
+                  <div class="carousel-graphic">
+                    <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="#d4af37" stroke-width="1.5">
+                      <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                    </svg>
+                  </div>
+                  <h3>Facciones & Aventureros</h3>
+                  <p>Conoce los grupos de aventureros como Odin's Hand, la Arcane Academy y las casas nobles del reino.</p>
+                  <a href="pages/characters/display_groups.html" class="btn btn-outline-gold btn-sm mt-2">Ver Grupos</a>
+                </div>
               </div>
+              <!-- Slide 3 -->
               <div class="carousel-item">
-                <svg class="bd-placeholder-img bd-placeholder-img-lg d-block w-100" width="800" height="400"
-                  xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Third slide"
-                  preserveAspectRatio="xMidYMid slice" focusable="false">
-                  <title>Adventure Awaits</title>
-                  <rect width="100%" height="100%" fill="#111"></rect>
-                  <text x="50%" y="50%" fill="#333" dy=".3em" font-size="2em">Adventure Awaits</text>
-                </svg>
+                <div class="carousel-item-content">
+                  <div class="carousel-graphic">
+                    <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="#d4af37" stroke-width="1.5">
+                      <path d="M6 3h12l4 6-10 13L2 9z"></path>
+                    </svg>
+                  </div>
+                  <h3>Reliquias & Artefactos</h3>
+                  <p>Inspecciona las propiedades místicas del Fragmento de Sangre y el Guantelete Plateado.</p>
+                  <a href="pages/lore/items/display_items.html" class="btn btn-outline-gold btn-sm mt-2">Ver Reliquias</a>
+                </div>
               </div>
             </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
-              data-bs-slide="prev">
+            <button class="carousel-control-prev" type="button" data-bs-target="#indexCarousel" data-bs-slide="prev">
               <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-              <span class="visually-hidden">Previous</span>
+              <span class="visually-hidden">Anterior</span>
             </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
-              data-bs-slide="next">
+            <button class="carousel-control-next" type="button" data-bs-target="#indexCarousel" data-bs-slide="next">
               <span class="carousel-control-next-icon" aria-hidden="true"></span>
-              <span class="visually-hidden">Next</span>
+              <span class="visually-hidden">Siguiente</span>
             </button>
           </div>
         </div>
 
-        <!-- Introduction Section -->
-        <div class="wiki-content mb-5">
-          <div class="row align-items-center">
-            <div class="col-lg-6 mb-4 mb-lg-0">
-              <h2 class="text-warning mb-3">What is 'Rolling and Falling'?</h2>
-              <p class="lead text-light">
-                A personal collection of lore, homebrew, and original content for the
-                campaign currently in progress.
-              </p>
-              <p class="text-secondary">
-                This project serves as a living document of our adventures, chronicling the heroes,
-                villains, and the ever-changing world of Terranova.
-              </p>
-            </div>
-            <div class="col-lg-6">
-              <div class="p-4 bg-dark rounded border border-secondary text-center">
-                <p class="mb-0 text-muted fst-italic">
-                  "In the heart of chaos, we find our story."
-                </p>
-              </div>
-            </div>
-          </div>
+        <!-- Section Title -->
+        <div class="d-flex align-items-center justify-content-between border-bottom border-secondary pb-2 mb-4">
+          <h2 class="h3 text-white mb-0">Categorías de la Wiki</h2>
+          <span class="text-muted small">Haz clic en una sección para explorar</span>
         </div>
 
-        <h3 class="border-bottom border-secondary pb-2 mb-4 text-white">Campaign Resources</h3>
-
-        <!-- Navigation Grid -->
-        <div class="row g-4 mb-5">
-
-          <!-- Lore Column (Replaces General Info) -->
+        <!-- Navigation Cards Grid -->
+        <div class="row g-4 mb-4">
+          <!-- Lore Card -->
           <div class="col-md-4">
-            <div class="card h-100">
+            <div class="card category-card">
               <div class="card-body">
-                <h5 class="card-title">📜 Lore</h5>
-                <p class="card-text">
-                  Deep dive into the history, myths, and legends of Terranova.
+                <div class="category-icon">📜</div>
+                <h5 class="card-title text-warning">Historia & Lore</h5>
+                <p class="card-text text-secondary">
+                  Compendio completo de mitos, leyendas e historia del mundo.
                 </p>
               </div>
-              <div class="card-footer bg-transparent border-top-0">
-                <a href="pages/lore/display_lore.html" class="btn btn-custom w-100">Read Lore</a>
+              <div class="card-footer bg-transparent border-top-0 pt-0">
+                <a href="pages/lore/display_lore.html" class="btn btn-outline-gold w-100">Explorar Lore</a>
               </div>
             </div>
           </div>
 
-          <!-- Events Column -->
+          <!-- Adventurers Card -->
           <div class="col-md-4">
-            <div class="card h-100">
+            <div class="card category-card">
               <div class="card-body">
-                <h5 class="card-title">📅 Events</h5>
-                <p class="card-text">
-                  A timeline of significant events and world-shaping moments.
+                <div class="category-icon">🛡️</div>
+                <h5 class="card-title text-warning">Aventureros & Facciones</h5>
+                <p class="card-text text-secondary">
+                  Fichas de grupos, personajes jugables y facciones influyentes.
                 </p>
               </div>
-              <div class="card-footer bg-transparent border-top-0">
-                <a href="pages/lore/events/display_events.html" class="btn btn-custom w-100">Timeline</a>
+              <div class="card-footer bg-transparent border-top-0 pt-0">
+                <a href="pages/characters/display_groups.html" class="btn btn-outline-gold w-100">Ver Facciones</a>
               </div>
             </div>
           </div>
 
-          <!-- Items Column -->
+          <!-- Places Card -->
           <div class="col-md-4">
-            <div class="card h-100">
+            <div class="card category-card">
               <div class="card-body">
-                <h5 class="card-title">💎 Items of Interest</h5>
-                <p class="card-text">
-                  Discover powerful artifacts, magical objects, and unique gear.
+                <div class="category-icon">🗺️</div>
+                <h5 class="card-title text-warning">Lugares & Regiones</h5>
+                <p class="card-text text-secondary">
+                  Mapas, ciudades, fortalezas y mazmorras en Terranova.
                 </p>
               </div>
-              <div class="card-footer bg-transparent border-top-0">
-                <a href="pages/lore/items/display_items.html" class="btn btn-custom w-100">View Items</a>
+              <div class="card-footer bg-transparent border-top-0 pt-0">
+                <a href="pages/places/display_places.html" class="btn btn-outline-gold w-100">Explorar Mapas</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Magical Items Card -->
+          <div class="col-md-4">
+            <div class="card category-card">
+              <div class="card-body">
+                <div class="category-icon">💎</div>
+                <h5 class="card-title text-warning">Objetos & Reliquias</h5>
+                <p class="card-text text-secondary">
+                  Artefactos legendarios, objetos mágicos y equipamiento único.
+                </p>
+              </div>
+              <div class="card-footer bg-transparent border-top-0 pt-0">
+                <a href="pages/lore/items/display_items.html" class="btn btn-outline-gold w-100">Ver Objetos</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Timeline & Events -->
+          <div class="col-md-4">
+            <div class="card category-card">
+              <div class="card-body">
+                <div class="category-icon">📅</div>
+                <h5 class="card-title text-warning">Línea de Tiempo</h5>
+                <p class="card-text text-secondary">
+                  Cronología de acontecimientos y grandes eras de la campaña.
+                </p>
+              </div>
+              <div class="card-footer bg-transparent border-top-0 pt-0">
+                <a href="pages/lore/events/display_events.html" class="btn btn-outline-gold w-100">Ver Cronología</a>
               </div>
             </div>
           </div>
 
           <!-- Schedules -->
           <div class="col-md-4">
-            <div class="card h-100">
+            <div class="card category-card">
               <div class="card-body">
-                <h5 class="card-title">🗓️ Schedules</h5>
-                <p class="card-text">
-                  Track upcoming sessions and game times.
+                <div class="category-icon">🗓️</div>
+                <h5 class="card-title text-warning">Horarios de Partida</h5>
+                <p class="card-text text-secondary">
+                  Calendario de sesiones, horarios y disponibilidad del grupo.
                 </p>
               </div>
-              <div class="card-footer bg-transparent border-top-0">
-                <a href="pages/schedules.html" class="btn btn-outline-light w-100">Check Times</a>
-              </div>
-            </div>
-          </div>
-
-          <!-- Groups -->
-          <div class="col-md-4">
-            <div class="card h-100">
-              <div class="card-body">
-                <h5 class="card-title">🛡️ Adventurers</h5>
-                <p class="card-text">
-                  Meet the diverse groups of heroes exploring the world.
-                </p>
-              </div>
-              <div class="card-footer bg-transparent border-top-0">
-                <a href="pages/characters/display_groups.html" class="btn btn-outline-light w-100">Meet Groups</a>
-              </div>
-            </div>
-          </div>
-
-          <!-- Places -->
-          <div class="col-md-4">
-            <div class="card h-100">
-              <div class="card-body">
-                <h5 class="card-title">🗺️ Places</h5>
-                <p class="card-text">
-                  Navigate the regions, cities, and dungeons of the realm.
-                </p>
-              </div>
-              <div class="card-footer bg-transparent border-top-0">
-                <a href="pages/places/display_places.html" class="btn btn-outline-light w-100">Explore Map</a>
+              <div class="card-footer bg-transparent border-top-0 pt-0">
+                <a href="pages/schedules.html" class="btn btn-outline-gold w-100">Consultar Horarios</a>
               </div>
             </div>
           </div>
         </div>
 
-      </div> <!-- End Main Content Column -->
-    </div> <!-- End Row -->
-  </div> <!-- End Container -->
+      </section>
+    </div>
+  </main>
 
   <div id="footer1"></div>
 </body>
 
 </html>
-
-

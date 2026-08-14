@@ -1,147 +1,178 @@
 <!doctype html>
-<html lang="en" translate="no" data-bs-theme="dark">
+<html lang="es" data-bs-theme="dark">
 
 <head>
-  <title>Rolling And Falling</title>
-  <meta name="author" content="Ranko" />
-  <meta name="description" content="Lore, Homebrew and Original campaign." />
-  <meta name="keywords" content="Lore, Homebrew and Original campaign." />
-  <link href="https://ranko1911.github.io/Rolling-and-Falling/images/icons/dado_blanco_fondo_negro.webp" rel="icon"
-    type="image/x-icon" />
-
+  <title>Anchieta's House — Rolling and Falling</title>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
-  <link href="https://getbootstrap.com/docs/5.3/assets/css/docs.css" rel="stylesheet" />
-  <script src="https://code.jquery.com/jquery-3.7.1.min.js"
-    integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
-  <script src="../../../scripts/loadComponents.js"></script>
+  <meta name="author" content="Ranko" />
+  <meta name="description" content="Main player character group in the Rolling and Falling campaign." />
+  <link rel="icon" href="../../../images/icons/dado_blanco_fondo_negro.webp" type="image/x-icon" />
 
-  <link rel="stylesheet" href="../../../css/index.css" />
+  <!-- Bootstrap & FontAwesome -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+
+  <!-- Styles -->
   <link rel="stylesheet" href="../../../css/wiki.css" />
-  <link rel="stylesheet" href="../../../css/display.css" />
+  <link rel="stylesheet" href="../../../css/article.css" />
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="../../../scripts/loadComponents.js"></script>
 </head>
 
 <body data-root="../../../">
   <div id="header1"></div>
 
-  <div class="container-fluid mt-4">
-    <div class="row">
-      <!-- Sidebar Column -->
-      <div class="col-md-3 mb-4">
+  <main class="container-fluid mt-4">
+    <div class="row g-4">
+      <!-- Sidebar -->
+      <aside class="col-lg-3 col-md-4">
         <div id="sidebar-container"></div>
-      </div>
+      </aside>
 
-      <!-- Main Content Column -->
-      <div class="col-md-9">
-
+      <!-- Main Content -->
+      <section class="col-lg-9 col-md-8">
         <!-- Breadcrumbs -->
-        <nav aria-label="breadcrumb">
+        <nav aria-label="breadcrumb" class="mb-3">
           <ol class="breadcrumb">
-            <li class="breadcrumb-item"><a href="../../../index.html">Home</a></li>
-            <li class="breadcrumb-item active">Characters</li>
-            <li class="breadcrumb-item"><a href="../display_groups.html">Groups</a></li>
+            <li class="breadcrumb-item"><a href="../../../index.html">Inicio</a></li>
+            <li class="breadcrumb-item">Personajes</li>
+            <li class="breadcrumb-item"><a href="../display_groups.html">Grupos</a></li>
             <li class="breadcrumb-item active" aria-current="page">Anchieta's House</li>
           </ol>
         </nav>
 
-        <!-- Content -->
-        <div class="wiki-content">
-          <div class="p-3 bg-black text-white text-center rounded mb-4">
-            <h1>Anchieta's House</h1>
-            <p>Members of Anchieta's House</p>
+        <div class="wiki-content p-4 p-lg-5">
+          <!-- RPG Infobox -->
+          <div class="rpg-infobox float-end-md">
+            <div class="rpg-infobox-header">Anchieta's House</div>
+            <div class="rpg-infobox-image">
+              <img src="../../../images/icons/dado_blanco_fondo_negro.webp" alt="Anchieta House Emblem">
+            </div>
+            <table class="rpg-infobox-table">
+              <tr>
+                <th>Tipo</th>
+                <td>Grupo de Aventureros (PJ)</td>
+              </tr>
+              <tr>
+                <th>Alineamiento</th>
+                <td>Caótico Bueno</td>
+              </tr>
+              <tr>
+                <th>Estado</th>
+                <td>Activo</td>
+              </tr>
+              <tr>
+                <th>Base</th>
+                <td>Everantha</td>
+              </tr>
+              <tr>
+                <th>Integrantes</th>
+                <td>6 Miembros principales</td>
+              </tr>
+            </table>
           </div>
 
-          <div class="container">
-            <div class="object">
-              <div class="object-description">
-                <h2 class="object-name">
-                  <a href="#">Haldery</a>
-                </h2>
-                <p>
-                  <a>The captain of the Guard on Everantha, also known as, the shield of faith, Iron Wall and Portable
-                    Castle.</a>
-                </p>
+          <!-- Main Article Header -->
+          <div class="article-header">
+            <h1 class="display-5 text-warning fw-bold">Anchieta's House</h1>
+            <p class="article-subtitle">Compañía principal de aventureros de la campaña</p>
+          </div>
+
+          <div class="article-body">
+            <h2>Descripción General</h2>
+            <p>
+              Anchieta's House es la compañía de aventureros formada por los héroes principales de la campaña <em>Rolling and Falling</em>. Conocidos por su inusitada combinación de habilidades tácticas, conexiones arcanas y una inagotable capacidad para generar caos estratégico, son la primera línea de defensa de Everantha.
+            </p>
+
+            <blockquote>
+              "Pueden ser la causa del dolor de cabeza de medio reino, pero cuando las sombras acechan Terranova, no hay nadie más en quien confiar."
+            </blockquote>
+
+            <h2>Miembros Destacados</h2>
+            <div class="row g-3 my-3">
+
+              <!-- Haldery -->
+              <div class="col-md-6">
+                <div class="card bg-dark border-secondary p-3 h-100">
+                  <h5 class="text-warning mb-1">🛡️ Haldery</h5>
+                  <span class="rpg-badge rpg-badge-gold mb-2">Paladín / Capitán</span>
+                  <p class="small text-secondary mb-0">
+                    Capitán de la Guardia en Everantha. Apodado el "Escudo de la Fe", "Muro de Hierro" y "Castillo Portátil".
+                  </p>
+                </div>
               </div>
-              <a href="#"><img src="../../../images/icons/dado_blanco_fondo_negro.webp" alt="object A Image"
-                  class="object-img" /></a>
+
+              <!-- Izalith -->
+              <div class="col-md-6">
+                <div class="card bg-dark border-secondary p-3 h-100">
+                  <h5 class="text-warning mb-1">🪙 Izalith</h5>
+                  <span class="rpg-badge rpg-badge-cyan">Comerciante / Picaro</span>
+                  <p class="small text-secondary mb-0">
+                    Impulsada por el oro y una peculiar obsesión por los juegos de estrategia y finanzas.
+                  </p>
+                </div>
+              </div>
+
+              <!-- Christopher -->
+              <div class="col-md-6">
+                <div class="card bg-dark border-secondary p-3 h-100">
+                  <h5 class="text-warning mb-1">🐕 Christopher</h5>
+                  <span class="rpg-badge rpg-badge-crimson">Vínculo Sombrío</span>
+                  <p class="small text-secondary mb-0">
+                    Joven con una misteriosa conexión con el plano del Shadowfell, acompañado siempre por su perro husky.
+                  </p>
+                </div>
+              </div>
+
+              <!-- Jhun -->
+              <div class="col-md-6">
+                <div class="card bg-dark border-secondary p-3 h-100">
+                  <h5 class="text-warning mb-1">⚔️ Jhun</h5>
+                  <span class="rpg-badge rpg-badge-gold">Espadachín misterioso</span>
+                  <p class="small text-secondary mb-0">
+                    Portador de una sangrienta katana cuyo pasado envuelto en enigmas guarda secretos vitales para el reino.
+                  </p>
+                </div>
+              </div>
+
+              <!-- King -->
+              <div class="col-md-6">
+                <div class="card bg-dark border-secondary p-3 h-100">
+                  <h5 class="text-warning mb-1">👑 King</h5>
+                  <span class="rpg-badge rpg-badge-cyan">Bardo / Diplomático</span>
+                  <p class="small text-secondary mb-0">
+                    Una lengua de oro combinada con una mente impredecible. Experto en transformar encuentros sociales en caos táctico.
+                  </p>
+                </div>
+              </div>
+
+              <!-- øl Firenze -->
+              <div class="col-md-6">
+                <div class="card bg-dark border-secondary p-3 h-100">
+                  <h5 class="text-warning mb-1">🍰 øl Firenze</h5>
+                  <span class="rpg-badge rpg-badge-gold">Enano Arcano</span>
+                  <p class="small text-secondary mb-0">
+                    Erudito enano en busca de herramientas legendarias para cumplir su misión ancestral... y los ingredientes para el tiramisú perfecto.
+                  </p>
+                </div>
+              </div>
+
             </div>
 
-            <div class="object">
-              <div class="object-description">
-                <h2 class="object-name">
-                  <a href="#">Izalith</a>
-                </h2>
-                <p>
-                  <a>A crazy woman moved by the money and the obsesion with a table
-                    top know as "Monoppoly" and "StardewValley".</a>
-                </p>
-              </div>
-              <a href="#"><img src="../../../images/icons/dado_blanco_fondo_negro.webp" alt="object A Image"
-                  class="object-img" /></a>
-            </div>
-            <div class="object">
-              <div class="object-description">
-                <h2 class="object-name">
-                  <a href="#">Christopher</a>
-                </h2>
-                <p>
-                  <a>A boy with an strange connection to the Shadowfell and his
-                    husky dog.</a>
-                </p>
-              </div>
-              <a href="#"><img src="../../../images/icons/dado_blanco_fondo_negro.webp" alt="object A Image"
-                  class="object-img" /></a>
-            </div>
-            <div class="object">
-              <div class="object-description">
-                <h2 class="object-name">
-                  <a href="#">Jhun</a>
-                </h2>
-                <p>
-                  <a>It's a boy or a girl?, It's doesn't matter, the important point
-                    is about his bloody katana and ¿Who is Jhun really?</a>
-                </p>
-              </div>
-              <a href="#"><img src="../../../images/icons/dado_blanco_fondo_negro.webp" alt="object A Image"
-                  class="object-img" /></a>
-            </div>
-            <div class="object">
-              <div class="object-description">
-                <h2 class="object-name">
-                  <a href="#">King</a>
-                </h2>
-                <p>
-                  <a>A golden tonge and a broken mind, the perfect combo to destroy
-                    every social encounter.</a>
-                </p>
-              </div>
-              <a href="#"><img src="../../../images/icons/dado_blanco_fondo_negro.webp" alt="object A Image"
-                  class="object-img" /></a>
-            </div>
-            <div class="object">
-              <div class="object-description">
-                <h2 class="object-name">
-                  <a href="#">
-                    øl Firenze</a>
-                </h2>
-                <p>
-                  <a>An arcane drawf searching for the legendaries tools to fullfil
-                    his mission, and for the ingredients for a tiramisu .</a>
-                </p>
-              </div>
-              <a href="#"><img src="../../../images/icons/dado_blanco_fondo_negro.webp" alt="object A Image"
-                  class="object-img" /></a>
-            </div>
+            <h2>Relaciones y Estado</h2>
+            <p>
+              Mantienen relaciones estrechas con la Guardia de Everantha, la Arcane Academy y el santuario de Sun Seed, mientras enfrentan la permanente amenaza de la <strong>Mano de Odín</strong>.
+            </p>
           </div>
         </div>
-      </div>
+      </section>
     </div>
-  </div>
+  </main>
 
   <div id="footer1"></div>
-  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
 </body>
 
 </html>

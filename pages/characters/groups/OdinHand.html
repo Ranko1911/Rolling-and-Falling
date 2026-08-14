@@ -1,66 +1,99 @@
 <!doctype html>
-<html lang="en" translate="no" data-bs-theme="dark">
+<html lang="es" data-bs-theme="dark">
 
 <head>
-  <title>Odin's Hand</title>
-  <meta name="author" content="Ranko" />
-  <meta name="description" content="Lore, Homebrew and Original campaign." />
-  <meta name="keywords" content="Lore, Homebrew and Original campaign." />
-  <link href="../../../images/icons/dado_blanco_fondo_negro.webp" rel="icon" type="image/x-icon" />
-
+  <title>Mano de Odín — Rolling and Falling</title>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
-  <link href="https://getbootstrap.com/docs/5.3/assets/css/docs.css" rel="stylesheet" />
-  <script src="https://code.jquery.com/jquery-3.7.1.min.js"
-    integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
-  <script src="../../../scripts/loadComponents.js"></script>
+  <meta name="author" content="Ranko" />
+  <meta name="description" content="Antagonist faction in the Rolling and Falling campaign." />
+  <link rel="icon" href="../../../images/icons/dado_blanco_fondo_negro.webp" type="image/x-icon" />
 
-  <link rel="stylesheet" href="../../../css/index.css" />
+  <!-- Bootstrap & FontAwesome -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+
+  <!-- Styles -->
   <link rel="stylesheet" href="../../../css/wiki.css" />
-  <link rel="stylesheet" href="../../../css/display.css" />
+  <link rel="stylesheet" href="../../../css/article.css" />
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="../../../scripts/loadComponents.js"></script>
 </head>
 
 <body data-root="../../../">
   <div id="header1"></div>
 
-  <div class="container-fluid mt-4">
-    <div class="row">
-      <!-- Sidebar Column -->
-      <div class="col-md-3 mb-4">
+  <main class="container-fluid mt-4">
+    <div class="row g-4">
+      <aside class="col-lg-3 col-md-4">
         <div id="sidebar-container"></div>
-      </div>
+      </aside>
 
-      <!-- Main Content Column -->
-      <div class="col-md-9">
-
-        <!-- Breadcrumbs -->
-        <nav aria-label="breadcrumb">
+      <section class="col-lg-9 col-md-8">
+        <nav aria-label="breadcrumb" class="mb-3">
           <ol class="breadcrumb">
-            <li class="breadcrumb-item"><a href="../../../index.html">Home</a></li>
-            <li class="breadcrumb-item active">Characters</li>
-            <li class="breadcrumb-item"><a href="../display_groups.html">Groups</a></li>
-            <li class="breadcrumb-item active" aria-current="page">Odin's Hand</li>
+            <li class="breadcrumb-item"><a href="../../../index.html">Inicio</a></li>
+            <li class="breadcrumb-item">Personajes</li>
+            <li class="breadcrumb-item"><a href="../display_groups.html">Grupos</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Mano de Odín</li>
           </ol>
         </nav>
 
-        <!-- Content -->
-        <div class="wiki-content">
-          <div class="p-3 bg-black text-white text-center rounded mb-4">
-            <h1>Odin's Hand</h1>
-            <p>Members of Odin's Hand</p>
+        <div class="wiki-content p-4 p-lg-5">
+          <!-- RPG Infobox -->
+          <div class="rpg-infobox float-end-md border-danger">
+            <div class="rpg-infobox-header bg-danger text-white">Mano de Odín</div>
+            <div class="rpg-infobox-image">
+              <img src="../../../images/icons/dado_blanco_fondo_negro.webp" alt="Odin Hand Emblem">
+            </div>
+            <table class="rpg-infobox-table">
+              <tr>
+                <th>Tipo</th>
+                <td>Facción Antagonista (BBEG)</td>
+              </tr>
+              <tr>
+                <th>Alineamiento</th>
+                <td>Caótico Malvado</td>
+              </tr>
+              <tr>
+                <th>Estado</th>
+                <td>Activo / Amenaza Global</td>
+              </tr>
+              <tr>
+                <th>Subgrupo</th>
+                <td>Guardia de la Tormenta</td>
+              </tr>
+            </table>
           </div>
 
-          <div class="container">
+          <div class="article-header border-danger">
+            <h1 class="display-5 text-danger fw-bold">Mano de Odín</h1>
+            <p class="article-subtitle text-secondary">La principal fuerza antagonista amenazando el destino de Terranova</p>
+          </div>
+
+          <div class="article-body">
+            <h2>Descripción General</h2>
+            <p>
+              La Mano de Odín es la organización enemiga principal de la campaña. Operando desde las sombras y mediante la fuerza militar de la Guardia de la Tormenta, buscan desestabilizar los reinos para imponer su dominio.
+            </p>
+
+            <blockquote class="border-danger text-light">
+              "Donde pasa la Mano de Odín, las tormentas no traen lluvia, sino desolación."
+            </blockquote>
+
+            <h2>Subfacciones & Capitanes</h2>
+            <p>
+              Comandados por poderosos generales arcanos y tácticos militares implacables.
+            </p>
           </div>
         </div>
-      </div>
+      </section>
     </div>
-  </div>
+  </main>
 
   <div id="footer1"></div>
-  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
 </body>
 
 </html>
