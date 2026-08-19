@@ -1,0 +1,245 @@
+<!doctype html>
+<html lang="es" data-bs-theme="dark">
+
+<head>
+  <title>Cargando Entrada — Rolling and Falling</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="author" content="Ranko" />
+  <link rel="icon" href="../images/icons/dado_blanco_fondo_negro.webp" type="image/x-icon" />
+
+  <!-- Bootstrap & FontAwesome -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+
+  <!-- Custom Styles -->
+  <link rel="stylesheet" href="../css/wiki.css" />
+  <link rel="stylesheet" href="../css/article.css" />
+
+  <!-- Marked Markdown Parser (Client-Side) -->
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+
+  <!-- Bootstrap & Dynamic Components Injector -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="../scripts/loadComponents.js"></script>
+</head>
+
+<body data-root="../">
+  <div id="header1"></div>
+
+  <main class="container-fluid mt-4">
+    <div class="row g-4">
+      <!-- Sidebar Column -->
+      <aside class="col-lg-3 col-md-4">
+        <div id="sidebar-container"></div>
+      </aside>
+
+      <!-- Main Content Column -->
+      <section class="col-lg-9 col-md-8">
+        <!-- Breadcrumbs -->
+        <nav aria-label="breadcrumb" class="mb-3">
+          <ol class="breadcrumb" id="wikiBreadcrumbs">
+            <li class="breadcrumb-item"><a href="../index.html">Inicio</a></li>
+            <li class="breadcrumb-item" id="crumbCategory"><a href="#">Wiki</a></li>
+            <li class="breadcrumb-item active" aria-current="page" id="crumbTitle">Cargando...</li>
+          </ol>
+        </nav>
+
+        <div class="wiki-content p-4 p-lg-5" id="viewContainer">
+          <div class="text-center py-5" id="loadingSpinner">
+            <div class="spinner-border text-warning" role="status">
+              <span class="visually-hidden">Cargando entrada...</span>
+            </div>
+            <p class="text-secondary mt-3">Cargando contenido de la wiki...</p>
+          </div>
+
+          <!-- Dynamic Infobox Placeholder -->
+          <div id="infoboxSlot"></div>
+
+          <!-- Article Header -->
+          <div class="article-header" id="articleHeader" style="display:none;">
+            <h1 class="display-5 text-warning fw-bold" id="viewTitle"></h1>
+            <p class="article-subtitle text-secondary fs-5" id="viewSubtitle"></p>
+          </div>
+
+          <!-- Rendered Markdown Body -->
+          <div class="article-body mt-4" id="viewBody" style="display:none;"></div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <div id="footer1"></div>
+
+  <script>
+    // Frontmatter & Markdown Loader Script
+    document.addEventListener("DOMContentLoaded", async function () {
+      const urlParams = new URLSearchParams(window.location.search);
+      const srcParam = urlParams.get("src");
+      const idParam = urlParams.get("id");
+
+      let mdFilePath = "";
+      let entryMeta = null;
+
+      // 1. Fetch content manifest
+      try {
+        const manifestRes = await fetch("../data/content-manifest.json");
+        if (manifestRes.ok) {
+          const manifest = await manifestRes.json();
+          if (idParam) {
+            entryMeta = manifest.entries.find(e => e.id === idParam);
+            if (entryMeta) mdFilePath = "../" + entryMeta.src;
+          }
+        }
+      } catch (err) {
+        console.warn("Could not load manifest:", err);
+      }
+
+      if (!mdFilePath && srcParam) {
+        mdFilePath = srcParam.startsWith("../") || srcParam.startsWith("http") ? srcParam : "../" + srcParam;
+      }
+
+      if (!mdFilePath) {
+        showError("No se ha especificado ninguna entrada o archivo para cargar.");
+        return;
+      }
+
+      // 2. Fetch Markdown file content
+      try {
+        const response = await fetch(mdFilePath);
+        if (!response.ok) throw new Error(`HTTP ${response.status}`);
+        const rawText = await response.text();
+
+        parseAndRender(rawText, entryMeta);
+      } catch (err) {
+        showError(`Error al cargar el archivo de contenido (${mdFilePath}): ` + err.message);
+      }
+    });
+
+    function parseYamlFrontMatter(text) {
+      let metadata = {};
+      let bodyText = text;
+
+      if (text.startsWith("---")) {
+        const parts = text.split(/^---$/m);
+        if (parts.length >= 3) {
+          const yamlBlock = parts[1].trim();
+          bodyText = parts.slice(2).join("---").trim();
+
+          yamlBlock.split("\n").forEach(line => {
+            const colonIndex = line.indexOf(":");
+            if (colonIndex !== -1) {
+              const key = line.slice(0, colonIndex).trim();
+              let val = line.slice(colonIndex + 1).trim();
+              if (val.startsWith('"') && val.endsWith('"')) val = val.slice(1, -1);
+              if (val.startsWith("'") && val.endsWith("'")) val = val.slice(1, -1);
+              metadata[key] = val;
+            }
+          });
+        }
+      }
+      return { metadata, bodyText };
+    }
+
+    function parseAndRender(rawText, fallbackMeta) {
+      const { metadata, bodyText } = parseYamlFrontMatter(rawText);
+      const meta = { ...fallbackMeta, ...metadata };
+
+      // Set Page Title
+      const title = meta.title || "Artículo";
+      document.title = `${title} — Rolling and Falling`;
+
+      // Set Breadcrumbs
+      const category = meta.category || "Wiki";
+      const crumbCatEl = document.getElementById("crumbCategory");
+      const categoryMap = {
+        groups: { label: "Grupos", url: "characters/display_groups.html" },
+        characters: { label: "Personajes", url: "characters/display_groups.html" },
+        items: { label: "Objetos", url: "lore/items/display_items.html" },
+        places: { label: "Lugares", url: "places/display_places.html" },
+        events: { label: "Eventos", url: "lore/events/display_events.html" },
+        lore: { label: "Lore", url: "lore/display_lore.html" }
+      };
+
+      const catInfo = categoryMap[category] || { label: category, url: "lore/display_lore.html" };
+      crumbCatEl.innerHTML = `<a href="${catInfo.url}">${catInfo.label}</a>`;
+      document.getElementById("crumbTitle").textContent = title;
+
+      // Set Article Header
+      document.getElementById("viewTitle").textContent = title;
+      document.getElementById("viewSubtitle").textContent = meta.subtitle || "";
+      document.getElementById("articleHeader").style.display = "block";
+
+      // Render Infobox if metadata has fields
+      renderInfobox(meta, title);
+
+      // Render Markdown Body
+      const bodyEl = document.getElementById("viewBody");
+      bodyEl.innerHTML = marked.parse(bodyText);
+      bodyEl.style.display = "block";
+
+      // Hide loading spinner
+      document.getElementById("loadingSpinner").style.display = "none";
+    }
+
+    function renderInfobox(meta, title) {
+      const fields = [
+        { key: "type", label: "Tipo" },
+        { key: "race", label: "Raza" },
+        { key: "class", label: "Clase" },
+        { key: "rarity", label: "Rareza" },
+        { key: "alignment", label: "Alineamiento" },
+        { key: "status", label: "Estado" },
+        { key: "base", label: "Base de Operaciones" },
+        { key: "region", label: "Región" },
+        { key: "members_count", label: "Integrantes" },
+        { key: "attunement", label: "Sintonización" }
+      ];
+
+      const activeFields = fields.filter(f => meta[f.key]);
+      if (activeFields.length === 0 && !meta.image) return;
+
+      let imageSrc = meta.image || "images/icons/dado_blanco_fondo_negro.webp";
+      if (!imageSrc.startsWith("../") && !imageSrc.startsWith("http")) {
+        imageSrc = "../" + imageSrc;
+      }
+
+      const rows = activeFields.map(f => `
+        <tr>
+          <th>${f.label}</th>
+          <td>${meta[f.key]}</td>
+        </tr>
+      `).join("");
+
+      const isDanger = meta.alignment && meta.alignment.toLowerCase().includes("malvado") || meta.category === "events";
+      const borderClass = isDanger ? "border-danger" : "";
+      const headerClass = isDanger ? "bg-danger text-white" : "";
+
+      const infoboxHtml = `
+        <div class="rpg-infobox float-end-md ${borderClass}">
+          <div class="rpg-infobox-header ${headerClass}">${title}</div>
+          <div class="rpg-infobox-image">
+            <img src="${imageSrc}" alt="${title}">
+          </div>
+          <table class="rpg-infobox-table">
+            ${rows}
+          </table>
+        </div>`;
+
+      document.getElementById("infoboxSlot").innerHTML = infoboxHtml;
+    }
+
+    function showError(message) {
+      document.getElementById("loadingSpinner").style.display = "none";
+      document.getElementById("viewContainer").innerHTML = `
+        <div class="alert alert-danger border-danger text-light p-4 text-center">
+          <h4 class="alert-heading fw-bold">⚠️ No se pudo cargar el artículo</h4>
+          <p class="mb-0">${message}</p>
+          <hr class="border-danger">
+          <a href="../index.html" class="btn btn-outline-light btn-sm mt-2">Volver al Inicio</a>
+        </div>`;
+    }
+  </script>
+</body>
+
+</html>

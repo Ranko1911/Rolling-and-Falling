@@ -49,50 +49,9 @@
             <span class="rpg-badge rpg-badge-gold">TESORO Y EQUIPAMIENTO</span>
           </div>
 
-          <div class="row g-4">
-
-            <!-- Guantelete Plateado -->
-            <div class="col-md-6">
-              <div class="card display-card h-100">
-                <div class="card-body">
-                  <div class="d-flex justify-content-between align-items-center mb-2">
-                    <span class="rpg-badge rpg-badge-gold">Rareza: Muy Raro</span>
-                    <span class="badge bg-info text-dark">Armadura / Objeto Maravilloso</span>
-                  </div>
-                  <h4 class="card-title text-warning mb-2">
-                    <a href="GuanteletePlateado.html">Guantelete Plateado</a>
-                  </h4>
-                  <p class="card-text text-secondary small">
-                    Un guantelete de diseño plateado intrincado y origen misterioso capaz de canalizar barreras arcanas.
-                  </p>
-                </div>
-                <div class="card-footer bg-transparent border-top-0 pt-0">
-                  <a href="GuanteletePlateado.html" class="btn btn-outline-gold w-100">Ver Propiedades</a>
-                </div>
-              </div>
-            </div>
-
-            <!-- Fragmento de Sangre -->
-            <div class="col-md-6">
-              <div class="card display-card h-100 border-danger">
-                <div class="card-body">
-                  <div class="d-flex justify-content-between align-items-center mb-2">
-                    <span class="rpg-badge rpg-badge-crimson">Artefacto Carmesí</span>
-                    <span class="badge bg-danger">Peligroso</span>
-                  </div>
-                  <h4 class="card-title text-danger mb-2">
-                    <a href="FragmentoDeSangre.html" class="text-danger">Fragmento de Sangre</a>
-                  </h4>
-                  <p class="card-text text-secondary small">
-                    Un fragmento cristalizado de color carmesí profundo que emana una pulsación mágica inquietante.
-                  </p>
-                </div>
-                <div class="card-footer bg-transparent border-top-0 pt-0">
-                  <a href="FragmentoDeSangre.html" class="btn btn-outline-danger w-100">Ver Ficha del Artefacto</a>
-                </div>
-              </div>
-            </div>
-
+          <!-- Items Grid -->
+          <div class="row g-4" id="itemsGrid">
+            <!-- Rendered dynamically from manifest -->
           </div>
         </div>
       </section>
@@ -100,6 +59,52 @@
   </main>
 
   <div id="footer1"></div>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", async function () {
+      const grid = document.getElementById("itemsGrid");
+      try {
+        const res = await fetch("../../../data/content-manifest.json");
+        if (res.ok) {
+          const data = await res.json();
+          const items = data.entries.filter(e => e.category === "items");
+          
+          grid.innerHTML = items.map(item => {
+            const linkUrl = `../../view.html?id=${item.id}`;
+            const isDanger = item.rarity && item.rarity.toLowerCase().includes("peligrosa");
+            const borderClass = isDanger ? "border-danger" : "";
+            const titleClass = isDanger ? "text-danger" : "text-warning";
+            const badgeClass = isDanger ? "rpg-badge-crimson" : "rpg-badge-gold";
+            const btnClass = isDanger ? "btn-outline-danger" : "btn-outline-gold";
+
+            return `
+              <div class="col-md-6">
+                <div class="card display-card h-100 ${borderClass}">
+                  <div class="card-body">
+                    <div class="d-flex justify-content-between align-items-center mb-2">
+                      <span class="rpg-badge ${badgeClass}">${item.rarity || 'Mágico'}</span>
+                      <span class="badge bg-info text-dark">${item.type || 'Objeto'}</span>
+                    </div>
+                    <h4 class="card-title ${titleClass} mb-2">
+                      <a href="${linkUrl}" class="${titleClass}">${item.title}</a>
+                    </h4>
+                    <p class="card-text text-secondary small">
+                      ${item.description || item.subtitle || ''}
+                    </p>
+                  </div>
+                  <div class="card-footer bg-transparent border-top-0 pt-0">
+                    <a href="${linkUrl}" class="btn ${btnClass} w-100">Ver Ficha de Artefacto</a>
+                  </div>
+                </div>
+              </div>
+            `;
+          }).join("");
+        }
+      } catch (e) {
+        console.warn("Could not load dynamic manifest:", e);
+      }
+    });
+  </script>
 </body>
 
 </html>

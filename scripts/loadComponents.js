@@ -4,7 +4,6 @@ document.addEventListener("DOMContentLoaded", function () {
   let rootPath = body.getAttribute("data-root");
 
   if (!rootPath) {
-    // Auto-calculate relative path based on directory depth
     const path = window.location.pathname;
     const depth = (path.match(/\/pages\//g) || []).length;
     if (depth > 0) {
@@ -15,7 +14,6 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   }
 
-  // Ensure rootPath ends with a slash if not empty
   if (rootPath && !rootPath.endsWith("/")) {
     rootPath += "/";
   }
@@ -33,16 +31,16 @@ document.addEventListener("DOMContentLoaded", function () {
 
         <div class="collapse navbar-collapse" id="headerNavBar">
           <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-lg-3">
-            <li class="nav-item"><a class="nav-link" href="${rootPath}index.html">Home</a></li>
-            <li class="nav-item"><a class="nav-link" href="${rootPath}pages/characters/display_groups.html">Adventurers</a></li>
-            <li class="nav-item"><a class="nav-link" href="${rootPath}pages/places/display_places.html">Places</a></li>
+            <li class="nav-item"><a class="nav-link" href="${rootPath}index.html">Inicio</a></li>
+            <li class="nav-item"><a class="nav-link" href="${rootPath}pages/characters/display_groups.html">Aventureros</a></li>
+            <li class="nav-item"><a class="nav-link" href="${rootPath}pages/places/display_places.html">Lugares</a></li>
             <li class="nav-item"><a class="nav-link" href="${rootPath}pages/lore/display_lore.html">Lore</a></li>
-            <li class="nav-item"><a class="nav-link" href="${rootPath}pages/schedules.html">Schedules</a></li>
-            <li class="nav-item"><a class="nav-link text-warning fw-bold" href="${rootPath}countdown.html">⏱️ Next Session</a></li>
+            <li class="nav-item"><a class="nav-link" href="${rootPath}pages/schedules.html">Horarios</a></li>
+            <li class="nav-item"><a class="nav-link text-warning fw-bold" href="${rootPath}countdown.html">⏱️ Próxima Sesión</a></li>
           </ul>
 
           <button class="btn btn-outline-gold btn-sm d-flex align-items-center gap-2" data-bs-toggle="modal" data-bs-target="#searchModal">
-            <span>🔍</span> Search Wiki...
+            <span>🔍</span> Buscar en Wiki...
           </button>
         </div>
       </div>
@@ -51,59 +49,59 @@ document.addEventListener("DOMContentLoaded", function () {
   const SIDEBAR_HTML = `
     <div class="card wiki-sidebar shadow">
       <div class="card-header d-flex align-items-center justify-content-between">
-        <span class="fw-bold">NAVIGATION</span>
+        <span class="fw-bold">NAVEGACIÓN</span>
         <span class="rpg-badge rpg-badge-gold">D&D 5E</span>
       </div>
       <ul class="list-group list-group-flush">
         <li class="list-group-item">
           <a href="${rootPath}index.html" class="d-flex align-items-center gap-2">
-            <span>🏠</span> <strong>Home</strong>
+            <span>🏠</span> <strong>Inicio</strong>
           </a>
         </li>
         <li class="list-group-item">
           <a href="${rootPath}countdown.html" class="text-warning fw-bold d-flex align-items-center gap-2">
-            <span>⏱️</span> Next Session Countdown
+            <span>⏱️</span> Próxima Sesión
           </a>
         </li>
 
-        <li class="list-group-item text-uppercase small text-muted font-monospace mt-2">Campaign Entities</li>
+        <li class="list-group-item text-uppercase small text-muted font-monospace mt-2">Entidades de Campaña</li>
 
         <li class="list-group-item">
           <a href="${rootPath}pages/characters/display_groups.html" class="d-flex align-items-center gap-2">
-            <span>🛡️</span> Groups & Factions
+            <span>🛡️</span> Grupos & Facciones
           </a>
         </li>
         <li class="list-group-item">
           <a href="${rootPath}pages/places/display_places.html" class="d-flex align-items-center gap-2">
-            <span>🗺️</span> Places of Terranova
+            <span>🗺️</span> Lugares de Terranova
           </a>
         </li>
         <li class="list-group-item">
           <a href="${rootPath}pages/lore/items/display_items.html" class="d-flex align-items-center gap-2">
-            <span>💎</span> Magical Items
+            <span>💎</span> Objetos Mágicos
           </a>
         </li>
 
-        <li class="list-group-item text-uppercase small text-muted font-monospace mt-2">Lore & World</li>
+        <li class="list-group-item text-uppercase small text-muted font-monospace mt-2">Lore & Historia</li>
 
         <li class="list-group-item">
           <a href="${rootPath}pages/lore/display_lore.html" class="d-flex align-items-center gap-2">
-            <span>📜</span> Lore Hub
+            <span>📜</span> Hub de Lore
           </a>
         </li>
         <li class="list-group-item">
           <a href="${rootPath}pages/lore/terranova.html" class="d-flex align-items-center gap-2">
-            <span>🌍</span> Terranova Campaign
+            <span>🌍</span> Terranova
           </a>
         </li>
         <li class="list-group-item">
           <a href="${rootPath}pages/lore/events/display_events.html" class="d-flex align-items-center gap-2">
-            <span>📅</span> Timeline & Events
+            <span>📅</span> Línea del Tiempo
           </a>
         </li>
         <li class="list-group-item">
           <a href="${rootPath}pages/schedules.html" class="d-flex align-items-center gap-2">
-            <span>🗓️</span> Game Schedules
+            <span>🗓️</span> Horarios
           </a>
         </li>
       </ul>
@@ -115,13 +113,13 @@ document.addEventListener("DOMContentLoaded", function () {
         <p class="mb-1 text-light fw-bold">Rolling and Falling RPG Campaign Wiki</p>
         <p class="small mb-3">"In the heart of chaos, we find our story."</p>
         <div class="d-flex justify-content-center gap-3 mb-3">
-          <a href="${rootPath}index.html" class="text-secondary small">Home</a>
+          <a href="${rootPath}index.html" class="text-secondary small">Inicio</a>
           <a href="${rootPath}pages/lore/display_lore.html" class="text-secondary small">Lore</a>
-          <a href="${rootPath}pages/characters/display_groups.html" class="text-secondary small">Groups</a>
-          <a href="${rootPath}pages/places/display_places.html" class="text-secondary small">Places</a>
-          <a href="${rootPath}countdown.html" class="text-secondary small">Countdown</a>
+          <a href="${rootPath}pages/characters/display_groups.html" class="text-secondary small">Grupos</a>
+          <a href="${rootPath}pages/places/display_places.html" class="text-secondary small">Lugares</a>
+          <a href="${rootPath}countdown.html" class="text-secondary small">Contador</a>
         </div>
-        <p class="small text-muted mb-0">&copy; ${new Date().getFullYear()} Rolling and Falling. Created for Homebrew D&D 5e.</p>
+        <p class="small text-muted mb-0">&copy; ${new Date().getFullYear()} Rolling and Falling. D&D 5e Homebrew Wiki.</p>
       </div>
     </footer>`;
 
@@ -130,11 +128,11 @@ document.addEventListener("DOMContentLoaded", function () {
       <div class="modal-dialog modal-dialog-centered modal-lg">
         <div class="modal-content">
           <div class="modal-header border-secondary">
-            <h5 class="modal-title text-warning" id="searchModalLabel">🔍 Search Wiki</h5>
-            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+            <h5 class="modal-title text-warning" id="searchModalLabel">🔍 Buscar en la Wiki</h5>
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Cerrar"></button>
           </div>
           <div class="modal-body">
-            <input type="text" id="wikiSearchInput" class="form-control form-control-lg search-input mb-3" placeholder="Type to search characters, places, items, lore..." autofocus>
+            <input type="text" id="wikiSearchInput" class="form-control form-control-lg search-input mb-3" placeholder="Escribe para buscar personajes, lugares, objetos, lore..." autofocus>
             <div id="wikiSearchResults" class="list-group">
               <!-- Dynamically populated search results -->
             </div>
@@ -150,38 +148,43 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   }
 
-  // Inject Header, Footer, Sidebar
   injectComponent("header1", HEADER_HTML);
   injectComponent("footer1", FOOTER_HTML);
   injectComponent("sidebar-container", SIDEBAR_HTML);
 
-  // Inject Search Modal if not present
   if (!document.getElementById("searchModal")) {
     document.body.insertAdjacentHTML("beforeend", SEARCH_MODAL_HTML);
   }
 
-  // Wiki Search Index
-  const wikiEntries = [
-    { title: "Terranova Campaign Overview", category: "Lore", url: `${rootPath}pages/lore/terranova.html`, desc: "Full history, kingdoms, and geography of Terranova." },
-    { title: "Lore Hub", category: "Lore", url: `${rootPath}pages/lore/display_lore.html`, desc: "Central repository of history, myths, and world lore." },
-    { title: "Next Session Countdown", category: "Game", url: `${rootPath}countdown.html`, desc: "Live countdown timer to the next tabletop game." },
-    { title: "Game Schedules", category: "Game", url: `${rootPath}pages/schedules.html`, desc: "Session calendar and availability tracker." },
-    { title: "Adventurer Groups & Factions", category: "Groups", url: `${rootPath}pages/characters/display_groups.html`, desc: "Roster of player parties and major factions." },
-    { title: "Odin's Hand", category: "Groups", url: `${rootPath}pages/characters/groups/OdinHand.html`, desc: "Aventureros - Odin's Hand faction details." },
-    { title: "Arcane Academy", category: "Groups", url: `${rootPath}pages/characters/groups/ArcaneAcademy.html`, desc: "Mage guild and magical scholarly institution." },
-    { title: "Anchieta House", category: "Groups", url: `${rootPath}pages/characters/groups/AnchietaHouse.html`, desc: "Noble house and political group." },
-    { title: "City Guard", category: "Groups", url: `${rootPath}pages/characters/groups/Guard.html`, desc: "Local enforcement and military guard." },
-    { title: "House Reinhart", category: "Groups", url: `${rootPath}pages/characters/groups/Reinhart.html`, desc: "Noble lineage and political faction." },
-    { title: "Sun Seed Order", category: "Groups", url: `${rootPath}pages/characters/groups/SunSeed.html`, desc: "Religious and paladin order." },
-    { title: "Staff & Key Figures", category: "Groups", url: `${rootPath}pages/characters/groups/Staff.html`, desc: "Key NPCs and administrative personnel." },
-    { title: "Places of Terranova", category: "Places", url: `${rootPath}pages/places/display_places.html`, desc: "Catalog of cities, regions, and dungeons." },
-    { title: "Magical Items Index", category: "Items", url: `${rootPath}pages/lore/items/display_items.html`, desc: "Artifacts, magical gear, and weapons." },
-    { title: "Fragmento de Sangre", category: "Items", url: `${rootPath}pages/lore/items/FragmentoDeSangre.html`, desc: "Rare magical relic crystal." },
-    { title: "Guantelete Plateado", category: "Items", url: `${rootPath}pages/lore/items/GuanteletePlateado.html`, desc: "Silver gauntlet artifact." },
-    { title: "Timeline & Events", category: "Events", url: `${rootPath}pages/lore/events/display_events.html`, desc: "Chronological timeline of historical events." }
+  // Search entries list
+  let searchEntries = [
+    { title: "Terranova Lore Completo", category: "Lore", url: `${rootPath}pages/lore/terranova.html`, desc: "Historia completa, reinos y geografía de Terranova." },
+    { title: "Lore Hub", category: "Lore", url: `${rootPath}pages/lore/display_lore.html`, desc: "Compendio central de mitos, leyendas e historia del mundo." },
+    { title: "Contador de Próxima Sesión", category: "Juego", url: `${rootPath}countdown.html`, desc: "Reloj regresivo en tiempo real para la próxima partida." },
+    { title: "Horarios de Partidas", category: "Juego", url: `${rootPath}pages/schedules.html`, desc: "Calendario de sesiones activas y disponibilidad del grupo." },
+    { title: "Catálogo de Grupos & Facciones", category: "Grupos", url: `${rootPath}pages/characters/display_groups.html`, desc: "Lista de compañías de aventureros y facciones." },
+    { title: "Catálogo de Lugares & Regiones", category: "Lugares", url: `${rootPath}pages/places/display_places.html`, desc: "Catálogo de ciudades, mazmorras y regiones." },
+    { title: "Catálogo de Objetos Mágicos", category: "Objetos", url: `${rootPath}pages/lore/items/display_items.html`, desc: "Artefactos, reliquias y equipamiento místico." },
+    { title: "Línea del Tiempo & Eventos", category: "Eventos", url: `${rootPath}pages/lore/events/display_events.html`, desc: "Cronología de grandes acontecimientos históricos." }
   ];
 
-  // Quick Search Logic
+  // Fetch content manifest asynchronously to enrich search index with Markdown articles
+  fetch(`${rootPath}data/content-manifest.json`)
+    .then(res => res.json())
+    .then(data => {
+      if (data && data.entries) {
+        data.entries.forEach(entry => {
+          searchEntries.push({
+            title: entry.title,
+            category: entry.category,
+            url: `${rootPath}pages/view.html?id=${entry.id}`,
+            desc: entry.description || entry.subtitle || ""
+          });
+        });
+      }
+    })
+    .catch(err => console.warn("Search manifest load warning:", err));
+
   const searchInput = document.getElementById("wikiSearchInput");
   const searchResults = document.getElementById("wikiSearchResults");
 
@@ -189,18 +192,18 @@ document.addEventListener("DOMContentLoaded", function () {
     if (!searchResults) return;
     const cleanQuery = query.toLowerCase().trim();
     if (!cleanQuery) {
-      searchResults.innerHTML = `<div class="p-3 text-muted text-center">Type a search term above to find wiki articles...</div>`;
+      searchResults.innerHTML = `<div class="p-3 text-muted text-center">Escribe un término arriba para buscar artículos de la wiki...</div>`;
       return;
     }
 
-    const matches = wikiEntries.filter(entry =>
+    const matches = searchEntries.filter(entry =>
       entry.title.toLowerCase().includes(cleanQuery) ||
       entry.category.toLowerCase().includes(cleanQuery) ||
       entry.desc.toLowerCase().includes(cleanQuery)
     );
 
     if (matches.length === 0) {
-      searchResults.innerHTML = `<div class="p-3 text-muted text-center">No matching entries found.</div>`;
+      searchResults.innerHTML = `<div class="p-3 text-muted text-center">No se encontraron resultados coincidentes.</div>`;
       return;
     }
 

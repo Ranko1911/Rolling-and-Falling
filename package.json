@@ -2,6 +2,7 @@
   "name": "Rolling-and-Falling",
   "version": "1.0.0",
   "scripts": {
+    "create": "node scripts/create-entry.js",
     "format": "prettier --write \"**/*.{js,jsx,ts,tsx,css,scss,html,json,md}\"",
     "precommit": "lint-staged"
   },
