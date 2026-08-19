@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="es" data-bs-theme="dark">
+
+<head>
+  <title>Diario de Sesiones — Rolling and Falling</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="author" content="Ranko" />
+  <meta name="description" content="Campaign session recaps, loot, and logs for Rolling and Falling." />
+  <link rel="icon" href="../images/icons/dado_blanco_fondo_negro.webp" type="image/x-icon" />
+
+  <!-- Bootstrap & FontAwesome -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="../css/wiki.css" />
+  <link rel="stylesheet" href="../css/display.css" />
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="../scripts/loadComponents.js"></script>
+</head>
+
+<body data-root="../">
+  <div id="header1"></div>
+
+  <main class="container-fluid mt-4">
+    <div class="row g-4">
+      <!-- Sidebar -->
+      <aside class="col-lg-3 col-md-4">
+        <div id="sidebar-container"></div>
+      </aside>
+
+      <!-- Main Content -->
+      <section class="col-lg-9 col-md-8">
+        <!-- Breadcrumbs -->
+        <nav aria-label="breadcrumb" class="mb-3">
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="../index.html">Inicio</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Diario de Sesiones</li>
+          </ol>
+        </nav>
+
+        <div class="wiki-content p-4 p-lg-5">
+          <div class="d-flex align-items-center justify-content-between border-bottom border-secondary pb-3 mb-4">
+            <div>
+              <h1 class="display-5 text-warning fw-bold mb-1">📜 Diario de Sesiones</h1>
+              <p class="text-secondary mb-0">Bitácora oficial de acontecimientos, decisiones de la party y botín acumulado.</p>
+            </div>
+            <span class="rpg-badge rpg-badge-gold" id="sessionCountBadge">PARTIDAS REGISTRADAS</span>
+          </div>
+
+          <!-- Dynamic Sessions Grid -->
+          <div class="row g-4" id="sessionsGrid">
+            <!-- Rendered dynamically from data/content-manifest.json -->
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <div id="footer1"></div>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", async function () {
+      const grid = document.getElementById("sessionsGrid");
+      try {
+        const res = await fetch("../data/content-manifest.json");
+        if (res.ok) {
+          const data = await res.json();
+          const items = data.entries.filter(e => e.category === "sessions");
+          
+          document.getElementById("sessionCountBadge").textContent = `${items.length} SESIONES JUGADAS`;
+
+          if (items.length === 0) {
+            grid.innerHTML = `<div class="col-12 text-center p-4 text-muted">No hay sesiones registradas por el momento.</div>`;
+            return;
+          }
+
+          // Sort by session number (descending by default for newest first)
+          items.sort((a, b) => (b.session_number || 0) - (a.session_number || 0));
+
+          grid.innerHTML = items.map(item => {
+            const linkUrl = `view.html?id=${item.id}`;
+            const sNum = item.session_number ? `Sesión #${item.session_number}` : 'Sesión';
+
+            return `
+              <div class="col-md-6 col-xl-4">
+                <div class="card display-card h-100">
+                  <div class="card-body">
+                    <div class="d-flex justify-content-between align-items-center mb-2">
+                      <span class="rpg-badge rpg-badge-gold">${sNum}</span>
+                      <span class="badge bg-secondary">${item.date || 'Sin Fecha'}</span>
+                    </div>
+                    <h4 class="card-title text-warning mb-2">
+                      <a href="${linkUrl}">${item.title}</a>
+                    </h4>
+                    <p class="card-text text-secondary small">
+                      ${item.description || item.subtitle || ''}
+                    </p>
+                    <div class="d-flex justify-content-between align-items-center mt-3 pt-2 border-top border-secondary small text-muted">
+                      <span><i class="fas fa-crown text-warning me-1"></i>DM: ${item.dm || 'Ranko'}</span>
+                      <span><i class="fas fa-map-marker-alt text-info me-1"></i>${item.location || 'Terranova'}</span>
+                    </div>
+                  </div>
+                  <div class="card-footer bg-transparent border-top-0 pt-0">
+                    <a href="${linkUrl}" class="btn btn-outline-gold btn-sm w-100">Leer Resumen Completo</a>
+                  </div>
+                </div>
+              </div>
+            `;
+          }).join("");
+        }
+      } catch (e) {
+        console.warn("Could not load dynamic manifest:", e);
+      }
+    });
+  </script>
+</body>
+
+</html>

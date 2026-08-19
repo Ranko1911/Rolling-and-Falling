@@ -1,6 +1,20 @@
 {
   "entries": [
     {
+      "id": "sesion-01",
+      "title": "Sesión 1: El Despertar de las Sombras",
+      "subtitle": "El primer encuentro del grupo y el temblor arcano en Everantha",
+      "category": "sessions",
+      "session_number": 1,
+      "date": "2026-09-01",
+      "type": "Diario de Sesión",
+      "status": "Completada",
+      "location": "Everantha",
+      "image": "images/icons/dado_blanco_fondo_negro.webp",
+      "src": "content/sessions/sesion-01.md",
+      "description": "El primer encuentro de Anchieta's House en Everantha y el combate contra las abominaciones de sombras emanadas de la grieta arcana."
+    },
+    {
       "id": "anchieta-house",
       "title": "Anchieta's House",
       "subtitle": "Compañía principal de aventureros de la campaña",

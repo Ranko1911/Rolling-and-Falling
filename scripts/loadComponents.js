@@ -35,6 +35,7 @@ document.addEventListener("DOMContentLoaded", function () {
             <li class="nav-item"><a class="nav-link" href="${rootPath}pages/characters/display_groups.html">Aventureros</a></li>
             <li class="nav-item"><a class="nav-link" href="${rootPath}pages/places/display_places.html">Lugares</a></li>
             <li class="nav-item"><a class="nav-link" href="${rootPath}pages/lore/display_lore.html">Lore</a></li>
+            <li class="nav-item"><a class="nav-link" href="${rootPath}pages/sessions.html">Diario de Sesiones</a></li>
             <li class="nav-item"><a class="nav-link" href="${rootPath}pages/schedules.html">Horarios</a></li>
             <li class="nav-item"><a class="nav-link text-warning fw-bold" href="${rootPath}countdown.html">⏱️ Próxima Sesión</a></li>
           </ul>
@@ -63,6 +64,11 @@ document.addEventListener("DOMContentLoaded", function () {
             <span>⏱️</span> Próxima Sesión
           </a>
         </li>
+        <li class="list-group-item">
+          <a href="${rootPath}pages/sessions.html" class="d-flex align-items-center gap-2">
+            <span>📜</span> <strong>Diario de Sesiones</strong>
+          </a>
+        </li>
 
         <li class="list-group-item text-uppercase small text-muted font-monospace mt-2">Entidades de Campaña</li>
 
@@ -86,7 +92,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
         <li class="list-group-item">
           <a href="${rootPath}pages/lore/display_lore.html" class="d-flex align-items-center gap-2">
-            <span>📜</span> Hub de Lore
+            <span>📖</span> Hub de Lore
           </a>
         </li>
         <li class="list-group-item">
@@ -114,6 +120,7 @@ document.addEventListener("DOMContentLoaded", function () {
         <p class="small mb-3">"In the heart of chaos, we find our story."</p>
         <div class="d-flex justify-content-center gap-3 mb-3">
           <a href="${rootPath}index.html" class="text-secondary small">Inicio</a>
+          <a href="${rootPath}pages/sessions.html" class="text-secondary small">Diario de Sesiones</a>
           <a href="${rootPath}pages/lore/display_lore.html" class="text-secondary small">Lore</a>
           <a href="${rootPath}pages/characters/display_groups.html" class="text-secondary small">Grupos</a>
           <a href="${rootPath}pages/places/display_places.html" class="text-secondary small">Lugares</a>
@@ -132,7 +139,7 @@ document.addEventListener("DOMContentLoaded", function () {
             <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Cerrar"></button>
           </div>
           <div class="modal-body">
-            <input type="text" id="wikiSearchInput" class="form-control form-control-lg search-input mb-3" placeholder="Escribe para buscar personajes, lugares, objetos, lore..." autofocus>
+            <input type="text" id="wikiSearchInput" class="form-control form-control-lg search-input mb-3" placeholder="Escribe para buscar personajes, lugares, objetos, sesiones, lore..." autofocus>
             <div id="wikiSearchResults" class="list-group">
               <!-- Dynamically populated search results -->
             </div>
@@ -158,6 +165,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // Search entries list
   let searchEntries = [
+    { title: "Diario de Sesiones", category: "Juego", url: `${rootPath}pages/sessions.html`, desc: "Bitácora oficial de acontecimientos y resúmenes de partidas." },
     { title: "Terranova Lore Completo", category: "Lore", url: `${rootPath}pages/lore/terranova.html`, desc: "Historia completa, reinos y geografía de Terranova." },
     { title: "Lore Hub", category: "Lore", url: `${rootPath}pages/lore/display_lore.html`, desc: "Compendio central de mitos, leyendas e historia del mundo." },
     { title: "Contador de Próxima Sesión", category: "Juego", url: `${rootPath}countdown.html`, desc: "Reloj regresivo en tiempo real para la próxima partida." },
@@ -168,7 +176,6 @@ document.addEventListener("DOMContentLoaded", function () {
     { title: "Línea del Tiempo & Eventos", category: "Eventos", url: `${rootPath}pages/lore/events/display_events.html`, desc: "Cronología de grandes acontecimientos históricos." }
   ];
 
-  // Fetch content manifest asynchronously to enrich search index with Markdown articles
   fetch(`${rootPath}data/content-manifest.json`)
     .then(res => res.json())
     .then(data => {
