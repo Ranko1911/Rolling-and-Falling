@@ -71,6 +71,26 @@ async function main() {
   const status = await askQuestion('Estado (default: Completada / Activo): ') || (category === 'sessions' ? 'Completada' : 'Activo');
   const description = await askQuestion('Resumen breve para tarjetas: ');
 
+  let includeStatblock = false;
+  let ca = '', hp = '', speed = '';
+  let str = 10, dex = 10, con = 10, int = 10, wis = 10, cha = 10;
+
+  if (category === 'characters' || category === 'groups') {
+    const statChoice = await askQuestion('\n¿Añadir Statblock 5e (CA, HP, Atributos)? (s/N): ');
+    if (statChoice.toLowerCase().startsWith('s')) {
+      includeStatblock = true;
+      ca = await askQuestion('Clase de Armadura (CA) (ej: 16): ') || '10';
+      hp = await askQuestion('Puntos de Golpe (HP) (ej: 45): ') || '10';
+      speed = await askQuestion('Velocidad (ej: 30 ft): ') || '30 ft';
+      str = await askQuestion('Fuerza (STR) [default: 10]: ') || '10';
+      dex = await askQuestion('Destreza (DEX) [default: 10]: ') || '10';
+      con = await askQuestion('Constitución (CON) [default: 10]: ') || '10';
+      int = await askQuestion('Inteligencia (INT) [default: 10]: ') || '10';
+      wis = await askQuestion('Sabiduría (WIS) [default: 10]: ') || '10';
+      cha = await askQuestion('Carisma (CHA) [default: 10]: ') || '10';
+    }
+  }
+
   const slug = category === 'sessions' && sessionNum ? `sesion-${sessionNum.trim().padStart(2, '0')}` : slugify(title);
   const relPath = `content/${category}/${slug}.md`;
   const fullPath = path.join(__dirname, '..', relPath);
@@ -120,6 +140,21 @@ ${description || 'Escribe aquí el resumen narrativo de lo ocurrido durante la s
 - 
 `;
   } else {
+    let statblockYaml = '';
+    if (includeStatblock) {
+      statblockYaml = `ca: ${ca}
+hp: ${hp}
+speed: "${speed}"
+stats:
+  str: ${str}
+  dex: ${dex}
+  con: ${con}
+  int: ${int}
+  wis: ${wis}
+  cha: ${cha}
+`;
+    }
+
     markdownContent = `---
 title: "${title}"
 subtitle: "${subtitle || ''}"
@@ -128,7 +163,7 @@ type: "${type || ''}"
 alignment: "${alignment || ''}"
 status: "${status}"
 image: "images/icons/dado_blanco_fondo_negro.webp"
----
+${statblockYaml}---
 
 # ${title}
 

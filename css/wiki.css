@@ -257,3 +257,40 @@ a:hover {
   border-color: var(--rpg-gold) !important;
   box-shadow: 0 0 10px rgba(212, 175, 55, 0.3) !important;
 }
+
+/* RPG 5e Statblock Styling */
+.rpg-statblock {
+  background: rgba(0, 0, 0, 0.25);
+  border-top: 1px solid var(--rpg-border-gold);
+}
+.rpg-statblock-title {
+  font-family: var(--rpg-font-heading);
+  font-size: 0.85rem;
+  letter-spacing: 1px;
+  color: var(--rpg-gold-bright);
+}
+.rpg-stat-box {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid var(--rpg-border);
+  border-radius: 4px;
+  padding: 4px 2px;
+  transition: all 0.2s ease;
+}
+.rpg-stat-box:hover {
+  border-color: var(--rpg-gold-bright);
+  background: rgba(212, 175, 55, 0.08);
+}
+.rpg-stat-label {
+  font-size: 0.65rem;
+  font-weight: 700;
+  color: var(--rpg-text-secondary);
+}
+.rpg-stat-val {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--rpg-text-primary);
+}
+.rpg-stat-mod {
+  font-size: 0.75rem;
+  color: var(--rpg-gold-bright);
+}

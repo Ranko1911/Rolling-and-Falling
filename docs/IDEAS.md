@@ -45,7 +45,7 @@ Propuestas de funciones y mejoras visuales/interactivas para llevar la wiki de c
     cha: 15
   ```
 
-- [ ] Incorporar renderizado de Statblocks 5e en `pages/view.html`
+- [x] Incorporar renderizado de Statblocks 5e en `pages/view.html`
 
 ---
 

@@ -126,14 +126,50 @@
           const yamlBlock = parts[1].trim();
           bodyText = parts.slice(2).join("---").trim();
 
+          let currentParentKey = null;
+
           yamlBlock.split("\n").forEach(line => {
+            if (!line.trim() || line.trim().startsWith("#")) return;
+
+            const isIndented = /^\s+/.test(line);
             const colonIndex = line.indexOf(":");
+
             if (colonIndex !== -1) {
-              const key = line.slice(0, colonIndex).trim();
-              let val = line.slice(colonIndex + 1).trim();
-              if (val.startsWith('"') && val.endsWith('"')) val = val.slice(1, -1);
-              if (val.startsWith("'") && val.endsWith("'")) val = val.slice(1, -1);
-              metadata[key] = val;
+              const rawKey = line.slice(0, colonIndex).trim();
+              let rawVal = line.slice(colonIndex + 1).trim();
+
+              if ((rawVal.startsWith('"') && rawVal.endsWith('"')) || (rawVal.startsWith("'") && rawVal.endsWith("'"))) {
+                rawVal = rawVal.slice(1, -1);
+              }
+
+              if (isIndented && currentParentKey) {
+                if (typeof metadata[currentParentKey] !== "object") {
+                  metadata[currentParentKey] = {};
+                }
+                const num = Number(rawVal);
+                metadata[currentParentKey][rawKey] = !isNaN(num) && rawVal !== "" ? num : rawVal;
+              } else {
+                if (rawVal === "" || rawVal === "{") {
+                  currentParentKey = rawKey;
+                  metadata[rawKey] = {};
+                } else if (rawVal.startsWith("{") && rawVal.endsWith("}")) {
+                  currentParentKey = null;
+                  metadata[rawKey] = {};
+                  const inner = rawVal.slice(1, -1);
+                  inner.split(",").forEach(pair => {
+                    const [k, v] = pair.split(":").map(s => s ? s.trim() : "");
+                    if (k) {
+                      let cleanV = (v || "").replace(/['"]/g, "");
+                      let n = Number(cleanV);
+                      metadata[rawKey][k] = !isNaN(n) && cleanV !== "" ? n : cleanV;
+                    }
+                  });
+                } else {
+                  currentParentKey = null;
+                  const num = Number(rawVal);
+                  metadata[rawKey] = !isNaN(num) && rawVal !== "" ? num : rawVal;
+                }
+              }
             }
           });
         }
@@ -182,6 +218,13 @@
       document.getElementById("loadingSpinner").style.display = "none";
     }
 
+    function get5eModifier(score) {
+      const num = parseInt(score, 10);
+      if (isNaN(num)) return "+0";
+      const mod = Math.floor((num - 10) / 2);
+      return mod >= 0 ? `+${mod}` : `${mod}`;
+    }
+
     function renderInfobox(meta, title) {
       const fields = [
         { key: "type", label: "Tipo" },
@@ -197,7 +240,9 @@
       ];
 
       const activeFields = fields.filter(f => meta[f.key]);
-      if (activeFields.length === 0 && !meta.image) return;
+      const hasStats = meta.ca || meta.ac || meta.hp || meta.speed || meta.stats;
+
+      if (activeFields.length === 0 && !meta.image && !hasStats) return;
 
       let imageSrc = meta.image || "images/icons/dado_blanco_fondo_negro.webp";
       if (!imageSrc.startsWith("../") && !imageSrc.startsWith("http")) {
@@ -215,15 +260,75 @@
       const borderClass = isDanger ? "border-danger" : "";
       const headerClass = isDanger ? "bg-danger text-white" : "";
 
+      let statblockHtml = "";
+      if (hasStats) {
+        const stats = meta.stats || {};
+        const statKeys = [
+          { key: "str", altKey: "fuerza", label: "FUE" },
+          { key: "dex", altKey: "destreza", label: "DES" },
+          { key: "con", altKey: "constitucion", label: "CON" },
+          { key: "int", altKey: "inteligencia", label: "INT" },
+          { key: "wis", altKey: "sabiduria", label: "SAB" },
+          { key: "cha", altKey: "carisma", label: "CAR" }
+        ];
+
+        const statBoxes = statKeys.map(s => {
+          const val = stats[s.key] !== undefined ? stats[s.key] : (stats[s.altKey] !== undefined ? stats[s.altKey] : (meta[s.key] || meta[s.altKey] || 10));
+          const mod = get5eModifier(val);
+          return `
+            <div class="col-4 col-sm-2">
+              <div class="rpg-stat-box text-center">
+                <div class="rpg-stat-label">${s.label}</div>
+                <div class="rpg-stat-val">${val}</div>
+                <div class="rpg-stat-mod">(${mod})</div>
+              </div>
+            </div>`;
+        }).join("");
+
+        let extraRows = [];
+        if (meta.saving_throws) extraRows.push(`<tr><th>Salvaciones</th><td>${meta.saving_throws}</td></tr>`);
+        if (meta.skills) extraRows.push(`<tr><th>Habilidades</th><td>${meta.skills}</td></tr>`);
+        if (meta.senses) extraRows.push(`<tr><th>Sentidos</th><td>${meta.senses}</td></tr>`);
+        if (meta.languages) extraRows.push(`<tr><th>Idiomas</th><td>${meta.languages}</td></tr>`);
+        if (meta.cr) extraRows.push(`<tr><th>Desafío (CR)</th><td>${meta.cr}</td></tr>`);
+
+        statblockHtml = `
+          <div class="rpg-statblock p-3 border-top border-warning-subtle">
+            <div class="rpg-statblock-title text-center mb-2">
+              ⚔️ ATRIBUTOS D&D 5E
+            </div>
+            <div class="d-flex justify-content-around text-center mb-3 py-2 bg-dark rounded border border-secondary">
+              <div>
+                <span class="text-secondary small d-block">CA</span>
+                <strong class="text-warning">${meta.ca || meta.ac || "-"}</strong>
+              </div>
+              <div>
+                <span class="text-secondary small d-block">HP</span>
+                <strong class="text-danger">${meta.hp || "-"}</strong>
+              </div>
+              <div>
+                <span class="text-secondary small d-block">VELOCIDAD</span>
+                <strong class="text-info">${meta.speed || "-"}</strong>
+              </div>
+            </div>
+            <div class="row g-1 mb-2">
+              ${statBoxes}
+            </div>
+            ${extraRows.length > 0 ? `
+              <table class="rpg-infobox-table mt-2">
+                ${extraRows.join("")}
+              </table>` : ''}
+          </div>`;
+      }
+
       const infoboxHtml = `
         <div class="rpg-infobox float-end-md ${borderClass}">
           <div class="rpg-infobox-header ${headerClass}">${title}</div>
           <div class="rpg-infobox-image">
             <img src="${imageSrc}" alt="${title}">
           </div>
-          <table class="rpg-infobox-table">
-            ${rows}
-          </table>
+          ${rows ? `<table class="rpg-infobox-table">${rows}</table>` : ''}
+          ${statblockHtml}
         </div>`;
 
       document.getElementById("infoboxSlot").innerHTML = infoboxHtml;

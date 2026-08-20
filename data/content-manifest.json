@@ -210,6 +210,79 @@
       "type": "Político / Fundación",
       "src": "content/events/fundacion-everantha.md",
       "description": "Establecimiento del primer reino unificado de Everantha, dando inicio a la Era Dorada."
+    },
+    {
+      "id": "ejemplo-personaje",
+      "title": "Ejemplo: Personaje con Statblock",
+      "subtitle": "Plantilla guía para fichas de personajes y criaturas (D&D 5e)",
+      "category": "characters",
+      "type": "PNJ / Paladín",
+      "alignment": "Legal Bueno",
+      "status": "Ejemplo",
+      "image": "images/icons/dado_blanco_fondo_negro.webp",
+      "src": "content/characters/ejemplo-personaje.md",
+      "description": "Plantilla y guía de referencia para la creación de fichas de personajes con bloque de estadísticas D&D 5e."
+    },
+    {
+      "id": "ejemplo-grupo",
+      "title": "Ejemplo: Grupo o Facción",
+      "subtitle": "Plantilla guía para organizaciones, gremios y compañías",
+      "category": "groups",
+      "type": "Gremio / Facción Aliada",
+      "alignment": "Legal Bueno",
+      "status": "Ejemplo",
+      "image": "images/icons/dado_blanco_fondo_negro.webp",
+      "src": "content/groups/ejemplo-grupo.md",
+      "description": "Plantilla y guía de referencia para registrar grupos, facciones y gremios."
+    },
+    {
+      "id": "ejemplo-objeto",
+      "title": "Ejemplo: Objeto Mágico",
+      "subtitle": "Plantilla guía para reliquias, artefactos y equipamiento",
+      "category": "items",
+      "type": "Objeto Maravilloso / Artefacto",
+      "rarity": "Raro",
+      "status": "Ejemplo",
+      "image": "images/icons/dado_blanco_fondo_negro.webp",
+      "src": "content/items/ejemplo-objeto.md",
+      "description": "Plantilla y guía de referencia para registrar artefactos y objetos mágicos."
+    },
+    {
+      "id": "ejemplo-lugar",
+      "title": "Ejemplo: Lugar o Región",
+      "subtitle": "Plantilla guía para ciudades, mazmorras y geografías",
+      "category": "places",
+      "type": "Bosque Místico / Zona Peligrosa",
+      "region": "Terranova Este",
+      "status": "Ejemplo",
+      "image": "images/icons/dado_blanco_fondo_negro.webp",
+      "src": "content/places/ejemplo-lugar.md",
+      "description": "Plantilla y guía de referencia para registrar regiones, ciudades y mazmorras."
+    },
+    {
+      "id": "ejemplo-evento",
+      "title": "Ejemplo: Evento Histórico",
+      "subtitle": "Plantilla guía para la línea del tiempo y acontecimientos",
+      "category": "events",
+      "era": "Era Dorada (Año 142)",
+      "type": "Conflicto Bélico",
+      "status": "Ejemplo",
+      "image": "images/icons/dado_blanco_fondo_negro.webp",
+      "src": "content/events/ejemplo-evento.md",
+      "description": "Plantilla y guía de referencia para registrar eventos históricos y cronología."
+    },
+    {
+      "id": "ejemplo-sesion",
+      "title": "Ejemplo: Diario de Sesión",
+      "subtitle": "Plantilla guía para resúmenes de partidas y bitácoras",
+      "category": "sessions",
+      "session_number": 0,
+      "date": "2026-08-20",
+      "type": "Diario de Sesión",
+      "status": "Ejemplo",
+      "image": "images/icons/dado_blanco_fondo_negro.webp",
+      "src": "content/sessions/ejemplo-sesion.md",
+      "description": "Plantilla y guía de referencia para registrar resúmenes de partidas jugadas."
     }
   ]
 }

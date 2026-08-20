@@ -7,6 +7,18 @@ alignment: "Caótico Malvado"
 status: "Activo / Amenaza Global"
 subgroup: "Guardia de la Tormenta"
 image: "images/icons/dado_blanco_fondo_negro.webp"
+ca: 18
+hp: 120
+speed: "30 ft"
+cr: "12 (8,400 XP)"
+saving_throws: "Fue +8, Con +7, Sab +6"
+stats:
+  str: 18
+  dex: 14
+  con: 16
+  int: 14
+  wis: 12
+  cha: 16
 ---
 
 # Mano de Odín
